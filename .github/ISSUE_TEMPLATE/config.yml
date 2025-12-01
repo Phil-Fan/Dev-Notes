@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Q&A / Discussions
+    url: https://github.com/Phil-Fan/Awesome-full-stack/discussions
+    about: 提建议前可在讨论区交流想法或获取反馈。

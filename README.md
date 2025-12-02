@@ -17,12 +17,13 @@
   - [信息源](#信息源)
   - [AI 相关](#ai-相关)
     - [MCP](#mcp)
+  - [Template](#template)
   - [IDE](#ide)
   - [语言\&框架](#语言框架)
   - [前端](#前端)
   - [后端](#后端)
     - [API 服务](#api-服务)
-    - [OAuth 服务](#oauth-服务)
+    - [用户管理与认证](#用户管理与认证)
     - [数据库](#数据库)
   - [网络](#网络)
     - [抓包](#抓包)
@@ -61,6 +62,10 @@
 - [Context7 MCP](https://github.com/upstash/context7)
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
 - [shadcn MCP](https://ui.shadcn.com/)
+
+## Template
+
+> 好用的开发模版
 
 ## IDE
 
@@ -139,7 +144,7 @@ npx create-next-app@latest my-app
 
 ### 境内备案
 
-- [ICP信息备案管理系统](https://beiancx.miit.gov.cn)
+- [ICP 信息备案管理系统](https://beiancx.miit.gov.cn)
 
 ### CDN 服务
 

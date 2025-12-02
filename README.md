@@ -58,7 +58,7 @@
 
 ### MCP
 
-- [Playwright | Context7](https://context7.com/websites/playwright_dev)
+- [Playwright - Context7](https://context7.com/websites/playwright_dev)
 - [shadcn](https://ui.shadcn.com/)
 
 ## IDE
@@ -80,7 +80,7 @@
   - [shadcn/ui](https://ui.shadcn.com/)
     - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
 
-```shell title="脚手架创建 Next.js 项目"
+```shell
 npx create-next-app@latest my-app
 ```
 
@@ -128,7 +128,11 @@ npx create-next-app@latest my-app
 
 ### 域名
 
+- [阿里云域名](https://wanwang.aliyun.com/domain/)
+
 ### 境内备案
+
+- [ICP信息备案管理系统](https://beiancx.miit.gov.cn)
 
 ### CDN 服务
 
@@ -161,7 +165,10 @@ npx create-next-app@latest my-app
 ### 产品介绍
 
 - [Figma](https://www.figma.com/): 产品设计与原型设计
+- [iMockup](https://www.imockup.app/zh): 模型机动画
 - [Jitter](https://jitter.video/templates/devices/): 产品视频介绍模版
+- [FocuSee](https://focusee.imobie.com/): 演示视频
+- [OBS Studio](https://github.com/obsproject/obs-studio): 免费开源的直播和屏幕录制软件
 
 ### 用户洞察
 

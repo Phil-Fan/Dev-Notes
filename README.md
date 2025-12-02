@@ -18,7 +18,7 @@
   - [AI 相关](#ai-相关)
     - [MCP](#mcp)
   - [IDE](#ide)
-  - [框架\&脚手架](#框架脚手架)
+  - [语言\&框架](#语言框架)
   - [前端](#前端)
   - [后端](#后端)
     - [API 服务](#api-服务)
@@ -29,10 +29,14 @@
   - [CI/CD](#cicd)
   - [云服务](#云服务)
     - [厂商](#厂商)
+    - [域名](#域名)
+    - [境内备案](#境内备案)
     - [CDN 服务](#cdn-服务)
   - [可观测](#可观测)
   - [文档工具](#文档工具)
   - [运营](#运营)
+    - [宣传](#宣传)
+    - [产品介绍](#产品介绍)
     - [用户洞察](#用户洞察)
   - [License](#license)
   - [Contributing](#contributing)
@@ -62,15 +66,25 @@
 - [Vim](https://www.vim.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-## 框架&脚手架
+## 语言&框架
 
 - [Flutter](https://flutter.dev/)：多平台应用开发框架
+- [Dart](https://dart.dev/)
+- [Python](https://www.python.org/)
 
 ## 前端
 
 - [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
+  - [TypeScript](https://github.com/microsoft/TypeScript)
+  - [biome](https://github.com/biomejs/biome): 轻量、CI/CD 友好的 Linter
+  - [shadcn/ui](https://ui.shadcn.com/)
+    - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
+
+```shell title="脚手架创建 Next.js 项目"
+npx create-next-app@latest my-app
+```
+
+- [Taro](https://docs.taro.zone/docs/): 使用 React/Vue 开发多平台小程序应用
 
 ## 后端
 
@@ -94,9 +108,9 @@
 ### 抓包
 
 - [Wireshark](https://www.wireshark.org/)
-- [Fiddler Classic](https://www.telerik.com/fiddler)
-- [Proxifier](https://proxifier.com/)
+- [reqable](https://github.com/reqable/reqable-app)
 - [Stream](https://apps.apple.com/app/stream/id1312141691) iOS 抓包
+- [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12
 
 ## CI/CD
 
@@ -112,6 +126,10 @@
 - [Aliyun](https://www.aliyun.com/)
 - [Vercel](https://vercel.com/)：前端托管与边缘函数
 
+### 域名
+
+### 境内备案
+
 ### CDN 服务
 
 - [Atlassian Statuspage](https://www.atlassian.com/software/statuspage/pricing)
@@ -119,7 +137,6 @@
 ## 可观测
 
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma)
-
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
 
@@ -136,10 +153,18 @@
 
 ## 运营
 
+### 宣传
+
+- [Product Hunt](https://www.producthunt.com/)
+- [X](https://x.com/)
+
+### 产品介绍
+
+- [Figma](https://www.figma.com/): 产品设计与原型设计
+- [Jitter](https://jitter.video/templates/devices/): 产品视频介绍模版
+
 ### 用户洞察
 
-- [GrowthBook](https://www.growthbook.io/)：开源 A/B Test 平台
-- [PostHog](https://posthog.com/)：产品分析与事件追踪
 - [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 
 ## License

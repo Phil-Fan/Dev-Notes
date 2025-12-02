@@ -165,6 +165,7 @@ npx create-next-app@latest my-app
 
 ### 用户洞察
 
+- [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
 - [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 
 ## License

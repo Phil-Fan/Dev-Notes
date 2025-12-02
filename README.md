@@ -58,13 +58,16 @@
 
 ### MCP
 
-- [Playwright - Context7](https://context7.com/websites/playwright_dev)
-- [shadcn](https://ui.shadcn.com/)
+- [Context7 MCP](https://github.com/upstash/context7)
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp)
+- [shadcn MCP](https://ui.shadcn.com/)
 
 ## IDE
 
 - [Vim](https://www.vim.org/)
+- [lazyvim](https://www.lazyvim.org)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Trae CN](https://www.trae.cn)
 
 ## 语言&框架
 
@@ -76,7 +79,7 @@
 
 - [Next.js](https://nextjs.org/)
   - [TypeScript](https://github.com/microsoft/TypeScript)
-  - [biome](https://github.com/biomejs/biome): 轻量、CI/CD 友好的 Linter
+  - [biome](https://github.com/biomejs/biome): 配置更简单、更快速的 linter/formater
   - [shadcn/ui](https://ui.shadcn.com/)
     - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
 
@@ -92,9 +95,10 @@ npx create-next-app@latest my-app
 
 - [FastAPI](https://github.com/fastapi/fastapi)
 
-### OAuth 服务
+### 用户管理与认证
 
 - [Casdoor](https://github.com/casdoor/casdoor)
+- [next-auth](https://next-auth.js.org)
 
 ### 数据库
 
@@ -115,6 +119,9 @@ npx create-next-app@latest my-app
 ## CI/CD
 
 - [GitHub Actions](https://github.com/features/actions)
+- [dokploy](https://dokploy.com)
+- [coolify](https://coolify.io)
+- [jenkins](https://www.jenkins.io)
 - [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
 - [Drone CI](https://github.com/harness/drone)
 

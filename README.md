@@ -39,6 +39,7 @@
     - [宣传](#宣传)
     - [产品介绍](#产品介绍)
     - [用户洞察](#用户洞察)
+  - [其他](#其他)
   - [License](#license)
   - [Contributing](#contributing)
   - [Acknowledgments](#acknowledgments)
@@ -112,14 +113,14 @@ npx create-next-app@latest my-app
 ## 网络
 
 - [Caddy](https://github.com/caddyserver/caddy)：非常简单的反向代理工具
-- [ZeroTier](https://www.zerotier.com/) 内网穿透工具
+- [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
 
 ### 抓包
 
 - [Wireshark](https://www.wireshark.org/)
-- [reqable](https://github.com/reqable/reqable-app)
+- [Reqable](https://github.com/reqable/reqable-app) 小黄鸟，可抓包小程序
 - [Stream](https://apps.apple.com/app/stream/id1312141691) iOS 抓包
-- [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12
+- [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12，Mac 不可用
 
 ## CI/CD
 
@@ -155,6 +156,7 @@ npx create-next-app@latest my-app
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
+- [Logfire](https://logfire.pydantic.dev/)：日志分析与可视化
 
 ## 文档工具
 
@@ -186,6 +188,14 @@ npx create-next-app@latest my-app
 
 - [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
 - [Google Analytics](https://marketingplatform.google.com/about/analytics/)
+
+## 其他
+
+- 软著登记：[中国版权保护中心](https://www.ccopyright.com.cn/)
+- 专利申请：[专利业务办理系统](https://cponline.cnipa.gov.cn/)
+- 商标注册：[国家知识产权局商标局](https://sbj.cnipa.gov.cn/sbj/index.html)
+- ICP 备案：[ICP 信息备案管理系统](https://beiancx.miit.gov.cn)
+- ICP 资质：
 
 ## License
 

@@ -10,39 +10,6 @@
 [![GitHub Issues](https://img.shields.io/github/issues/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/issues)
 [![CC0 License](https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat-square)](LICENSE)
 
-## 目录
-
-- [Awesome Full Stack](#awesome-full-stack)
-  - [目录](#目录)
-  - [信息源](#信息源)
-  - [AI 相关](#ai-相关)
-    - [MCP](#mcp)
-  - [IDE](#ide)
-  - [Template](#template)
-  - [前端](#前端)
-  - [后端](#后端)
-    - [用户管理与认证](#用户管理与认证)
-    - [数据库](#数据库)
-    - [中间件](#中间件)
-    - [应用部署](#应用部署)
-    - [CI/CD](#cicd)
-    - [运维与监控](#运维与监控)
-  - [网络](#网络)
-    - [抓包](#抓包)
-  - [文档工具](#文档工具)
-  - [云服务](#云服务)
-    - [厂商](#厂商)
-    - [域名](#域名)
-    - [CDN 服务](#cdn-服务)
-  - [运营](#运营)
-    - [宣传](#宣传)
-    - [产品介绍](#产品介绍)
-    - [用户洞察](#用户洞察)
-  - [其他](#其他)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Acknowledgments](#acknowledgments)
-
 ## 信息源
 
 - [Linux.do](https://linux.do/)
@@ -121,6 +88,11 @@ npx create-next-app@latest my-app
 - [Docker](https://www.docker.com/)
 - [Kubernetes](https://kubernetes.io/)
 
+**网络**
+
+- [Caddy](https://github.com/caddyserver/caddy)：非常简单的反向代理工具
+- [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
+
 ### CI/CD
 
 - [GitHub Actions](https://github.com/features/actions)
@@ -137,28 +109,14 @@ npx create-next-app@latest my-app
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
 
-## 网络
+### 其他
 
-- [Caddy](https://github.com/caddyserver/caddy)：非常简单的反向代理工具
-- [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
-
-### 抓包
+**抓包**
 
 - [Wireshark](https://www.wireshark.org/)
 - [Reqable](https://github.com/reqable/reqable-app) 小黄鸟，可抓包小程序
 - [Stream](https://apps.apple.com/app/stream/id1312141691) iOS 抓包
 - [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12，Mac 不可用
-
-## 文档工具
-
-- [MkDocs](https://www.mkdocs.org/)
-- [VuePress](https://vuepress.vuejs.org)
-- [fumadocs](https://github.com/fuma-nama/fumadocs)
-- [Jekyll](https://jekyllrb.com)
-  - [minima](https://github.com/jekyll/minima)
-
-- [reveal-md](https://github.com/webpro/reveal-md)
-- [Slidev](https://sli.dev/)
 
 ## 云服务
 
@@ -183,6 +141,17 @@ npx create-next-app@latest my-app
 - [Product Hunt](https://www.producthunt.com/)
 - [X](https://x.com/)
 
+### 内容与文档
+
+- [MkDocs](https://www.mkdocs.org/)
+- [VuePress](https://vuepress.vuejs.org)
+- [fumadocs](https://github.com/fuma-nama/fumadocs)
+- [Jekyll](https://jekyllrb.com)
+  - [minima](https://github.com/jekyll/minima)
+
+- [reveal-md](https://github.com/webpro/reveal-md)
+- [Slidev](https://sli.dev/)
+
 ### 产品介绍
 
 - [Figma](https://www.figma.com/): 产品设计与原型设计
@@ -196,7 +165,7 @@ npx create-next-app@latest my-app
 - [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
 - [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 
-## 其他
+### 流程与合规
 
 - 软著登记：[中国版权保护中心](https://www.ccopyright.com.cn/)
 - 专利申请：[专利业务办理系统](https://cponline.cnipa.gov.cn/)

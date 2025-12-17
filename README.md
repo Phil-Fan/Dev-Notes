@@ -20,12 +20,19 @@
 ## AI 相关
 
 - CLI 工具
-  - Codex
-  - Claude Code
-  - Gemini CLI
+  - [Codex](https://github.com/openai/codex)
+  - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew)
+  - [Gemini CLI](https://github.com/google/gemini-cli)
+
+    ```shell
+    brew install --cask codex
+    brew install --cask claude-code
+    brew install gemini-cli
+    ```
+
 - IDE
-  - Cursor
-  - Windsurf
+  - [Cursor](https://cursor.com/home)
+  - [Windsurf](https://windsurf.com/download/editor)
 - Spec Tools
   - [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
   - [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
@@ -72,6 +79,9 @@ npx create-next-app@latest my-app
 ## 后端
 
 - [Python](https://www.python.org/)
+  - [uv](https://github.com/astral-sh/uv): package and project manager
+  - [ruff](https://github.com/astral-sh/ruff): linter and code formatter
+  - [ty](https://github.com/astral-sh/ty): type checker and language server
   - [fastapi](https://github.com/tiangolo/fastapi)
 - [Go](https://go.dev/)
   - [gin](https://github.com/gin-gonic/gin)

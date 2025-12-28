@@ -19,7 +19,9 @@
 
 ## AI 相关
 
+- [cherry-studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
 - CLI 工具
+  - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
   - [Codex](https://github.com/openai/codex)
   - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew)
   - [Gemini CLI](https://github.com/google/gemini-cli)
@@ -42,8 +44,11 @@
 - [Context7 MCP](https://github.com/upstash/context7)
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
 - [shadcn MCP](https://ui.shadcn.com/)
+- [Exa MCP](https://docs.exa.ai/reference/exa-mcp)
 
 ## IDE
+
+- [iTerm2](https://github.com/gnachman/iTerm2)：Mac 下最好的终端
 
 - [Vim](https://www.vim.org/)
 - [lazyvim](https://www.lazyvim.org)

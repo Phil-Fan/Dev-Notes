@@ -19,36 +19,39 @@
 
 ## AI 相关
 
+### My Best Practices
+
+- 能用 AI 做，不要自己做，逐渐放手。领悟的最好方法是让 Agent Tool 在你的专业领域完成你指定的工作，然后查看效果。
+- 确定好技术栈，用**脚手架和模板**框定 AI 能力边界！用**脚手架和模板**框定 AI 能力边界！
+- 需求对话占据 80% 的时间，然后 DEBUG 和迭代占据 20% 的时间。
+- 白嫖很好，但有时候免费的才是最贵的。
+- 任务不要太长，记得 /compact
+- 睡前可以挂一个免费的模型跑任务 :laughing:
+
 - [cherry-studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
-- [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
 
-- CLI 工具
-  - [OpenCode](https://opencode.ai/)
-    - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
-  - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
-  - [Codex](https://github.com/openai/codex)
-  - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew)
-    - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
-  - [Gemini CLI](https://github.com/google/gemini-cli)
+### CLI 工具
 
-    ```shell
-    brew install --cask codex
-    brew install --cask claude-code
-    brew install gemini-cli
-    ```
+- [OpenCode](https://opencode.ai/)
+  - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
+- [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
+- [Codex](https://github.com/openai/codex): Debug 很好，能力很强，但是任务运行时间太久
+- [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全。
+  - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
+- [Gemini CLI](https://github.com/google/gemini-cli)：UI 大师
 
-- IDE
-  - [Cursor](https://cursor.com/home)
-  - [Windsurf](https://windsurf.com/download/editor)
-  - [Google Antigravity](https://antigravity.google/)
-  - [Trae CN](https://www.trae.cn)
-  - [Visual Studio Code](https://code.visualstudio.com/)
-- Spec Tools
-  - [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
-  - [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
-  
-- 知识库
-  - [腾讯 AI 工作台](https://ima.qq.com/)
+```shell
+brew install --cask codex
+brew install --cask claude-code
+brew install gemini-cli
+```
+
+### IDE
+
+- [Cursor](https://cursor.com/home)：Tab 神器
+- [Antigravity](https://antigravity.google/), [Windsurf](https://windsurf.com/download/editor)
+- [Trae CN](https://www.trae.cn)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ### MCP
 
@@ -57,6 +60,27 @@
 - [shadcn MCP](https://ui.shadcn.com/)
 - [Exa MCP](https://docs.exa.ai/reference/exa-mcp)
 - [GitHub MCP](https://github.com/github/github-mcp-server): GitHub's official MCP Server
+
+### Spec Tools
+
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
+- [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
+
+提问语句：
+
+```text
+read this @SPEC.md and interview me in detail using the AskUserQuestionTool about literally anything: technical implementation, UI & UX, concerns, tradeoffs, etc. but make sure the questions are not obvious
+
+be very in-depth and continue interviewing me continually until it's complete, then write the spec to the file
+```
+  
+### 知识库
+
+- [腾讯 AI 工作台](https://ima.qq.com/): 腾讯良心产品
+
+### 图像
+
+- [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
 
 ## 工具
 

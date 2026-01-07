@@ -30,17 +30,20 @@
 > - 任务不要太长，记得 /compact
 > - 睡前可以挂一个免费的模型跑任务 😆
 
-- [cherry-studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
+- [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client. 
+  - 可以当做 API key 管理器
+  - AI app all in one
+  - 知识库、agent 都可以放在一起用
 
 ### CLI 工具
 
-- [OpenCode](https://opencode.ai/)
+- [OpenCode](https://opencode.ai/)：用户体验不错。
   - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
 - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
 - [Codex](https://github.com/openai/codex): Debug 很好，能力很强，但是任务运行时间太久
-- [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全。
+- [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全，有一些奇怪小 Bug。可以上一些国产模型，比如 MiniMax GLM 等
   - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
-- [Gemini CLI](https://github.com/google/gemini-cli)：UI 大师
+- [Gemini CLI](https://github.com/google/gemini-cli)：UI 可以
 
 ```shell
 brew install --cask codex
@@ -50,7 +53,7 @@ brew install gemini-cli
 
 ### IDE
 
-- [Cursor](https://cursor.com/home)：Tab 神器
+- [Cursor](https://cursor.com/home)：Tab 神器，新上 Plan 模式和网页模式挺有意思的。
 - [Antigravity](https://antigravity.google/), [Windsurf](https://windsurf.com/download/editor)
 - [Trae CN](https://www.trae.cn)
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -62,6 +65,8 @@ brew install gemini-cli
 - [shadcn MCP](https://ui.shadcn.com/)
 - [Exa MCP](https://docs.exa.ai/reference/exa-mcp)
 - [GitHub MCP](https://github.com/github/github-mcp-server): GitHub's official MCP Server
+- [高德地图 MCP Server](https://lbs.amap.com/api/mcp-server/summary): 高德地图 API 的 MCP Server
+- [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp): Chrome DevTools for coding agents
 
 ### Spec Tools
 
@@ -78,7 +83,7 @@ be very in-depth and continue interviewing me continually until it's complete, t
   
 ### 知识库
 
-- [腾讯 AI 工作台](https://ima.qq.com/): 腾讯良心产品
+- [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
 
 ### 图像
 

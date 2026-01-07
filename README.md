@@ -248,6 +248,7 @@ npx create-next-app@latest my-app
 - 阅读并遵循 [Contributing Guide](CONTRIBUTING.md)。
 - 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](.github/CODE_OF_CONDUCT.md)。
 - 使用 [Issue Templates](.github/ISSUE_TEMPLATE) 与 [Pull Request Template](.github/pull_request_template.md) 保持讨论高效。
+- 本项目使用 pre-commit 进行代码规范检查，详见 [Hooks Setup](HOOKS_SETUP.md)。
 
 ![Star history](https://api.star-history.com/svg?repos=Phil-Fan/Awesome-full-stack&type=Date)
 

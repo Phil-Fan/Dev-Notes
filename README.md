@@ -4,11 +4,7 @@
 
 收藏一些全栈开发相关的工具、资源、教程、最佳实践。
 
-[![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![GitHub Stars](https://img.shields.io/github/stars/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/issues)
-[![CC0 License](https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat-square)](LICENSE)
+[![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re) [![GitHub Stars](https://img.shields.io/github/stars/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/network/members) [![GitHub Issues](https://img.shields.io/github/issues/Phil-Fan/Awesome-full-stack?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/issues) [![CC0 License](https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat-square)](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/LICENSE)
 
 ## 信息源
 
@@ -98,9 +94,16 @@ be very in-depth and continue interviewing me continually until it's complete, t
 
 - [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
 
-### 图像
+### 多模态
 
-- [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
+- Image
+  - 🍌
+    - [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
+- Video
+  - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
+  - [Veo - Google DeepMind](https://deepmind.google/models/veo/)
+- Audio
+  - TTS: [ElevenLabs](https://elevenlabs.io)
 
 ## 工具
 
@@ -173,7 +176,7 @@ npx create-next-app@latest my-app
 
 ### 网络
 
-- [Caddy](https://github.com/caddyserver/caddy)：非常简单的反向代理工具
+- [Caddy](https://github.com/caddyserver/caddy)：反向代理最佳实践
 - [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
 
 ### CI/CD
@@ -256,14 +259,13 @@ npx create-next-app@latest my-app
 
 ## License
 
-- 本项目采用 [CC0 1.0 Universal](LICENSE)，你可以自由复制、分享与改编。
+- 本项目采用 [CC0 1.0 Universal](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/LICENSE)，你可以自由复制、分享与改编。
 
 ## Contributing
 
-- 阅读并遵循 [Contributing Guide](CONTRIBUTING.md)。
-- 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](.github/CODE_OF_CONDUCT.md)。
-- 使用 [Issue Templates](.github/ISSUE_TEMPLATE) 与 [Pull Request Template](.github/pull_request_template.md) 保持讨论高效。
-- 本项目使用 pre-commit 进行代码规范检查，详见 [Hooks Setup](HOOKS_SETUP.md)。
+- 阅读并遵循 [Contributing Guide](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/.github/CONTRIBUTING.md)。
+- 提交或修改资源前请确认链接有效，并参考 [Code of Conduct](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/.github/CODE_OF_CONDUCT.md)。
+- 使用 [Issue Templates](https://github.com/Phil-Fan/Awesome-full-stack/issues/new/choose) 与 [Pull Request Template](https://github.com/Phil-Fan/Awesome-full-stack/blob/main/.github/pull_request_template.md) 保持讨论高效。
 
 ![Star history](https://api.star-history.com/svg?repos=Phil-Fan/Awesome-full-stack&type=Date)
 

@@ -1,0 +1,214 @@
+/**
+ * 自定义样式
+ * 处理 MkDocs 风格的提示块和其他样式
+ */
+
+/* MkDocs 风格提示块样式转换 */
+.vp-note,
+.vp-tip,
+.vp-warning,
+.vp-danger,
+.vp-info,
+.vp-success,
+.vp-bug,
+.vp-question,
+.vp-failure,
+.vp-example,
+.vp-abstract,
+.vp-quote {
+  margin: 1rem 0;
+  padding: 0.1rem 1.5rem;
+  border-left: 0.5rem solid;
+  border-radius: 0.25rem;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.vp-note {
+  border-color: #448aff;
+}
+
+.vp-tip {
+  border-color: #00c853;
+}
+
+.vp-warning {
+  border-color: #ffab00;
+  background-color: #ffab0010;
+}
+
+.vp-danger {
+  border-color: #ff1744;
+  background-color: #ff174410;
+}
+
+.vp-info {
+  border-color: #2196f3;
+}
+
+.vp-success {
+  border-color: #00c853;
+  background-color: #00c85310;
+}
+
+.vp-bug {
+  border-color: #f50057;
+}
+
+.vp-question {
+  border-color: #64dd17;
+}
+
+.vp-failure {
+  border-color: #d50000;
+}
+
+.vp-example {
+  border-color: #7c4dff;
+}
+
+.vp-abstract {
+  border-color: #00b0ff;
+}
+
+.vp-quote {
+  border-color: #9e9e9e;
+  border-left-width: 0.25rem;
+}
+
+/* Bilibili 视频嵌入样式 */
+iframe[src*="bilibili"] {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* 代码块样式增强 */
+.vp-code-group {
+  margin: 1rem 0;
+}
+
+/* 图片响应式 */
+img {
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* GitHub 风格的警告框样式 */
+:where(.VPDoc) details.alert {
+  border-radius: 0.5rem;
+  padding: 0 1.25rem;
+  margin: 1rem 0;
+  border-left: 0.5rem solid;
+}
+
+:where(.VPDoc) details.alert>[summary] {
+  font-weight: 600;
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+:where(.VPDoc) details.alert>[summary]::-webkit-details-marker {
+  display: none;
+}
+
+/* 首页样式增强 */
+.VPHome {
+  padding-top: 0 !important;
+}
+
+.VPHero .action {
+  gap: 0.5rem;
+}
+
+.VPHero .action .VPButton {
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.VPHero .action .VPButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 特性卡片样式 */
+.VPFeature {
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px);
+}
+
+.VPFeature .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 资源列表样式 */
+.awesome-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.awesome-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.awesome-list li:last-child {
+  border-bottom: none;
+}
+
+.awesome-list li:hover {
+  background-color: var(--vp-c-bg-soft);
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+/* 链接样式优化 */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 代码块标题样式 */
+div[class*="language-"]::before {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* 表格样式 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table th,
+table td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+table tr:hover {
+  background-color: var(--vp-c-bg-soft);
+}

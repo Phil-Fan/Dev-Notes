@@ -1,0 +1,14 @@
+{
+  "name": "awesome-full-stack-docs",
+  "version": "1.0.0",
+  "description": "全栈开发资源与知识库",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

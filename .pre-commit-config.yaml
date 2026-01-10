@@ -1,0 +1,16 @@
+repos:
+  - repo: local
+    hooks:
+      - id: markdownlint
+        name: markdownlint (local)
+        entry: markdownlint
+        args: ["--fix", "--config", ".github/.markdownlint.yaml"]
+        language: system
+        types_or: [markdown]
+
+      - id: autocorrect
+        name: autocorrect (local)
+        entry: autocorrect
+        language: system
+        args: ["--fix"]
+        types_or: [markdown, text]

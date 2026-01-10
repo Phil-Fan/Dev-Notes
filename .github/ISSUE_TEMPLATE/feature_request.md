@@ -4,6 +4,8 @@ about: 建议新增分类、资源或自动化能力
 labels: enhancement
 ---
 
+# Feature Request
+
 ## 背景 Background
 
 为什么需要这个功能/资源？解决什么痛点？

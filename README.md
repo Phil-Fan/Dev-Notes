@@ -91,6 +91,7 @@ be very in-depth and continue interviewing me continually until it's complete, t
 - [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): 多平台专业 UI/UX 设计智能
 - [notebooklm-skill](https://github.com/PleasePrompto/notebooklm-skill): Claude Code 与 Google NotebookLM 通信，查询上传文档并获取基于引用的答案
 - [obsidian-skills](https://github.com/kepano/obsidian-skills): Obsidian 的 Claude Skills 集合
+- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code): Claude Code 精选命令、文件和工作流列表
 
 ### 知识库
 

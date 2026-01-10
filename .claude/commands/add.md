@@ -35,11 +35,14 @@ allowed-tools: [Read, Edit, Bash]
 ## 添加规则
 
 1. **格式化**：
-   ```
+
+   ```text
    - [名称](链接): 描述
    ```
+
    或无描述：
-   ```
+
+   ```text
    - [名称](链接)
    ```
 
@@ -66,7 +69,7 @@ allowed-tools: [Read, Edit, Bash]
 
 ## 示例
 
-```
+```text
 /add uv https://github.com/astral-sh/uv 快速的 Python 包管理器
 → 添加到 后端 → Python 下
 

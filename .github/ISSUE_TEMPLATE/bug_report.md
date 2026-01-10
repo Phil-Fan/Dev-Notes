@@ -4,6 +4,8 @@ about: 告知我们仓库中的 bug、链接失效或描述错误
 labels: bug
 ---
 
+# Bug Report
+
 ## 描述 Description
 
 清晰描述问题以及你预期的行为/结果。

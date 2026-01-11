@@ -33,7 +33,7 @@ ruby -v
 
 :::info 安装指令
 
-**linux or wsl**
+### linux or wsl
 
 ```shell title="linux or wsl"
 sudo apt update && sudo apt upgrade -y
@@ -49,7 +49,7 @@ source ~/.bashrc
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 ```
 
-**macos**
+### macos
 
 ```shell title="macos"
 brew install rbenv ruby-build

@@ -1,6 +1,6 @@
 # Server
 
-:::tip 
+:::tip
 备忘记录一些实验室服务器和云服务器的操作，以 linux 为主
 :::
 
@@ -155,6 +155,7 @@ huggingface-cli download --resume-download <model_name> --local-dir <path>
 ```shell
 pip install -U "huggingface_hub[cli]
 ```
+
 ```shell
 hf download <model_name>
 ```
@@ -480,6 +481,7 @@ sudo ufw allow 7500/tcp    # 仪表盘
 sudo ufw allow 40443/tcp   # HTTP 穿透
 sudo ufw allow 40800/tcp   # HTTPS 穿透
 ```
+
 :::
 
 ```shell title="后台运行"

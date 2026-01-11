@@ -232,7 +232,6 @@ conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/clo
 conda config --set show_channel_urls yes
 ```
 
-
 ustc 源
 
 ```shell
@@ -244,7 +243,6 @@ conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
 conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
 conda config --set show_channel_urls yes
 ```
-
 
 ### 换 pip 源
 

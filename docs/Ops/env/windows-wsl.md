@@ -104,14 +104,14 @@ wsl --shutdown
 
 适合本地开发使用。
 
-**1. 安装 SSH 服务**
+#### 1. 安装 SSH 服务
 
 ```bash
 sudo apt update
 sudo apt install openssh-server net-tools -y
 ```
 
-**2. 编辑配置文件**
+#### 2. 编辑配置文件
 
 ```bash
 sudo vim /etc/ssh/sshd_config
@@ -127,7 +127,7 @@ PasswordAuthentication yes
 PermitRootLogin no           # 安全起见禁用 root 登录
 ```
 
-**3. 启动服务**
+#### 3. 启动服务
 
 ```bash
 # 启动 SSH
@@ -145,7 +145,7 @@ sudo ss -tlnp | grep ssh
 
 应该看到 `0.0.0.0:22` 和 `0.0.0.0:2222`
 
-**4. 免密登录**
+#### 4. 免密登录
 
 ```powershell title="Windows PowerShell"
 # 生成密钥对
@@ -164,7 +164,7 @@ echo "粘贴的公钥内容" >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ```
 
-**5. 连接测试**
+#### 5. 连接测试
 
 ```bash title="从 Windows 连接"
 ssh -p 2222 username@localhost
@@ -174,7 +174,7 @@ ssh -p 2222 username@localhost
 
 WSL2 新版本支持镜像网络模式，WSL 与宿主机共用 IP。
 
-**1. 配置 `.wslconfig`**
+#### 1. 配置 `.wslconfig`
 
 ```powershell title="Windows PowerShell"
 notepad $env:USERPROFILE\.wslconfig
@@ -201,7 +201,7 @@ hostAddressLoopback=true
 
 :::
 
-**2. 重启 WSL**
+#### 2. 重启 WSL
 
 ```powershell title="PowerShell (管理员)"
 wsl --shutdown
@@ -216,7 +216,7 @@ wsl --version
 
 确保为 `2.0.0+`，推荐 `2.0.14.0` 以上。
 
-**3. 配置 SSH 服务**
+#### 3. 配置 SSH 服务
 
 ```bash
 # 安装
@@ -239,7 +239,7 @@ PasswordAuthentication yes
 sudo service ssh restart
 ```
 
-**4. 开放防火墙**
+#### 4. 开放防火墙
 
 :::warning Hyper-V 防火墙
 
@@ -255,7 +255,7 @@ Set-NetFirewallHyperVVMSetting -Name '{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}' -D
 
 :::
 
-**5. 测试连接**
+#### 5. 测试连接
 
 ```powershell title="Windows 本机"
 ssh username@localhost -p 8022
@@ -270,7 +270,7 @@ ssh username@<Windows_IP> -p 8022
 
 适用于旧版本 WSL2 或 NAT 模式。
 
-**1. 查找 WSL IP**
+#### 1. 查找 WSL IP
 
 ```bash title="WSL 中执行"
 ip addr show eth0 | grep inet
@@ -280,7 +280,7 @@ ip addr show eth0 | grep inet
 
 ⚠️ 注意：WSL 重启后 IP 会变化。
 
-**2. Windows 端口转发**
+#### 2. Windows 端口转发
 
 ```powershell title="PowerShell (管理员)"
 # 配置端口转发
@@ -290,7 +290,7 @@ netsh interface portproxy add v4tov4 listenport=2222 listenaddress=0.0.0.0 conne
 netsh advfirewall firewall add rule name="WSL SSH 2222" dir=in action=allow protocol=TCP localport=2222
 ```
 
-**3. 自动更新转发脚本**
+#### 3. 自动更新转发脚本
 
 WSL IP 变化时自动更新转发规则：
 

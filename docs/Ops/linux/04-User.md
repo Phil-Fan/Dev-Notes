@@ -92,7 +92,7 @@ r-- = 4
 
 Linux 文件权限分为三组：
 
-```
+```text
 -rwxr-xr-- file.txt
  ││  ││  ││
  ││  ││  └─── 其他人 (others)

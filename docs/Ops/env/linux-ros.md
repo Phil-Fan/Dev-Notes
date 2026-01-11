@@ -7,6 +7,7 @@ ROS (Robot Operating System) 是机器人操作系统，用于编写机器人软
 ROS 不是传统意义上的操作系统，而是一个**中间件**或**框架**，运行在 Linux (Ubuntu) 之上，提供机器人开发所需的通信、硬件抽象、设备驱动等功能。
 
 **类比理解：**
+
 - Linux 是电脑的"地基"
 - ROS 是盖房子的"脚手架"
 - 你写的代码是"房子"
@@ -21,30 +22,34 @@ ROS 不是传统意义上的操作系统，而是一个**中间件**或**框架*
 
 :::info
 
-节点 (Node) 是 ROS 中的独立进程，每个节点负责一个具体任务。 公司里的不同部门员工，各司其职。
+节点 (Node) 是 ROS 中的独立进程，每个节点负责一个具体任务。公司里的不同部门员工，各司其职。
+
 - 摄像头节点 - 负责采集图像
 - 激光雷达节点 - 负责采集距离数据
 - 导航节点 - 负责规划路径
 
-话题 (Topic) 是节点间传递数据的"管道"，采用**发布-订阅**模式。公司里的公告栏，任何人都可以发布消息，任何人都可以订阅消息。
+话题 (Topic) 是节点间传递数据的"管道"，采用**发布 - 订阅**模式。公司里的公告栏，任何人都可以发布消息，任何人都可以订阅消息。
 
 - 单向通信（发布者 → 订阅者）
 - 异步通信（非实时）
 - 一对多（一个发布者，多个订阅者）
 
 **示例：**
+
 - `/camera/image_raw` - 摄像头图像话题
 - `/cmd_vel` - 速度控制话题
 - `/scan` - 激光雷达数据话题
 
-服务 (Service) 是节点间的双向通信，采用**请求-响应**模式。客户请求服务，服务器处理后返回结果。
+服务 (Service) 是节点间的双向通信，采用**请求 - 响应**模式。客户请求服务，服务器处理后返回结果。
 
 **特点：**
+
 - 双向通信（请求 → 响应）
 - 同步通信（等待响应）
 - 一对一（一个客户端，一个服务端）
 
 **示例：**
+
 - `/spawn` - 生成新的海龟
 - `/clear` - 清空轨迹
 - `/kill` - 删除海龟
@@ -226,7 +231,7 @@ rosparam dump file.yaml
 
 ### 工作空间结构
 
-```
+```text
 catkin_ws/          # 工作空间根目录
 ├── src/            # 源代码空间（放功能包）
 ├── build/          # 编译空间（自动生成）
@@ -280,7 +285,7 @@ source ~/.bashrc
 
 ### 功能包结构
 
-```
+```text
 my_package/              # 功能包根目录
 ├── CMakeLists.txt       # 编译规则
 ├── package.xml          # 包信息（依赖、版本等）
@@ -349,12 +354,14 @@ rosrun rviz rviz
 ```
 
 **常用操作：**
+
 - 鼠标左键：旋转视角
 - 鼠标中键：平移视角
 - 鼠标滚轮：缩放
 - 鼠标右键：设置 2D/3D 切换
 
 **添加显示内容：**
+
 - 点击左下角 "Add" 按钮
 - 选择要显示的类型（如 PointCloud2、LaserScan、Image）
 - 设置对应的话题
@@ -394,6 +401,7 @@ rosrun plotjuggler plotjuggler
 ```
 
 **使用方法：**
+
 1. File → Load DataBag → 选择 `.bag` 文件
 2. 将话题拖到右侧绘图区域
 3. 实时查看数据变化
@@ -409,6 +417,7 @@ rosrun plotjuggler plotjuggler
 :::tip 为什么需要 Launch？
 
 手动启动节点：
+
 ```bash
 # 终端 1
 roscore
@@ -424,6 +433,7 @@ rosrun package3 node3
 ```
 
 使用 Launch 文件：
+
 ```bash
 roslaunch my_package all_nodes.launch
 ```
@@ -497,7 +507,7 @@ roscd my_package
 mkdir msg
 ```
 
-2. 创建消息文件 `msg/Person.msg`：
+1. 创建消息文件 `msg/Person.msg`：
 
 ```msg
 string name
@@ -505,7 +515,7 @@ uint8 age
 float32 height
 ```
 
-3. 修改 `package.xml` 和 `CMakeLists.txt`：
+1. 修改 `package.xml` 和 `CMakeLists.txt`：
 
 ```xml
 <!-- package.xml -->
@@ -527,7 +537,7 @@ add_message_files(FILES Person.msg)
 generate_messages(DEPENDENCIES std_msgs)
 ```
 
-4. 编译并使用：
+1. 编译并使用：
 
 ```bash
 cd ~/catkin_ws

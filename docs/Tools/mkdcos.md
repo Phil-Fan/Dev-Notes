@@ -474,7 +474,7 @@ plugins:
 
 :::warning 遇到的问题
 
-```
+```text
   DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
   given by the platformdirs library.  To remove this warning and
   see the appropriate new directories, set the environment variable

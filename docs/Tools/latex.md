@@ -12,30 +12,27 @@
 
 :::
 
-
 众所周知，大学中有很多课程都需要写实验报告/解题报告/小作业报告/论文等等，除却写作内容，排版也是非常令人头疼的一部分。常用的排版工具有两大类，一类是以 word 为代表的“所见即所得”式，另一类是像 LaTeX 这样子的“所想即所得”的编程式排版。
 
 发现身边有很多朋友并不是非常会排版，或者是排版会花费很多时间。而在现行的评价体系下，在内容质量大致相似的情况下，图文并茂，排版整洁的作业印象分一定会高不少。笔者 LaTeX 水平不高，目的就是想要快点把实验报告写掉:laughing:，中间也花了很多时间迭代几个模版，所以就有了这个笔记 + 分享性质的章节。
 
-这一个章节面向0 LaTeX 基础小白，使用`overleaf`平台，希望实现的效果是基本掌握后，只用15-20min就能完成日常论文/实验报告作业的排版。
-
-
+这一个章节面向 0 LaTeX 基础小白，使用`overleaf`平台，希望实现的效果是基本掌握后，只用 15-20min 就能完成日常论文/实验报告作业的排版。
 
 :::info
 
-我为什么要用 latex 
+我为什么要用 latex
 
-- 复用性高，所有设置都比较明晰 :yellow_heart: 
-- 只要做一个称心如意的模版，便可以**专注于内容本身，而将麻烦的排版交给编译器**:full_moon_with_face: 
-- 良好的公式体验：公式编辑较 word 方便和美观太多 
+- 复用性高，所有设置都比较明晰 :yellow_heart:
+- 只要做一个称心如意的模版，便可以**专注于内容本身，而将麻烦的排版交给编译器**:full_moon_with_face:
+- 良好的公式体验：公式编辑较 word 方便和美观太多
 - 公式、图表、参考文献可以自动标号
 
 当然，它也有一些缺点，比如图片排版较为复杂，调一个符合要求的模版比较困难，但是在当今 LLM 比较发达的今天，很多语法和格式问题都可以丢给 AI 来解决。
 
-我为什么要用 overleaf 
+我为什么要用 overleaf
 
-- 不用进行包管理、环境配置简单、打开网址就可以用 
-- 云端自动保存、不怕写了半天的论文突然消失 
+- 不用进行包管理、环境配置简单、打开网址就可以用
+- 云端自动保存、不怕写了半天的论文突然消失
 - 有很多模版供使用
 
 :::
@@ -261,14 +258,15 @@
 
 模版类
 
-- [如何使用zjuthesis编写毕业论文：LaTeX零基础入门](https://www.cc98.org/topic/5511675)
+- [如何使用 zjuthesis 编写毕业论文：LaTeX 零基础入门](https://www.cc98.org/topic/5511675)
 - [魔改了个课程大作业报告 Latex 模版](https://www.cc98.org/topic/5548440)
-- [Typora 实验报告模板 基于github上项目typora-latex-theme](https://www.cc98.org/topic/5834340)
-- [开坑LaTeX笔记模板，目标将ElegantNote斩于马下](https://www.cc98.org/topic/5337819)
-- [Latex笔记美化](https://www.cc98.org/topic/5325844)
-- [我是如何用vim+latex记笔记的](https://www.cc98.org/topic/5319293)
-- [发现一个超好用的\LaTeX公式和绘图工具](https://www.cc98.org/topic/5089911)
-- [开一个帖子记录下使用latex时学会的一些技巧](https://www.cc98.org/topic/5126300)
+- [Typora 实验报告模板 基于 github 上项目 typora-latex-theme](https://www.cc98.org/topic/5834340)
+- [开坑 LaTeX 笔记模板，目标将 ElegantNote 斩于马下](https://www.cc98.org/topic/5337819)
+- [Latex 笔记美化](https://www.cc98.org/topic/5325844)
+- [我是如何用 vim+latex 记笔记的](https://www.cc98.org/topic/5319293)
+- [发现一个超好用的\LaTeX 公式和绘图工具](https://www.cc98.org/topic/5089911)
+- [开一个帖子记录下使用 latex 时学会的一些技巧](https://www.cc98.org/topic/5126300)
+
 :::
 
 ## 本地环境配置

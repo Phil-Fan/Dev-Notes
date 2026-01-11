@@ -74,7 +74,7 @@ LAN 是**院子里的门**，WAN 是**通往大街的门**。路由器就是**�
 路由器存储器会出现坏块，导致系统不稳定。检查方法：
 
 ```html
-http://192.168.31.1/cgi-bin/luci/;stok=<你的stok>/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=%0A%5B%20-z%20%22%24(dmesg%20%7C%20grep%20ESMT)%22%20%5D%20%26%26%20B%3D%22Toshiba%22%20%7C%7C%20B%3D%22ESMT%22%0Auci%20set%20wireless.%24(uci%20show%20wireless%20%7C%20awk%20-F%20'.'%20'%2Fwl1%2F%20%7Bprint%20%242%7D').ssid%3D%22%24B%20%24(dmesg%20%7C%20awk%20'%2FBad%2F%20%7Bprint%20%245%7D')%22%0A%2Fetc%2Finit.d%2Fnetwork%20restart%0A
+http://192.168.31.1/cgi-bin/luci/;stok=<你的 stok>/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=%0A%5B%20-z%20%22%24(dmesg%20%7C%20grep%20ESMT)%22%20%5D%20%26%26%20B%3D%22Toshiba%22%20%7C%7C%20B%3D%22ESMT%22%0Auci%20set%20wireless.%24(uci%20show%20wireless%20%7C%20awk%20-F%20'.'%20'%2Fwl1%2F%20%7Bprint%20%242%7D').ssid%3D%22%24B%20%24(dmesg%20%7C%20awk%20'%2FBad%2F%20%7Bprint%20%245%7D')%22%0A%2Fetc%2Finit.d%2Fnetwork%20restart%0A
 ```
 
 运行后 2.4G WiFi 名称会变成 `ESMT` 或 `Toshiba`，后面数字就是坏块数量。无数字 = 无坏块！
@@ -128,6 +128,7 @@ http://192.168.31.1/cgi-bin/luci/;stok=<你的stok>/api/misystem/set_config_iotd
 **作用：** 代替你发送请求，隐藏你的真实身份。
 
 **应用场景：**
+
 - 访问被封锁的网站
 - 保护隐私
 - 提高访问速度
@@ -141,6 +142,7 @@ http://192.168.31.1/cgi-bin/luci/;stok=<你的stok>/api/misystem/set_config_iotd
 **作用：** 代替服务器接收请求，隐藏服务器真实身份。
 
 **应用场景：**
+
 - 负载均衡
 - 缓存加速
 - 安全防护
@@ -223,6 +225,7 @@ V2Ray 订阅 → Subconverter → Clash 订阅
 ```
 
 **功能：**
+
 - 格式互转（Clash、Surge、Quantumult 等）
 - 规则合并
 - 自定义规则
@@ -297,19 +300,24 @@ tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect
 
 :::tip Some Protocols
 
-**SS（Shadowsocks）**
+### SS（Shadowsocks）
+
 - **特点**：简单高效，无混淆，易被封锁。
 - **格式**：
+
 ```shell title="格式"
 ss://加密方式:密码@服务器IP:端口#备注
 ```
+
 ```shell title="示例"
 ss://aes-256-gcm:password@1.1.1.1:443#测试节点
 ```
 
-**SSR（ShadowsocksR）**
+### SSR（ShadowsocksR）
+
 - **特点**：支持混淆和协议插件，抗封锁更强。
 - **格式**：
+
 ```shell title="格式"
 ssr://Base64编码(IP:端口:协议:加密:混淆:密码/?参数)
 ```
@@ -318,7 +326,8 @@ ssr://Base64编码(IP:端口:协议:加密:混淆:密码/?参数)
 ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw
 ```
 
-**VMess（V2Ray 协议）**
+### VMess（V2Ray 协议）
+
 - **特点**：动态端口，抗封锁强，配置复杂。
 - **格式**：
 

@@ -490,7 +490,7 @@ smbclinet //ip/name -U xxx
 
 :::tip 注意权限问题
 
-2. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
+1. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
 
 不然的话，不管使用命令访问还是使用图形界面访问都是会导致**报错没有权限**的问题
 
@@ -615,7 +615,7 @@ alias sudo='sudo env PATH=$PATH'
 
 ### sh: 0: getcwd() failed: No such file or directory
 
-一般来说是因为你 cd 到了某个目录之后 rm 了这个目录，这时去执行某些 service 脚本的时候就会报 get cwd 错误。 只需要 cd 到任何一个实际存在的目录下再执行就好了
+一般来说是因为你 cd 到了某个目录之后 rm 了这个目录，这时去执行某些 service 脚本的时候就会报 get cwd 错误。只需要 cd 到任何一个实际存在的目录下再执行就好了
 
 ### Could not load the Qt platform plugin “xcb“
 
@@ -680,7 +680,6 @@ vim /etc/apt/sources.list
 
 :::tip 注意换源的时候注意备份之前的
 
-
 ```shell
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 ```
@@ -702,6 +701,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
 ```
+
 ZJU mirror
 
 ```shell
@@ -717,19 +717,22 @@ Update
 sudo apt-get update
 sudo apt-get upgrade
 ```
-:::
 
+:::
 
 :::warning 404
 [Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有 release 文件所以禁用-CSDN 博客](https://blog.csdn.net/ys743276112/article/details/127436835)
 [sudo apt-get update 命令出现没有 Release 文件问题解决\_debian apt get update 没有 release 文件-CSDN 博客](https://blog.csdn.net/A18040554844/article/details/110099737)
 
-另外的解决方法，拉取https问题
+另外的解决方法，拉取 https 问题
+
 ```shell
 sudo apt install apt-transport-https
 sudo apt install ca-certificates
 ```
+
 :::
+
 ### 中文系统
 
 在系統中添加中文語言，既可以顯示中文，也可以輸入中文。
@@ -891,11 +894,12 @@ ssh-copy-id name@ip
 :::warning WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 警告：远程主机标识已更改！
 
-此报错是由于远程的主机的公钥发生了变化导致的。 ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。
+此报错是由于远程的主机的公钥发生了变化导致的。ssh 服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh 就会核对公钥，如果和上次记录的不同，OpenSSH 会发出警告。
 
 ```shell title="解决方法"
 ssh-keygen -R XX.XX.XX.XX
 ```
+
 :::
 
 ### X11 设置 GUI

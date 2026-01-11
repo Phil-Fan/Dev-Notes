@@ -51,7 +51,7 @@ clear                     # 清屏（cmd 用 cls）
 Get-ExecutionPolicy -List
 ```
 
-3. 更改执行策略：
+1. 更改执行策略：
 
 ```powershell
 # 仅对当前用户
@@ -61,8 +61,8 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
 ```
 
-4. 输入 `Y` 确认更改
-5. 重新打开终端验证
+1. 输入 `Y` 确认更改
+2. 重新打开终端验证
 
 :::
 
@@ -168,15 +168,15 @@ systeminfo
 
 :::info
 
-自定义短语:导入行业特殊词汇右键输入法设置 → 词库和自学习 → 自定义短语 → 导入行业特殊词汇
+自定义短语：导入行业特殊词汇右键输入法设置 → 词库和自学习 → 自定义短语 → 导入行业特殊词汇
 
-专业词典:默认未完全启用，需手动开启
+专业词典：默认未完全启用，需手动开启
 
-V 模式:快速输入中文年月日和公式
+V 模式：快速输入中文年月日和公式
 
-U 模式:输入特殊符号
+U 模式：输入特殊符号
 
-Emoji 面板: `Ctrl + Shift + B` 打开符号面板
+Emoji 面板：`Ctrl + Shift + B` 打开符号面板
 
 :::
 
@@ -217,12 +217,12 @@ start explorer.exe
 1. 运行 WinDBG，按 `Ctrl + S` 打开符号表设置
 2. 粘贴符号表地址：
 
-```
+```text
 SRV*C:\Symbols*http://msdl.microsoft.com/download/symbols
 ```
 
-3. `Ctrl + D` 打开 DMP 文件
-4. 首次打开时勾选 "Don't ask again in this WinDbg session"，点否
+1. `Ctrl + D` 打开 DMP 文件
+2. 首次打开时勾选 "Don't ask again in this WinDbg session"，点否
 
 :::tip 打开第二个 DMP 文件
 
@@ -273,7 +273,7 @@ SRV*C:\Symbols*http://msdl.microsoft.com/download/symbols
 netsh wlan show profiles
 
 # 查看指定 WiFi 密码
-netsh wlan show profile name="WiFi名称" key=clear
+netsh wlan show profile name="WiFi 名称" key=clear
 ```
 
 ### 关闭系统代理

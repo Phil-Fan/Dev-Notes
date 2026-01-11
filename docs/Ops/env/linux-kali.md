@@ -88,22 +88,23 @@ apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-pl
 
 :::info
 
-方法 1 在kali终端执行以下命令：
+方法 1 在 kali 终端执行以下命令：
 
 ```shell
 sudo metacity --replace      #打开窗口管理器
 ```
 
-如果没有metacity这个命令，就下载一下
+如果没有 metacity 这个命令，就下载一下
 
 ```shell
-apt-get install metacity          #下载metacity命令
+apt-get install metacity          #下载 metacity 命令
 ```
+
 下载之后再执行一遍上面那个命令就好了
 
-但有一个问题：每次打开kali都需要运行一遍上面第1条命令
+但有一个问题：每次打开 kali 都需要运行一遍上面第 1 条命令
 
-方法 2 重装lightdm，命令如下：
+方法 2 重装 lightdm，命令如下：
 
 ```shell
 sudo apt-get remove --purge lightdm

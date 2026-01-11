@@ -355,7 +355,7 @@ sqlmap.py -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --is-dba
 
 3、`--roles`：列出数据库管理员角色
 
-该命令用于查看数据库用户的角色。如果当前用户有权限读取包含所有用户的表，输入该命令会列举出每个用户的角色，也可以用-U参数指定想看哪个用户的角色，如图所示：
+该命令用于查看数据库用户的角色。如果当前用户有权限读取包含所有用户的表，输入该命令会列举出每个用户的角色，也可以用-U 参数指定想看哪个用户的角色，如图所示：
 
 ```shell
 sqlmap.py -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --roles
@@ -363,7 +363,7 @@ sqlmap.py -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --roles
 
 4、`--referer`：HTTP referer 头
 
-Sqlmap 可以在请求中伪造 HTTP 中的 referer，当--level参数设定为3或3以上时，会尝试对referer注入。可以使用referer命令来欺骗，例：
+Sqlmap 可以在请求中伪造 HTTP 中的 referer，当--level 参数设定为 3 或 3 以上时，会尝试对 referer 注入。可以使用 referer 命令来欺骗，例：
 
 ```shell
 sqlmap.py -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --referer http://www.baidu.com
@@ -371,7 +371,7 @@ sqlmap.py -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --referer http://www.baidu.
 
 5、`--sql-shell`：运行自定义 SQL 语句
 
-该命令用于执行指定的SQL语句，如下所示，假设执行select * from users limit 0,1语句，如下所示：
+该命令用于执行指定的 SQL 语句，如下所示，假设执行 select * from users limit 0,1 语句，如下所示：
 
 ```shell
 sqlmap.py -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --sql-shell
@@ -379,20 +379,20 @@ sqlmap.py -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --sql-shell
 
 6、`--os-cmd`，`--os-shell`：运行任意操作系统命令
 
-在当前用户有权限使用特定的函数的前提下，如果数据库为MySQL、PostgreSQL，Sqlmap会上传一个二进制库，包含用户自定义的函数sys_exec () 和sys_eval ()，那么创建的这两个函数就可以执行系统命令。
+在当前用户有权限使用特定的函数的前提下，如果数据库为 MySQL、PostgreSQL，Sqlmap 会上传一个二进制库，包含用户自定义的函数 sys_exec () 和 sys_eval ()，那么创建的这两个函数就可以执行系统命令。
 
-如果数据库是微软 SQL Server时，Sqlmap通过存储过程 xp_cmdshell 来执行任意命令，如果 xp_cmdshell 被禁用(SQL Server 2005及以上版本默认被禁用)，则Sqlmap会重新启用它；如果不存在，会自动创建。
+如果数据库是微软 SQL Server 时，Sqlmap 通过存储过程 xp_cmdshell 来执行任意命令，如果 xp_cmdshell 被禁用 (SQL Server 2005 及以上版本默认被禁用)，则 Sqlmap 会重新启用它；如果不存在，会自动创建。
 
-用`--os-shell`参数可以模拟一个真实的Shell，输入想执行的命令。当不能执行多语句时(如PHP或ASP+Mysql)，仍然可以使用 INTO OUTFILE写进可写目录，创建一个Web后门。
+用`--os-shell`参数可以模拟一个真实的 Shell，输入想执行的命令。当不能执行多语句时 (如 PHP 或 ASP+Mysql)，仍然可以使用 INTO OUTFILE 写进可写目录，创建一个 Web 后门。
 
-Sqlmap支持ASP、ASP.NET、JSP和PHP四种语言（要想执行该参数，需要有数据库管理员权限，也就是--is-dba的值要为True)。
+Sqlmap 支持 ASP、ASP.NET、JSP 和 PHP 四种语言（要想执行该参数，需要有数据库管理员权限，也就是--is-dba 的值要为 True)。
 
 - 执行系统命令：
-
 
 ```shell
 sqlmap -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --os-cmd=ipconfig
 ```
+
 执行后根据提示选择网站语言，然后回车，指定目标站点根目录，然后继续回车即可完整执行命令。
 
 - 执行 shell：
@@ -400,27 +400,32 @@ sqlmap -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --os-cmd=ipconfig
 ```shell
 sqlmap -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --os-shell
 ```
+
 执行后根据提示选择网站语言，然后回车，指定目标站点根目录后回车，输入命令即可执行。
 
 执行命令后会在网站根目录上传两个文件：tmpbxbxz.php、tmpuoiuz.php(此文件为上传页面)
 
 7、`--file-read`：从数据库服务器中读取文件
 
-该命令用于读取执行文件，当数据库为MySQL、PostgreSQL或MicrosoftSQL Server，并且当前用户有权限使用特定的函数时，读取的文件可以是文本，也可以是二进制文件。
+该命令用于读取执行文件，当数据库为 MySQL、PostgreSQL 或 MicrosoftSQL Server，并且当前用户有权限使用特定的函数时，读取的文件可以是文本，也可以是二进制文件。
+
 ```shell
 sqlmap -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --file-read "C:/11.txt"
 ```
+
 在这里插入图片描述
 执行完会把文件保存到本地目录下
 在这里插入图片描述
 
 8、`--file-write` `--file-dest`：上传文件到数据库服务器中
 
-该命令用于写入本地文件到服务器中，当数据库为MySQL、PostgreSQL或Microsoft SQL Server，并且当前用户有权限使用特定的函数时，上传的文件可以是文本，也可以是二进制文件。
+该命令用于写入本地文件到服务器中，当数据库为 MySQL、PostgreSQL 或 Microsoft SQL Server，并且当前用户有权限使用特定的函数时，上传的文件可以是文本，也可以是二进制文件。
+
 ```shell
 sqlmap -u http://127.0.0.1/sqli-labs/Less-1/?id=1 --file-write "C:/1.txt" --file-dest "C:/windows/Temp/1.php"
 ```
-执行结束即可把本地的1.txt 文件上传到目标服务器下
+
+执行结束即可把本地的 1.txt 文件上传到目标服务器下
 在这里插入图片描述
 :::
 

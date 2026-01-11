@@ -193,7 +193,7 @@ awk '{print tolower($0)}' file.txt   # 转小写
 awk '{print toupper($0)}' file.txt   # 转大写
 ```
 
-### 实用示例
+### awk 实用示例
 
 ```bash
 # 统计文件大小
@@ -334,7 +334,7 @@ cat file.txt | sort | uniq
 cat data.csv | cut -d, -f3 | sort | uniq -c | sort -rn
 ```
 
-### 实用示例
+### 管道操作实用示例
 
 ```bash
 # 查找最大的文件

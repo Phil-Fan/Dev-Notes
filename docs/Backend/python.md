@@ -14,11 +14,13 @@ pip index versions <package>
 pip install <package>==<version>
 ```
 
-!!! note "windows 使用命令行调用不同版本的 python"
+:::tip windows 使用命令行调用不同版本的 python
 
-    在系统路径path（高级系统系统设置——环境变量）中加入python.exe所在目录（打开文件所在位置——属性——打开文件所在位置）（因为是快捷方式，所以需要先找到快捷方式所在目录，再找到原exe文件所在位置）
+在系统路径 path（高级系统系统设置——环境变量）中加入 python.exe 所在目录（打开文件所在位置——属性——打开文件所在位置）（因为是快捷方式，所以需要先找到快捷方式所在目录，再找到原 exe 文件所在位置）
 
-    **注：应考虑到优先级的问题，将想要通过命令行直接进入的 python 版本所对应的路径放在上面**
+**注：应考虑到优先级的问题，将想要通过命令行直接进入的 python 版本所对应的路径放在上面**
+
+:::
 
 ### pip 换源
 
@@ -30,13 +32,16 @@ pip install package_name -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-!!! bug "WARNING: The repository located at mirrors.aliyun.com is not a trusted or secure host and is being ignored. If this repository is available via HTTPS we recommend you use HTTPS instead, otherwise you may silence this warning and allow it anyway with '--trusted-host mirrors.aliyun.com'."
-在大多数情况下，这个警告表示 pip 无法验证镜像源的 SSL 证书。可能的原因包括：
+:::warning
+WARNING: The repository located at mirrors.aliyun.com is not a trusted or secure host and is being ignored. If this repository is available via HTTPS we recommend you use HTTPS instead, otherwise you may silence this warning and allow it anyway with '--trusted-host mirrors.aliyun.com'.
 
-    SSL证书问题： 镜像源的SSL证书过期、自签名或存在其他问题。
-    网络问题： 在某些网络环境中（特别是公司网络或学校网络），中间人攻击(MITM)防御机制可能会导致证书验证失败。
+这个警告表示 pip 无法验证镜像源的 SSL 证书。可能的原因包括：
 
-    [已解决WARNING: The repository located at mirrors.aliyun.com is not a trusted or secure host异常的正确解决方法，亲测\_the repository located at mirrors, aliyun, com is -CSDN博客](https://blog.csdn.net/FMC_WBL/article/details/136143632)
+- SSL 证书问题：镜像源的 SSL 证书过期、自签名或存在其他问题。
+- 网络问题：在某些网络环境中（特别是公司网络或学校网络），中间人攻击 (MITM) 防御机制可能会导致证书验证失败。
+
+[已解决 WARNING: The repository located at mirrors.aliyun.com is not a trusted or secure host 异常的正确解决方法，亲测\_the repository located at mirrors, aliyun, com is -CSDN 博客](https://blog.csdn.net/FMC_WBL/article/details/136143632)
+:::
 
 ### pip 导出环境
 
@@ -133,7 +138,9 @@ uv venv --python 3.11
 export UV_DEFAULT_INDEX="https://mirrors.aliyun.com/pypi/simple"
 ```
 
-!!! note "网络环境"
+:::tip 网络环境
+:::
+
 `shell
     unset http_proxy && unset https_proxy
     `
@@ -285,7 +292,9 @@ bash Miniconda3-py39_24.7.1-0-Linux-aarch64.sh
 
 [conda 使用指南](https://blog.csdn.net/miracleoa/article/details/106115730)
 
-!!! note " conda 和 pip 的区别"
+:::tip  conda 和 pip 的区别
+:::
+
 [Anaconda | Understanding Conda and Pip](https://www.anaconda.com/blog/understanding-conda-and-pip)
 
     ||conda|pip|
@@ -413,10 +422,12 @@ pdb.set_trace()
 
 ### CUDA
 
-!!! note "什么是 CUDA"
+:::tip 什么是 CUDA
+
 通俗地说，CUDA 是一种协助“CPU 任务分发+GPU 并行处理”的编程模型/平台，用于加速 GPU 和 CPU 之间的计算。
 
-    也就是说CUDA通过CPU任务分发和GPU并行处理的方式，把计算任务通过CPU分发给GPU进行并行计算加速。而GPU并行计算的能力需要CUDA借助其自带的编程接口和工具，比如C/C++语言来编写并行计算程序，并通过CUDA编译器将程序转化为可以在英NVIDIA GPU上执行的机器码快速运行。
+也就是说 CUDA 通过 CPU 任务分发和 GPU 并行处理的方式，把计算任务通过 CPU 分发给 GPU 进行并行计算加速。而 GPU 并行计算的能力需要 CUDA 借助其自带的编程接口和工具，比如 C/C++ 语言来编写并行计算程序，并通过 CUDA 编译器将程序转化为可以在英 NVIDIA GPU 上执行的机器码快速运行。
+:::
 
 #### CUDA 版本的兼容性
 
@@ -476,19 +487,23 @@ nvcc --version
 pip install torch==1.10.1+cu102 torchvision==0.11.2+cu102 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu102/torch_stable.html
 ```
 
-!!! failure "numpy 报错"
+:::warning numpy 报错
+
 安装好 torch 之后，numpy 会报错
 
-    ```
-    UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at  ..\torch\csrc\utils\tensor_numpy.cpp:68.)
-    _dtype_to_storage = {data_type(0).dtype: data_type for data_type in _storages}
-    ```
+```text
+UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at  ..\torch\csrc\utils\tensor_numpy.cpp:68.)
+_dtype_to_storage = {data_type(0).dtype: data_type for data_type in _storages}
+```
 
-    **解决方法：** 将 numpy 版本降低为非>2.0.0 的版本，之后就能成功导入了。
-    ```shell
-    pip uninstall numpy
-    pip install numpy==1.26
-    ```
+**解决方法：** 将 numpy 版本降低为非>2.0.0 的版本，之后就能成功导入了。
+
+```shell
+pip uninstall numpy
+pip install numpy==1.26
+```
+
+:::
 
 ```python title="测试是否可用"
 import torch # 如果 pytorch 安装成功即可导入
@@ -553,15 +568,17 @@ ln -s /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30 libstdc++.so.6
 
 ### ImportError: No module named parse
 
-!!! bug "ImportError: No module named parse"
+:::warning ImportError: No module named parse
 python 版本问题，在 python 2.x 中
 
-    ```python
-    from urlparse import urlparse
-    ```
+```python
+from urlparse import urlparse
+```
 
-    在python 3.x
+在 python 3.x
 
-    ```python
-    from urllib.parse import urlparse
-    ```
+```python
+from urllib.parse import urlparse
+```
+
+:::

@@ -1,78 +1,365 @@
-# 文件与数据处理
+# 文本数据处理
 
-## 正则表达式
+Linux 提供了强大的文本处理工具，能够高效地搜索、过滤、转换和分析文本数据。
 
-## 文件格式化
+## grep - 文本搜索
 
-## 数据处理三剑客
+grep 是最常用的文本搜索工具，支持正则表达式。
 
-### 过滤文本 grep
-
-`-C` ：获取查找结果的上下文（Context）；
-
-`-v` 将对结果进行反选（Invert），也就是输出不匹配的结果。
-
-`-R` 会递归地进入子目录并搜索所有的文本文件。
-
-[通过 14 个实例彻底掌握 grep 命令 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/561445240)
+### 基本用法
 
 ```bash
-## 在文件中搜索单词或字符串
-$ sudo grep nobody /etc/passwd
+# 在文件中搜索
+grep "pattern" file.txt
+grep "error" /var/log/syslog
 
-## 多文件中的搜索模式
-$ sudo grep linuxtechi /etc/passwd /etc/shadow /etc/gshadow
+# 递归搜索目录
+grep -r "TODO" ./src
 
-## 打印与模式匹配的文件名
-假设我们想列出包含单词“root”的文件名，可以在 grep 命令中使用“-l”选项，后跟单词（模式）和文件。
-$ grep -l 'root' /etc/fstab /etc/passwd /etc/mtab
+# 忽略大小写
+grep -i "hello" file.txt
 
-## 显示带有行号的输出行
-$ grep -n 'nobody' /etc/passwd
+# 反向匹配（不包含）
+grep -v "comment" file.txt
 
-## 反转模式匹配
-$ grep -v 'nobody' /etc/passwd
+# 显示行号
+grep -n "function" script.py
 
-## 打印以特定字符开头的所有行
-Bash Shell 将插入符号 “^” 视为特殊字符，用于标记行或单词的开头。
-$ grep ^backup /etc/passwd
+# 统计匹配行数
+grep -c "import" *.py
 
-## 打印文件中的所有空行
-$ grep '^$' /etc/sysctl.conf
-$ grep -n '^$' /etc/sysctl.conf #打印空行行号
-
-## 计算与模式匹配的行数
-“-c” 选项用于计算与搜索模式匹配的行数。
-假设我们要计算 /etc/password 文件中以 “false” 结尾的行数
-$ grep -c false$ /etc/passwd
+# 只显示文件名
+grep -l "pattern" *.txt
 ```
 
-- ack，rg
+### 正则表达式
 
 ```bash
-# 查找所有使用了 requests 库的文件
-rg -t py 'import requests'
+# 行首匹配
+grep "^root" /etc/passwd
 
-# 查找所有没有写 shebang 的文件（包含隐藏文件）
-rg -u --files-without-match "^#!"
+# 行尾匹配
+grep "bash$" /etc/passwd
 
-# 查找所有的foo字符串，并打印其之后的5行
-rg foo -A 5
+# 空行
+grep "^$" file.txt
 
-# 打印匹配的统计信息（匹配的行和文件的数量）
-rg --stats PATTERN
+# 匹配任意字符
+grep "hel.o" file.txt
+
+# 匹配 0 个或多个
+grep "hel*o" file.txt
+
+# 或运算
+grep -E "error|warning" log.txt
+
+# 匹配数字
+grep -E "[0-9]+" file.txt
 ```
 
-### 修改文本 sed
-
-### 处理文本 awk
-
-awk 主要是用来格式化
-
-[linux awk 命令详解 - ggjucheng - 博客园 (cnblogs.com)](https://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html)
-
-awk 工作流程是这样的：先执行 BEGING，然后读取文件，读入有/n 换行符分割的一条记录，然后将记录按指定的域分隔符划分域，填充域，\$0则表示所有域，\$1表示第一个域，$n表示第 n 个域，随后开始执行模式所对应的动作 action。接着开始读入第二条记录······直到所有的记录都读完，最后执行 END 操作。
+### 常用选项
 
 ```bash
-awk [参数] [处理内容] [操作对象]
+# 显示上下文
+grep -C 3 "pattern" file.txt    # 前后各 3 行
+grep -A 5 "pattern" file.txt    # 之后 5 行
+grep -B 5 "pattern" file.txt    # 之前 5 行
+
+# 递归搜索
+grep -r "import" ./src
+
+# 排除文件
+grep -r "TODO" ./src --exclude-dir={node_modules,vendor}
+grep -r "TODO" ./src --exclude="*.min.js"
+
+# 只显示匹配部分
+grep -o "[0-9]+\.[0-9]+" file.txt
+
+# 使用扩展正则
+grep -E "error|warning|fatal" log.txt
 ```
+
+## sed - 流编辑器
+
+sed 用于文本替换和转换。
+
+### 基本替换
+
+```bash
+# 替换第一个匹配
+sed 's/old/new/' file.txt
+
+# 替换所有匹配
+sed 's/old/new/g' file.txt
+
+# 删除匹配行
+sed '/pattern/d' file.txt
+
+# 直接修改文件
+sed -i 's/old/new/g' file.txt
+```
+
+### 高级用法
+
+```bash
+# 删除空行
+sed '/^$/d' file.txt
+
+# 删除注释行
+sed '/^#/d' file.txt
+
+# 在指定行后插入
+sed '/pattern/a\new line' file.txt
+
+# 在指定行前插入
+sed '/pattern/i\new line' file.txt
+
+# 打印指定行
+sed -n '10,20p' file.txt        # 第 10-20 行
+sed -n '/pattern/p' file.txt    # 匹配的行
+
+# 多个替换
+sed -e 's/foo/bar/' -e 's/baz/qux/' file.txt
+```
+
+### 实用示例
+
+```bash
+# 删除行首空格
+sed 's/^[ \t]*//' file.txt
+
+# 删除行尾空格
+sed 's/[ \t]*$//' file.txt
+
+# 删除 Windows 换行符
+sed 's/\r$//' file.txt
+
+# 在每行前添加编号
+sed '= file.txt | sed 'N;s/\n/: /'
+
+# 提取域名
+echo "https://www.example.com/path" | sed 's|^[^/]*//||' | sed 's|/.*||'
+```
+
+## awk - 文本分析
+
+awk 是强大的文本处理工具，适合格式化和数据分析。
+
+### 基本语法
+
+```bash
+# 基本结构
+awk 'pattern { action }' file.txt
+
+# 打印整行
+awk '{print}' file.txt
+
+# 打印指定列
+awk '{print $1}' file.txt        # 第一列
+awk '{print $1, $3}' file.txt    # 第一和第三列
+
+# 指定分隔符
+awk -F: '{print $1}' /etc/passwd
+awk -F, '{print $2}' file.csv
+```
+
+### BEGIN 和 END
+
+```bash
+# 计算文件行数
+awk 'END {print NR}' file.txt
+
+# 计算列总和
+awk '{sum+=$1} END {print sum}' numbers.txt
+
+# 格式化输出
+awk 'BEGIN {print "Name\tAge"} {print $1, $2} END {print "Total:", NR}' file.txt
+```
+
+### 条件处理
+
+```bash
+# 过滤行
+awk '$3 > 50 {print}' file.txt       # 第三列大于 50
+awk '/pattern/ {print}' file.txt    # 包含 pattern 的行
+
+# 统计
+awk '{count++} END {print count}' file.txt
+awk '{sum+=$1} END {print sum}' file.txt
+
+# 内置函数
+awk '{print length($0)}' file.txt    # 行长度
+awk '{print tolower($0)}' file.txt   # 转小写
+awk '{print toupper($0)}' file.txt   # 转大写
+```
+
+### 实用示例
+
+```bash
+# 统计文件大小
+ls -l | awk '{sum+=$5} END {print sum}'
+
+# 过滤进程
+ps aux | awk '$3 > 1.0 {print $11, $3}'
+
+# 提取 IP 地址
+ifconfig | awk '/inet / {print $2}'
+
+# 日志分析
+awk '/error/ {count++} END {print "Errors:", count}' /var/log/syslog
+
+# CSV 处理
+awk -F, 'NR>1 {print $1, $3}' data.csv
+```
+
+## sort - 排序
+
+```bash
+# 基本排序
+sort file.txt
+
+# 反向排序
+sort -r file.txt
+
+# 数字排序
+sort -n numbers.txt
+
+# 按指定列排序
+sort -k2 file.txt               # 按第 2 列
+sort -t: -k3 -n /etc/passwd     # 按第 3 列（数字）
+
+# 去重排序
+sort -u file.txt
+
+# 检查排序
+sort -C file.txt                # 检查是否已排序
+```
+
+## uniq - 去重
+
+```bash
+# 去重（需要先排序）
+sort file.txt | uniq
+
+# 统计重复次数
+sort file.txt | uniq -c
+
+# 只显示重复行
+sort file.txt | uniq -d
+
+# 只显示不重复行
+sort file.txt | uniq -u
+```
+
+## wc - 统计
+
+```bash
+# 统计行数、单词数、字节数
+wc file.txt
+
+# 只统计行数
+wc -l file.txt
+
+# 统计多个文件
+wc -l *.txt
+
+# 统计总行数
+find . -name "*.py" | xargs wc -l | tail -1
+```
+
+## head/tail - 查看文件部分
+
+```bash
+# 查看前 10 行
+head file.txt
+head -n 20 file.txt
+
+# 查看后 10 行
+tail file.txt
+tail -n 20 file.txt
+
+# 实时查看日志
+tail -f /var/log/syslog
+
+# 查看中间行
+sed -n '10,20p' file.txt
+```
+
+## cut - 提取列
+
+```bash
+# 按字节提取
+cut -c 1-10 file.txt            # 第 1-10 个字符
+
+# 按分隔符提取
+cut -d: -f1 /etc/passwd          # 按 : 分隔，取第 1 列
+cut -d, -f2,5 file.csv          # 取第 2 和第 5 列
+
+# 按范围提取
+cut -d: -f1-5 /etc/passwd        # 第 1-5 列
+cut -d: -f3- /etc/passwd         # 第 3 列到末尾
+```
+
+## xargs - 参数构建
+
+```bash
+# 基本用法
+echo "file1 file2" | xargs rm
+
+# 指定参数数量
+echo "1 2 3 4 5" | xargs -n 2
+
+# 并行执行
+find . -name "*.jpg" | xargs -P 4 convert
+
+# 处理包含空格的文件名
+find . -print0 | xargs -0 rm
+
+# 与 find 结合
+find . -name "*.log" -print0 | xargs -0 tar -czvf logs.tar.gz
+```
+
+## 组合使用
+
+### 管道操作
+
+```bash
+# 查找并统计
+grep "error" log.txt | wc -l
+
+# 排序并去重
+cat file.txt | sort | uniq
+
+# 多步骤处理
+cat data.csv | cut -d, -f3 | sort | uniq -c | sort -rn
+```
+
+### 实用示例
+
+```bash
+# 查找最大的文件
+find . -type f -exec ls -l {} \; | awk '{print $5, $9}' | sort -rn | head -10
+
+# 统计代码行数
+find . -name "*.py" | xargs wc -l | tail -1
+
+# 查找重复行
+sort file.txt | uniq -d
+
+# 提取 IP 并统计
+awk '/connection/ {print $2}' log.txt | sort | uniq -c | sort -rn
+
+# 日志分析
+grep "ERROR" log.txt | awk '{print $1, $2}' | sort | uniq -c
+```
+
+:::tip 工具选择
+
+- **grep** - 搜索文本
+- **sed** - 替换和编辑文本
+- **awk** - 格式化和分析数据
+- **sort/uniq** - 排序和去重
+- **cut** - 提取列
+- **xargs** - 构建命令参数
+
+:::

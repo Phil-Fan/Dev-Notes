@@ -11,7 +11,11 @@
 - [Linux.do](https://linux.do/)
 - [Hacker News](https://news.ycombinator.com/)
 - [OSPP](https://summer-ospp.ac.cn)
+- [X](https://x.com/)
+- [小红书](https://www.xiaohongshu.com/)
 - [小宇宙](https://www.xiaoyuzhoufm.com/)
+- [即刻](https://web.okjike.com)
+- [Folo](https://github.com/RSSNext/Folo): All-in-one RSS reader.
 
 ## AI 相关
 
@@ -72,9 +76,13 @@ brew install gemini-cli
 提问语句：
 
 ```text
-read this @SPEC.md and interview me in detail using the AskUserQuestionTool about literally anything: technical implementation, UI & UX, concerns, tradeoffs, etc. but make sure the questions are not obvious
+read this @SPEC.md and interview me in detail
+using the AskUserQuestionTool about literally anything: 
+technical implementation, UI & UX, concerns, tradeoffs, etc. 
+but make sure the questions are not obvious
 
-be very in-depth and continue interviewing me continually until it's complete, then write the spec to the file
+be very in-depth and continue interviewing me continually 
+until it's complete, then write the spec to the file.
 ```
 
 ### Skills
@@ -194,11 +202,15 @@ npx create-next-app@latest my-app
 - [jenkins](https://www.jenkins.io)
 - [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
 - [Drone CI](https://github.com/harness/drone)
-- [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
+
+- commit hooks:
+  - [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
+  - [husky](https://github.com/typicode/husky) 适合前端项目
 
 - Linter:
   - [eslint/eslint](https://github.com/eslint/eslint): JavaScript/TypeScript 静态分析
   - [prettier/prettier](https://github.com/prettier/prettier): 代码格式化
+    - [rbubley/mirrors-prettier](https://github.com/rbubley/mirrors-prettier) for pre-commit
   - [biomejs/biome](https://github.com/biomejs/biome): 一体化 Linter & Formatter & Bundler（ESLint + Prettier 替代）
   - [markdownlint](https://github.com/DavidAnson/markdownlint): Markdown 静态分析
   - [autocorrect](https://github.com/huacnlee/autocorrect): CJK 排版自动修正

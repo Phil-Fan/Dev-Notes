@@ -7,7 +7,8 @@
     "dev": "pnpm --filter awesome-full-stack-docs dev",
     "build": "pnpm --filter awesome-full-stack-docs build",
     "preview": "pnpm --filter awesome-full-stack-docs preview",
-    "lint": "pre-commit run --all-files"
+    "lint": "pre-commit run --all-files",
+    "clean": "pnpm --filter awesome-full-stack-docs clean"
   },
   "keywords": [
     "awesome",

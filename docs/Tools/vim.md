@@ -145,6 +145,5 @@ js\:|Js: javascript:\ $S; JavaScript
 
 `.`操作就是用来重复上一次更改的
 
-=== "example"
 用 x 操作来删除一个字符，接着用。重复删除字符
 ![image](https://img-blog.csdn.net/20150614230108127)

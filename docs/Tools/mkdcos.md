@@ -88,32 +88,54 @@ jobs:
 
 ### 提示块
 
-!!! failure "这是 failure 类型的提示框"
+:::warning 这是 failure 类型的提示框
+:::
+
 注意`extension`不要拼成`extention`！！
 
-!!! bug "这是 bug 类型的提示框"
+:::warning 这是 bug 类型的提示框
+:::
+
 发现一个 bug，请尽快修复！
 
-!!! tip "tip"
+:::tip tip
 
-!!! note "note"
+:::
 
-!!! question "这是 question 类型的提示框"
+:::tip note
+
+:::
+
+:::question 这是 question 类型的提示框
+:::
+
 这是一个问题，请回答！
 
-!!! warning "这是 warning 类型的提示框"
+:::warning 这是 warning 类型的提示框
+:::
+
 注意！注意！注意！
 
-!!! success "这是 success 类型的提示框"
+:::success 这是 success 类型的提示框
+:::
+
 恭喜你，完成了一个任务！
 
-!!! example "这是 example 类型的提示框"
+:::example 这是 example 类型的提示框
 
-!!! info "这是 info 类型的提示框"
+:::
 
-!!! abstract "这是 abstract 类型的提示框"
+:::info 这是 info 类型的提示框
 
-!!! quote "这是 quote 类型的提示框"
+:::
+
+:::abstract 这是 abstract 类型的提示框
+
+:::
+
+:::quote 这是 quote 类型的提示框
+
+:::
 
 ### 列表
 
@@ -166,20 +188,22 @@ jobs:
 </iframe>
 ```
 
-??? info "参数用途"
+:::details 参数用途
 
-    | 参数用途                         | 参数名      | 使用方法          |
-    |----------------------------------|-------------|-------------------|
-    | 是否自动播放(默认否)            | `autoplay`    | 1: 开启, 0: 关闭  |
-    | 默认弹幕开关(默认开启)          | `danmaku`    | 1: 开启, 0: 关闭  |
-    | 是否默认静音(默认否)            | `muted`       | 1: 开启, 0: 关闭  |
-    | 一键静音按钮是否显示(默认不显示) | `hasMuteButton` | 1: 开启, 0: 关闭  |
-    | 视频封面下方是否显示播放量弹幕量等信息(默认显示) | `hideCoverInfo` | 1: 开启, 0: 关闭  |
-    | 是否隐藏弹幕按钮(默认不隐藏)    | `hideDanmakuButton` | 1: 开启, 0: 关闭 |
-    | 是否隐藏全屏按钮(默认显示)      | `noFullScreenButton` | 1: 开启, 0: 关闭 |
-    | 是否开始记忆播放(默认开启)      | `fw`          | 1: 开启, 0: 关闭  |
-    | 默认开始时间(默认0)             | `t`           | 直接填写数值, 单位秒 |
-    | 是否显示高清(默认否)            | `highQuality` | 1: 开启, 0: 关闭 (貌似是无用的, 各位可以试试) |
+| 参数用途                         | 参数名      | 使用方法          |
+|----------------------------------|-------------|-------------------|
+| 是否自动播放 (默认否)            | `autoplay`    | 1: 开启，0: 关闭  |
+| 默认弹幕开关 (默认开启)          | `danmaku`    | 1: 开启，0: 关闭  |
+| 是否默认静音 (默认否)            | `muted`       | 1: 开启，0: 关闭  |
+| 一键静音按钮是否显示 (默认不显示) | `hasMuteButton` | 1: 开启，0: 关闭  |
+| 视频封面下方是否显示播放量弹幕量等信息 (默认显示) | `hideCoverInfo` | 1: 开启，0: 关闭  |
+| 是否隐藏弹幕按钮 (默认不隐藏)    | `hideDanmakuButton` | 1: 开启，0: 关闭 |
+| 是否隐藏全屏按钮 (默认显示)      | `noFullScreenButton` | 1: 开启，0: 关闭 |
+| 是否开始记忆播放 (默认开启)      | `fw`          | 1: 开启，0: 关闭  |
+| 默认开始时间 (默认 0)             | `t`           | 直接填写数值，单位秒 |
+| 是否显示高清 (默认否)            | `highQuality` | 1: 开启，0: 关闭 (貌似是无用的，各位可以试试) |
+
+:::
 
 ### 嵌套列表
 
@@ -227,7 +251,9 @@ pip install mdx_truly_sane_lists
 - `mkdocs build` - Build the documentation site.
 - `mkdocs -h` - Print help message and exit.
 
-??? note "安装代码"
+:::details 安装代码
+
+:::
 
 ```Shell
    pip install mkdocs
@@ -446,17 +472,19 @@ plugins:
         custom_mathjax_url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"
 ```
 
-!!! bug "遇到的问题" 1. 无法显示数学公式（解决方法：加上了 js 文件）2. toc 配置与之前的逻辑不同，导致自动配置 123 的时候出现错误 3. 奇怪的路径问题
+:::warning 遇到的问题
 
-    ```
-      DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
-      given by the platformdirs library.  To remove this warning and
-      see the appropriate new directories, set the environment variable
-      `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
-      The use of platformdirs will be the default in `jupyter_core` v6
-    ```
+```
+  DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
+  given by the platformdirs library.  To remove this warning and
+  see the appropriate new directories, set the environment variable
+  `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
+  The use of platformdirs will be the default in `jupyter_core` v6
+```
 
-    [DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs · Issue #148 · danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter/issues/148)
+[DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs · Issue #148 · danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter/issues/148)
+
+:::
 
 如果想要实现 material 中的某些功能，需要自己写 html 代码
 
@@ -657,7 +685,9 @@ changelog: True
 
 ### 解析 xmind
 
-!!! todo "可以实现吗"
+:::todo 可以实现吗
+
+:::
 
 [OpenFiles.online](https://openfiles.online/)
 [在浏览器中解析和渲染 XMind 文件 | 文森的主站](https://liangwensen.com/blog/parse-and-render-xmind-file-in-browser)

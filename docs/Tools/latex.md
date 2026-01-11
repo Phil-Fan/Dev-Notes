@@ -1,25 +1,44 @@
 # Latex 备忘录
 
-!!! attention "本文写于 2024 年，有些信息可能有些过时，请注意甄别"
+:::attention 本文写于 2024 年，有些信息可能有些过时，请注意甄别
+
+:::
 
 ## Overleaf | 边学边用的使用指南
 
 最早是看到 98 上发的有关 latex 的帖子，说可以快速高效地写实验报告。也从雪松前辈发的模版中学习到一些 latex 排版的基础知识。再加上去年《数学软件》短学期老妖的一些小作业的磨炼，可以说对 latex 的基本用法有了浅薄的了解。这个学期的所有课程作业报告和论文就没有使用过 word 了（真香啊:laughing:）。
 
-!!! tip "趁手的工具才是最好的工具"
+:::tip 趁手的工具才是最好的工具
 
-!!! note "为什么要写这一个章节"
+:::
+
+
 众所周知，大学中有很多课程都需要写实验报告/解题报告/小作业报告/论文等等，除却写作内容，排版也是非常令人头疼的一部分。常用的排版工具有两大类，一类是以 word 为代表的“所见即所得”式，另一类是像 LaTeX 这样子的“所想即所得”的编程式排版。
 
 发现身边有很多朋友并不是非常会排版，或者是排版会花费很多时间。而在现行的评价体系下，在内容质量大致相似的情况下，图文并茂，排版整洁的作业印象分一定会高不少。笔者 LaTeX 水平不高，目的就是想要快点把实验报告写掉:laughing:，中间也花了很多时间迭代几个模版，所以就有了这个笔记 + 分享性质的章节。
 
-    这一个章节面向0 LaTeX 基础小白，使用`overleaf`平台，希望实现的效果是基本掌握后，只用15-20min就能完成日常论文/实验报告作业的排版。
+这一个章节面向0 LaTeX 基础小白，使用`overleaf`平台，希望实现的效果是基本掌握后，只用15-20min就能完成日常论文/实验报告作业的排版。
 
-=== "我为什么要用 latex" - 复用性高，所有设置都比较明晰 :yellow_heart: - 只要做一个称心如意的模版，便可以**专注于内容本身，而将麻烦的排版交给编译器**:full_moon_with_face: - 良好的公式体验：公式编辑较 word 方便和美观太多 - 公式、图表、参考文献可以自动标号
 
-    当然，它也有一些缺点，比如图片排版较为复杂，调一个符合要求的模版比较困难，但是在当今 LLM 比较发达的今天，很多语法和格式问题都可以丢给 AI 来解决。
 
-=== "我为什么要用 overleaf" - 不用进行包管理、环境配置简单、打开网址就可以用 - 云端自动保存、不怕写了半天的论文突然消失 - 有很多模版供使用
+:::info
+
+我为什么要用 latex 
+
+- 复用性高，所有设置都比较明晰 :yellow_heart: 
+- 只要做一个称心如意的模版，便可以**专注于内容本身，而将麻烦的排版交给编译器**:full_moon_with_face: 
+- 良好的公式体验：公式编辑较 word 方便和美观太多 
+- 公式、图表、参考文献可以自动标号
+
+当然，它也有一些缺点，比如图片排版较为复杂，调一个符合要求的模版比较困难，但是在当今 LLM 比较发达的今天，很多语法和格式问题都可以丢给 AI 来解决。
+
+我为什么要用 overleaf 
+
+- 不用进行包管理、环境配置简单、打开网址就可以用 
+- 云端自动保存、不怕写了半天的论文突然消失 
+- 有很多模版供使用
+
+:::
 
 这里分享 4 个我自己魔改的模版，基本上覆盖到了大部分的日常学习场景。
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240629181605.webp)
@@ -154,13 +173,17 @@
 
 这种格式如何获取呢？
 
-=== "方式一：从你找到论文的网页获取"
+:::info
+
+方式一：从你找到论文的网页获取
 <img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210459330.webp" alt="image-20240628210459330" style="zoom: 50%;" />
 
-=== "方式 2：使用`endnote`或者`zotero`等文献管理软件"
+方式 2：使用`endnote`或者`zotero`等文献管理软件
 <img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210840951.webp" alt="image-20240628210840951" style="zoom:50%;" />
 
-=== "方式 3——GPT"
+方式 3——GPT
+:::
+
 你已经有了一版参考文献的列表，但是你懒得一个一个去知网找了；打开任意一个大模型，输入你的参考文献的列表，说"请把上边的参考文献改写成为 bibtex 的格式"
 
 获取之后，请把对应的代码放在`ref.bib`文件下，这个代码中的`number1`可以改成任何你记得住的数字或者字符，相当于给这个参考文献一个名字。
@@ -229,49 +252,30 @@
 
 感谢各位前辈的分享！
 
-=== "教程类"
+:::info
 
-    [Documentation - Overleaf](https://www.overleaf.com/learn)
+教程类
 
-    [一份其实很短的 LaTeX 入门文档](https://www.cc98.org/topic/4914572)
+- [Documentation - Overleaf](https://www.overleaf.com/learn)
+- [一份其实很短的 LaTeX 入门文档](https://www.cc98.org/topic/4914572)
 
-=== "模版类"
+模版类
 
-    [如何使用zjuthesis编写毕业论文：LaTeX零基础入门](https://www.cc98.org/topic/5511675)
-
-    [魔改了个课程大作业报告 Latex 模版](https://www.cc98.org/topic/5548440)
-
-    [Typora 实验报告模板 基于github上项目typora-latex-theme](https://www.cc98.org/topic/5834340)
-
-    [开坑LaTeX笔记模板，目标将ElegantNote斩于马下](https://www.cc98.org/topic/5337819)
-
-    [分享一个微调后的数院学位论文latex模板（hyperref+bibtex）](https://www.cc98.org/topic/5141677)
-
-    [本科生实验报告 LaTeX 模板](https://www.cc98.org/topic/5068412)
-
-    [本科生毕业设计与展示latex模板](https://www.cc98.org/topic/5070413)
-
-    [自制了一个简单的课程论文的LaTex模板](https://www.cc98.org/topic/5063731)
-
-=== "笔记 & 技巧类"
-
-    [Latex笔记美化](https://www.cc98.org/topic/5325844)
-
-    [我是如何用vim+latex记笔记的](https://www.cc98.org/topic/5319293)
-
-    [发现一个超好用的\LaTeX公式和绘图工具](https://www.cc98.org/topic/5089911)
-
-    [开一个帖子记录下使用latex时学会的一些技巧](https://www.cc98.org/topic/5126300)
-
-    [latex一夜入门 搞定 简历模版](https://www.cc98.org/topic/5008837)
-
-    [🍃overleaf本地部署｜会员｜解除时间限制](https://www.cc98.org/topic/5874634)
-
-    [合法免费白嫖 Overleaf 高级会员方法，解决编译时间限制问题（已失效）](https://www.cc98.org/topic/5749388)
+- [如何使用zjuthesis编写毕业论文：LaTeX零基础入门](https://www.cc98.org/topic/5511675)
+- [魔改了个课程大作业报告 Latex 模版](https://www.cc98.org/topic/5548440)
+- [Typora 实验报告模板 基于github上项目typora-latex-theme](https://www.cc98.org/topic/5834340)
+- [开坑LaTeX笔记模板，目标将ElegantNote斩于马下](https://www.cc98.org/topic/5337819)
+- [Latex笔记美化](https://www.cc98.org/topic/5325844)
+- [我是如何用vim+latex记笔记的](https://www.cc98.org/topic/5319293)
+- [发现一个超好用的\LaTeX公式和绘图工具](https://www.cc98.org/topic/5089911)
+- [开一个帖子记录下使用latex时学会的一些技巧](https://www.cc98.org/topic/5126300)
+:::
 
 ## 本地环境配置
 
-!!! attention "本章节是本地环境的部署，如果您想使用在线环境 or 配环境苦手，请跳过"
+:::attention 本章节是本地环境的部署，如果您想使用在线环境 or 配环境苦手，请跳过
+
+:::
 
 ### Texlive | Linux 的 `LaTeX`环境
 
@@ -643,7 +647,9 @@ F1 输入`Open Keyboard Shortcuts`
 }
 ```
 
-!!! bug "chetex：warning ..."
+:::warning chetex：warning ...
+:::
+
 在`setting.json`中加入
 
     ```
@@ -652,7 +658,9 @@ F1 输入`Open Keyboard Shortcuts`
 
     [教程](https://blog.csdn.net/weixin_40935730/article/details/121680692)
 
-!!! attention "个人感觉 vsc 里面的报错不是特别智能，查看 problem 报错有时候定位不到问题"
+:::attention 个人感觉 vsc 里面的报错不是特别智能，查看 problem 报错有时候定位不到问题
+:::
+
 总结几个常见的报错：- 图片位置错误/路径错误 - 没有闭合的括号或者指令
 
     可以先把图片注释掉，看看能不能调好
@@ -662,7 +670,9 @@ F1 输入`Open Keyboard Shortcuts`
 
 ### `IguanaTex` | LaTeX in PPT
 
-!!! attention "mac 平台的 keynote 本身自带 latex 功能；windows 平台的 powerpoint 的公式对于 latex 的支持比较一般，使用体验较差；如果 windows 有展示公式的需求且比较反感公式截图，可以考虑 beamer 或者 reveal-md 制作 slides"
+:::attention mac 平台的 keynote 本身自带 latex 功能；windows 平台的 powerpoint 的公式对于 latex 的支持比较一般，使用体验较差；如果 windows 有展示公式的需求且比较反感公式截图，可以考虑 beamer 或者 reveal-md 制作 slides
+
+:::
 
 假设已经安装好了 Texlive
 
@@ -688,7 +698,9 @@ required to use pdflatex/xelatex/lualatex.
 - Download from [this link](https://www.ms.u-tokyo.ac.jp/~abenori/soft/index.html#TEX2IMG) (more details on TeX2img on their [Github repo](https://github.com/abenori/TeX2img))
 - After unpacking TeX2img somewhere on your machine, run TeX2img.exe once to let it automatically set the various paths to latex/ghostscript, then set the **full** path to `TeX2imgc.exe` (note the "`c`"!) in the "Main Settings" window.
 
-!!! bug "中文公式输入错误"
+:::warning 中文公式输入错误
+
+:::
 
 ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240609200702478.webp)
 
@@ -708,7 +720,9 @@ required to use pdflatex/xelatex/lualatex.
 
 这个插件可以使用快捷键插入图片，免去了写 htbp 等的麻烦，还可以插入到指定路径下。
 
-!!! bug "根路径不是 report 文件夹怎么办"
+:::warning 根路径不是 report 文件夹怎么办
+
+:::
 
 按`F1`输入`setting`，在`setting.json`中加入
 
@@ -845,7 +859,9 @@ bin/up
 
 ## 公式与符号
 
-!!! attention "本章节记录一些老忘记的公式和用法，如果需要速查，推荐使用[这个网站](https://latex.emoryhuang.cn/posts/)或[这个网站](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)"
+:::attention 本章节记录一些老忘记的公式和用法，如果需要速查，推荐使用[这个网站](https://latex.emoryhuang.cn/posts/)或[这个网站](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+
+:::
 
 ### 大括号最重要的代码段是
 

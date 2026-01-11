@@ -5,11 +5,15 @@
 
 [PHP 学习路线](https://www.runoob.com/w3cnote/php-learning-recommend.html)
 
-!!! tip "学习路线" 1. 熟悉 HTML/CSS/JS 等网页基本元素，完成阶段可自行制作简单的网页，对元素属性相对熟悉。2. 理解动态语言的概念和运做机制，熟悉基本的 PHP 语法。3. 学习如何将 PHP 与 HTML 结合起来，完成简单的动态页面。4. 接触学习 MySQL，开始设计数据库。5. 不断巩固 PHP 语法，熟悉大部分的 PHP 常用函数，理解面向对象编程，MySQL 优化，以及一些模板和框架。6. 最终完成一个功能齐全的动态站点。
+:::tip 学习路线
+
+:::
 
 ## 基础语法
 
-!!! note "优化之前写过的评论网页"
+:::tip 优化之前写过的评论网页
+
+:::
 
 - PHP 是一种开源的通用脚本语言，尤其适用于 Web 开发。
 - PHP（全称：PHP：Hypertext Preprocessor，即"PHP：超文本预处理器"）是一种通用开源脚本语言。
@@ -233,7 +237,9 @@ $conn->close();
 
 将序列化的值当作参数传入
 
-!!! note "最终的原因"
+:::tip 最终的原因
+:::
+
 PHP 是弱类型的原因，我们可以利用这样的特性去绕过一些判断
 
 #### [BUUCTF[极客大挑战 2019]PHP](https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019]PHP)
@@ -303,7 +309,9 @@ O:4:"Name":2:{s:14:"Nameusername";s:5:"admin";s:14:"Namepassword";i:100;}
 
 又因为私有变量需要修改，所以更改为
 
-!!! note "在反序列化时，当前属性个数大于实际属性个数时，就会跳过`__wakeup()`，去执行`__destruct`"
+:::tip 在反序列化时，当前属性个数大于实际属性个数时，就会跳过`__wakeup()`，去执行`__destruct`
+
+:::
 
 又因为需要绕过`__wakeup()`函数，所以我们把属性个数改成大于实际属性的个数
 
@@ -317,7 +325,9 @@ http://02801fc4-349c-428a-bb2c-2015f2934d2b.node5.buuoj.cn:81/?select=O:4:%22Nam
 
 上课老师讲的一个例题，主要核心思想就是利用 php 这种弱类型的语言。构造的 exp 是利用引用，使得两个变量一模一样，从而达到目的。
 
-!!! note "类型"
+:::tip 类型
+:::
+
 a - array
 b - boolean
 d - double

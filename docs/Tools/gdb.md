@@ -28,7 +28,9 @@ wget https://ftp.gnu.org/gnu/gdb/gdb-10.2.tar.xz
 tar -xvzf gdb-10.2.tar.xz
 ```
 
-!!! question "我这里报了`gzip: stdin: not in gzip format tar: Child returned status 1 tar: Error exit delayed`"
+:::question 我这里报了`gzip: stdin: not in gzip format tar: Child returned status 1 tar: Error exit delayed`
+:::
+
 `shell title="解压缩换成这个命令"
     tar -vxf gdb-10.2.tar.xz
     `
@@ -65,7 +67,9 @@ cd build
 ../configure --enable-tui
 ```
 
-!!! question "可能会提示你没有相关库 `configure: WARNING: no enhanced curses library found; disabling TUI`"
+:::question 可能会提示你没有相关库 `configure: WARNING: no enhanced curses library found; disabling TUI`
+:::
+
 查阅官方发现：Build GDB with the text-mode full-screen user interface (TUI).Requires a curses library (ncurses and cursesX are also supported).
 
     你需要安装ncurses库，才能安装tui。[参考 configure: WARNING: no enhanced curses library found; disabling TUI](https://www.linuxquestions.org/questions/linux-newbie-8/configure-warning-no-enhanced-curses-library-found%3B-disabling-tui-4175443971/)
@@ -88,7 +92,9 @@ cd build
     sudo make install
     ```
 
-!!! question "`‘makeinfo‘ is missing on your system.`"
+:::question `‘makeinfo‘ is missing on your system.`
+:::
+
 `shell
     sudo apt-get install texinfo
     `

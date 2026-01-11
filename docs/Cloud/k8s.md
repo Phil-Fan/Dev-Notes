@@ -274,7 +274,9 @@ Pending
 
 调度器的三步流程（非常重要）
 
-=== "① 过滤（Filtering）"
+:::info
+
+① 过滤（Filtering）
 
     排除掉不满足条件的节点，比如：
 
@@ -295,7 +297,7 @@ Pending
 
     → scheduler 只会考虑有 GPU 的节点。
 
-=== "② 打分（Scoring）"
+② 打分（Scoring）
 
     在筛选后的节点上打分：
 
@@ -307,7 +309,7 @@ Pending
 
     得分最高的节点被选中。
 
-=== "③ 绑定（Binding）"
+③ 绑定（Binding）
 
     最后 scheduler 调用：
 
@@ -316,6 +318,8 @@ Pending
     ```
 
     把 Pod 绑定到节点。
+
+:::
 
 K8s 允许你表达复杂的调度需求：
 

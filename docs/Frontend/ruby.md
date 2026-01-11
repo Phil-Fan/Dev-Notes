@@ -31,33 +31,36 @@ graph TD
 ruby -v
 ```
 
-=== "linux or wsl"
+:::info 安装指令
 
-    ```shell
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
+**linux or wsl**
 
-    ```shell
-    git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-    echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
-    source ~/.bashrc
+```shell title="linux or wsl"
+sudo apt update && sudo apt upgrade -y
+sudo apt install ruby-dev ruby-bundler nodejs
+```
 
-    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-    ```
+```shell
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
+source ~/.bashrc
 
-=== "macos"
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+```
 
-    ```shell title="macos"
-    brew install rbenv ruby-build
-    ```
+**macos**
 
+```shell title="macos"
+brew install rbenv ruby-build
+```
 
-    ```shell title="macos"
-    echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
-    source ~/.zshrc
-    ```
+```shell title="macos"
+echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+:::
 
 ```shell
 rbenv install 3.2.4
@@ -114,7 +117,7 @@ https://gems.ruby-china.com/
 
 ### 安装 Bundler
 
-安装 一个名为 Bundler 的程序 —— ��于自动安装其他所需的程序
+安装 一个名为 Bundler 的程序 —— 用于自动安装其他所需的程序
 
 ```shell
 gem install bundler
@@ -124,53 +127,56 @@ gem install bundler
 
 ## 标准安装流程（Ruby ≥ 3.2）
 
-!!! example "完整配置方案"
+:::info 完整配置方案
+:::
+
 **目标：** 使用 Ruby ≥ 3.2 + 正确的 bundler + 无权限问题
 
-    ### Step 1：更新 ruby-build（核心一步）
+### Step 1：更新 ruby-build（核心一步）
 
-    ```bash
-    # 首次安装
-    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+```bash
+# 首次安装
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-    # 如果已存在，更新
-    cd ~/.rbenv/plugins/ruby-build && git pull
+# 如果已存在，更新
+cd ~/.rbenv/plugins/ruby-build && git pull
 
-    rbenv rehash
+rbenv rehash
 
-    # 验证可用版本
-    rbenv install --list | grep 3.
-    ```
+# 验证可用版本
+rbenv install --list | grep 3.
+```
 
-    ### Step 2：安装并切换 Ruby（推荐 3.2.2）
+### Step 2：安装并切换 Ruby（推荐 3.2.2）
 
-    ```bash
-    rbenv install 3.2.2
-    rbenv global 3.2.2
+```bash
+rbenv install 3.2.2
+rbenv global 3.2.2
 
-    # 验证
-    ruby -v
-    # ruby 3.2.2
-    ```
+# 验证
+ruby -v
+# ruby 3.2.2
+```
 
-    ### Step 3：重新安装 bundler（不再需要 --user-install）
+### Step 3：重新安装 bundler（不再需要 --user-install）
 
-    ```bash
-    gem install bundler
-    bundle -v
-    ```
+```bash
+gem install bundler
+bundle -v
+```
 
-    ### Step 4：重新安装项目依赖
+### Step 4：重新安装项目依赖
 
-    ```bash
-    cd ~/cv
-    rm -f Gemfile.lock
-    bundle install
-    # 或
-    make install
-    ```
+```bash
+cd ~/cv
+rm -f Gemfile.lock
+bundle install
+# 或
+make install
+```
 
-    **注意事项：**
-    - 确保 ruby-build 是最新版本，否则���能无法安装新版 Ruby
-    - Ruby ≥ 3.2 后不再需要 `--user-install` 参数
-    - 删除 `Gemfile.lock` 可以强制重新解析依赖
+**注意事项：**
+
+- 确保 ruby-build 是最新版本，否则不能无法安装新版 Ruby
+- Ruby ≥ 3.2 后不再需要 `--user-install` 参数
+- 删除 `Gemfile.lock` 可以强制重新解析依赖

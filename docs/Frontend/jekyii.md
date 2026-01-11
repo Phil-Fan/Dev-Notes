@@ -14,7 +14,9 @@ comments: true
 gem install jekyll
 ```
 
-!!! bug "ERROR: Could not find a valid gem 'sass-embedded' (~> 1.54) (required by 'jekyll' (>= 0)) in any repository ERROR: Possible alternatives: sass-embedded"
+:::warning ERROR: Could not find a valid gem 'sass-embedded' (~> 1.54) (required by 'jekyll' (>= 0)) in any repository ERROR: Possible alternatives: sass-embedded
+:::
+
 这一步报错了，所以再把镜像源切换回官方的
 
     ```shell

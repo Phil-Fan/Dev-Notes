@@ -1,6 +1,8 @@
 # Linux
 
-!!! note "这一篇主要记录在配置 linux 时候遇到的一些问题和解决方案"
+:::tip 这一篇主要记录在配置 linux 时候遇到的一些问题和解决方案
+
+:::
 
 ## 常见操作
 
@@ -211,7 +213,9 @@ export http_proxy=http://your_proxy_server:your_proxy_port
 export https_proxy=http://your_proxy_server:your_proxy_port
 ```
 
-!!! question "could not connect to the clash core"
+:::question could not connect to the clash core
+:::
+
 检查一下网络是否能够正常连接，有可能是防火墙的规则的问题
 
     ```bash title="允许所有入站流量"
@@ -249,7 +253,9 @@ sudo netplan apply
 2.改文件的编辑必须严格按照格式来，**是分层的**，用空格来退格
 
 [启动 netplan-wpa-wlan0.sevice 失败：未找到单元 netplan-wpa-wlan0.service - ubuntu](https://askoverflow.dev/ubuntu/question/1291424/failed-to-start-netplan-wpa-wlan0-sevice-unit-netplan-wpa-wlan0-service-not-fou/)
-!!! tip "注意事项"
+:::tip 注意事项
+:::
+
 出现类似错误：`line8 column 6:cloud not find expected` 提示是**冒号：后面没加空格**
 
     出现类似错误：`netplan found character that cannot start any token`，提示是没有按五个层次写配置文档，一定要**下一层比上一层多空一格或以上。**
@@ -482,11 +488,13 @@ smbclinet //ip/name -U xxx
 
 > [Linux 上挂载 Samba（Windows & macOS 共享文件夹）的正确姿势 - 知乎](https://zhuanlan.zhihu.com/p/26763026)
 
-!!! tip "注意权限问题" 1. 设置了当前共享文件夹有可写权限的话，那么需要增加当前文件夹的 other 的写权限
+:::tip 注意权限问题
 
-    2. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
+2. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
 
-    不然的话，不管使用命令访问还是使用图形界面访问都是会导致**报错没有权限**的问题
+不然的话，不管使用命令访问还是使用图形界面访问都是会导致**报错没有权限**的问题
+
+:::
 
 #### linux 作客户端——挂载文件系统
 
@@ -607,7 +615,7 @@ alias sudo='sudo env PATH=$PATH'
 
 ### sh: 0: getcwd() failed: No such file or directory
 
-    一般来说是因为你 cd 到了某个目录之后 rm 了这个目录，这时去执行某些 service 脚本的时候就会报 get cwd 错误。 只需要 cd 到任何一个实际存在的目录下再执行就好了
+一般来说是因为你 cd 到了某个目录之后 rm 了这个目录，这时去执行某些 service 脚本的时候就会报 get cwd 错误。 只需要 cd 到任何一个实际存在的目录下再执行就好了
 
 ### Could not load the Qt platform plugin “xcb“
 
@@ -670,86 +678,58 @@ uname -a
 vim /etc/apt/sources.list
 ```
 
-!!! tip "注意换源的时候注意备份之前的"
-`shell
-    sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
-    `
+:::tip 注意换源的时候注意备份之前的
 
-=== "鱼香 ros"
-`shell
-    wget http://fishros.com/install -O fishros && bash fishros
-    `
 
-=== "清华源"
-[ubuntu | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
+```shell
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+```
 
-    ```shell
-    estricted universe multiverse
-    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-    # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-    # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-    # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-    ```
+鱼香 ros
 
-=== "aliyun 源"
-[ubuntu 镜像\_ubuntu 下载地址\_ubuntu 安装教程 - 阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/ubuntu)
+```shell
+wget http://fishros.com/install -O fishros && bash fishros
+```
 
-    ```shell
-    deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-    deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-    deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-    deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-    deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-    deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-    deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-    deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-    deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-    deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-    ```
+清华源
 
-=== "ustc 源"
+```shell
+estricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+```
+ZJU mirror
 
-    ```
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
-    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted univ# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-    deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-    # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main rerse multiverse
-    deb https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-    deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-    ```
+```shell
+deb https://mirrors.zju.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.zju.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.zju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.zju.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+```
 
-=== "zju"
-
-    ```shell
-    deb https://mirrors.zju.edu.cn/ubuntu/ focal main restricted universe multiverse
-    deb https://mirrors.zju.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-    deb https://mirrors.zju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-    deb https://mirrors.zju.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-    ```
+Update
 
 ```shell
 sudo apt-get update
 sudo apt-get upgrade
 ```
+:::
 
-!!! failure "404"
+
+:::warning 404
 [Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有 release 文件所以禁用-CSDN 博客](https://blog.csdn.net/ys743276112/article/details/127436835)
 [sudo apt-get update 命令出现没有 Release 文件问题解决\_debian apt get update 没有 release 文件-CSDN 博客](https://blog.csdn.net/A18040554844/article/details/110099737)
 
-    另外的解决方法，拉取https问题
-    ```shell
-    sudo apt install apt-transport-https
-    sudo apt install ca-certificates
-    ```
-
+另外的解决方法，拉取https问题
+```shell
+sudo apt install apt-transport-https
+sudo apt install ca-certificates
+```
+:::
 ### 中文系统
 
 在系統中添加中文語言，既可以顯示中文，也可以輸入中文。
@@ -811,7 +791,9 @@ tar -xzvf xxxx.tar.gz
 sudo apt-get install terminator
 ```
 
-!!! bug "设置为默认终端"
+:::warning 设置为默认终端
+
+:::
 
 | 开启 or 关闭快捷键 | 作用                             |
 | ------------------ | -------------------------------- |
@@ -906,20 +888,15 @@ ssh-copy-id name@ip
 
 [深入理解\~/.ssh/config 和/etc/ssh/ssh_config 配置文件 - 百度开发者中心](https://developer.baidu.com/article/details/2922032)
 
-!!! failure "错误与解决方法"
-=== "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"
+:::warning WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 警告：远程主机标识已更改！
 
-        此报错是由于远程的主机的公钥发生了变化导致的。 ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。
+此报错是由于远程的主机的公钥发生了变化导致的。 ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。
 
-        ```shell title="解决方法"
-        ssh-keygen -R XX.XX.XX.XX
-        ```
-
-    === "连接IPV6地址"
-        ```shell
-        ssh -6 user@ipv6
-        ```
+```shell title="解决方法"
+ssh-keygen -R XX.XX.XX.XX
+```
+:::
 
 ### X11 设置 GUI
 
@@ -948,12 +925,14 @@ sudo apt install xauth
 sudo service ssh restart
 ```
 
-!!! note "-X 和-Y 的区别"
-[xorg - What is the difference between \`ssh -Y\` (trusted X11 forwarding) and \`ssh -X\` (untrusted X11 forwarding)? - Ask Ubuntu](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
+:::tip -X 和-Y 的区别
+if you use `ssh -X remotemachine` the remote machine is treated as an untrusted client. So your local client sends a command to the remote machine and receives the graphical output. If your command violates some security settings you'll receive an error instead.
 
-    if you use `ssh -X remotemachine` the remote machine is treated as an untrusted client. So your local client sends a command to the remote machine and receives the graphical output. If your command violates some security settings you'll receive an error instead.
+But if you use `ssh -Y remotemachine` the remote machine is treated as a trusted client. This last option can open security problems. Because other graphical (X11) clients could sniff data from the remote machine (make screenshots, do keylogging and other nasty stuff) and it is even possible to alter those data.
 
-    But if you use `ssh -Y remotemachine` the remote machine is treated as a trusted client. This last option can open security problems. Because other graphical (X11) clients could sniff data from the remote machine (make screenshots, do keylogging and other nasty stuff) and it is even possible to alter those data.
+> [xorg](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
+
+:::
 
 ### conda
 
@@ -1141,7 +1120,9 @@ cd nutstore_linux_src_installer
 sudo ./update-toolchain.sh
 ```
 
-!!! question "这里我报错了，少一个库"
+:::question 这里我报错了，少一个库
+:::
+
 没搞明白，就全装了
 
     ```shell
@@ -1227,17 +1208,6 @@ nutstore help
 ```
 
 ## VMware
-
-!!! warning "VMware Workstation v17.x 永久许可证激活密钥："
-
-    不知道能不能用
-    ```
-    MC60H-DWHD5-H80U9-6V85M-8280D
-    4A4RR-813DK-M81A9-4U35H-06KND
-    NZ4RR-FTK5H-H81C1-Q30QH-1V2LA
-    JU090-6039P-08409-8J0QH-2YR7F
-    4Y09U-AJK97-089Z0-A3054-83KLA
-    ```
 
 ### 安装 VMware Tools 选项显示灰色的正确解决办法
 

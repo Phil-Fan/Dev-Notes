@@ -1,4 +1,4 @@
-# :fontawesome-brands-apple: MacOS
+# MacOS
 
 ## 快捷键
 
@@ -145,7 +145,9 @@ brew install gemini-cli
 
 在使用硬盘传数据的时候，老是报`错误代码 -50`，搜了一下才发现 mac 原生是不支持 NTFS 文件系统的
 
-!!! info "什么是 NTFS"
+:::info 什么是 NTFS
+:::
+
 NTFS（New Technology File System）是由微软开发的一种文件系统，最早在 Windows NT 操作系统中引入。它是 Windows 系统的默认文件系统，用于存储和检索硬盘上的数据。
 
 官网地址
@@ -217,31 +219,32 @@ source ~/.zshrc
 
 ### 换 conda 源
 
-=== "THU"
+THU
 
-````shell
-conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/>
-conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/>
-conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/>
-conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/>
-conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/>
-conda config --append channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/>
-
-    # 搜索时显示通道地址
-    conda config --set show_channel_urls yes
-    ```
-
-=== "ustc 源"
 ```shell
-conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/pkgs/main/>
-conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/pkgs/free/>
-conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/>
-conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/>
-conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/>
-conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/>
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/
+conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
+conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+# 搜索时显示通道地址
+conda config --set show_channel_urls yes
+```
 
-    conda config --set show_channel_urls yes
-    ```
+
+ustc 源
+
+```shell
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
+conda config --set show_channel_urls yes
+```
+
 
 ### 换 pip 源
 
@@ -252,7 +255,7 @@ conda config --add channels <https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/>
 ```shell
 command + 空格            #  打开聚焦搜索
 输入 ~/Library/Application Support       # 找到 Application Support 文件夹
-````
+```
 
 在`Application Support`这个文件夹里面建一个 pip 文件夹;
 在新建的 pip 文件夹下建一个`pip.conf`文件。
@@ -273,8 +276,7 @@ trusted-host=pypi.tuna.tsinghua.edu.cn
 ```shell
 conda activate your_conda_env_name
 conda install anaconda-clean
-anaconda-clean # add `--yes` to avoid being prompted to delete each one
-
+anaconda-clean --yes # 避免被提示删除每个文件
 #注：如果这一步之行不成功，可以直接跳过
 ```
 
@@ -286,7 +288,7 @@ rm -rf ~/miniconda3
 
 （3）删除将 conda 路径添加到 PATH 环境变量的行（或者注释掉）
 
-注：其实只之行第二步就可，后边这两步为了再次安装时，环境冲突，所以删干净
+注：其实只执行第二步就可，后边这两步为了再次安装时，环境冲突，所以删干净
 
 ```shell
 vi ~/.bashrc

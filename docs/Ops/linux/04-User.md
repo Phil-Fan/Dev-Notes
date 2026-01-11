@@ -1,232 +1,345 @@
-# 使用者管理
+# 用户与权限管理
 
-## 用户权限
+Linux 是多用户操作系统，合理的用户和权限管理是系统安全的基础。
 
-- UID
-  - 500~65535 普通用户
-  - 0 超级用户
+## 用户管理
 
-- PID process identification
+### 用户信息
 
-- useradd
+```bash
+# 查看当前用户
+whoami
+id
 
-- 文件分类
-  p 表示命名管道文件
+# 查看所有用户
+cat /etc/passwd
+cut -d: -f1 /etc/passwd
 
-      d 表示目录文件
+# 查看登录用户
+who
+w
+```
 
-      l 表示符号连接文件
+### 用户操作
 
-      - 表示普通文件
+```bash
+# 添加用户
+sudo useradd username
+sudo useradd -m -s /bin/bash username  # 创建家目录和指定 Shell
 
-      s 表示 socket 文件
+# 设置密码
+sudo passwd username
 
-      c 表示字符设备文件
+# 删除用户
+sudo userdel username          # 只删除用户
+sudo userdel -r username       # 删除用户和家目录
 
-      b 表示块设备文件
+# 修改用户
+sudo usermod -aG sudo username  # 添加到 sudo 组
+sudo usermod -s /bin/zsh username # 修改 Shell
+```
 
-- 特殊访问位置
+## 组管理
 
-  [linux 一文带你彻底搞懂特殊权限位 suid，sgid，sticky\_大雷编程的博客-CSDN 博客\_suid 位](https://blog.csdn.net/csdn_leidada/article/details/122223958)
+### 组信息
 
-  通过有效用户标识实现
+```bash
+# 查看所有组
+cat /etc/group
+getent group
 
-  SUID : set-user-ID
+# 查看用户所属组
+groups username
+id username
+```
 
-  ​ 拥有用户的权限
+### 组操作
 
-  ​ chmod u+s XXX
+```bash
+# 添加组
+sudo groupadd developers
 
-  SGID : set-group-ID
+# 删除组
+sudo groupdel developers
 
-  ​ 拥有组权限
+# 添加用户到组
+sudo usermod -aG developers username
+gpasswd -a username developers     # 另一种方法
 
-  ​ chmod g+s XXX
+# 从组中移除用户
+sudo gpasswd -d username developers
+```
 
-  ​ chmod 2777 XXX
+## 文件权限
 
-  uname 可显示电脑以及操作系统的相关信息。
+### 权限表示
 
-  ```bash
-  -a 或--all  显示全部的信息。
-  -m 或--machine  显示电脑类型。
-  -n 或--nodename  显示在网络上的主机名称。
-  -r 或--release  显示操作系统的发行编号。
-  -s 或--sysname  显示操作系统名称。
-  -v  显示操作系统的版本。
-  --help  显示帮助。
-  --version  显示版本信息
-  ```
+```bash
+# 符号表示
+r w x
+| | |
+| | └─ 执行 (execute) = 1
+| └─── 写入 (write) = 2
+└───── 读取 (read) = 4
 
-  sticky BIt: 只有所有者可以删除或者重命名、在共享文档中使用
+# 数字表示
+rwx = 7 (4+2+1)
+rw- = 6 (4+2)
+r-- = 4
+```
 
-  ​ 可以修改、不能删除
+### 权限类型
 
-  ​ chmod 1755 XXX
+Linux 文件权限分为三组：
 
-  ​ chmod +t XXX
+```
+-rwxr-xr-- file.txt
+ ││  ││  ││
+ ││  ││  └─── 其他人 (others)
+ ││  └─────── 组 (group)
+ └─────所有者 (user)
+```
 
-  文件和目录操作权限不同：
+### chmod - 修改权限
 
-  对于目录来说，read 权限是读取 list，write 是更改文件名字、移动、删除等等
+```bash
+# 符号模式
+chmod u+x script.sh           # 所有者添加执行权限
+chmod g+w file.txt            # 组添加写权限
+chmod o-r file.txt            # 其他人移除读权限
+chmod a+r file.txt            # 所有人添加读权限
 
-  execute 权限是 search 权限，也就是是否可以 access
+# 数字模式
+chmod 755 script.sh           # rwxr-xr-x
+chmod 644 file.txt            # rw-r--r--
+chmod 700 private.txt          # rwx------ (仅所有者)
 
-- 用户 用户组
+# 递归修改
+chmod -R 755 /var/www/html
 
-  user = u = 用户
+# 示例
+chmod +x script.sh             # 添加执行权限
+chmod go-w file.txt           # 移除组和其他人的写权限
+```
 
-  group = g = 用户组
+### chown - 修改所有者
 
-  others = o = 其他人
+```bash
+# 修改所有者
+sudo chown user file.txt
 
-  r = read w = write x = execute 可执行
+# 修改组
+sudo chown :group file.txt
 
-  没有则用‘-’替代
+# 同时修改所有者和组
+sudo chown user:group file.txt
 
-  顺序 u -> g -> o
+# 递归修改
+sudo chown -R user:group /path/to/dir
+```
 
-- chgrp = change group
+### chgrp - 修改组
 
-- chown = change owner
+```bash
+sudo chgrp group file.txt
+```
 
-- chmod =
+## 特殊权限
 
-  r = 4 , w = 2 , x = 1
+### SUID (Set User ID)
 
-  rwx = 7, rw = 6
+```bash
+# 设置 SUID
+chmod u+s /usr/bin/passwd
+chmod 4755 file.txt             # 4755 = SUID + 755
 
-- chattr
+# 示例： passwd 命令需要 SUID
+# 普通用户执行 passwd 时，临时获得 root 权限
+```
 
-  `chattr +i XXX`防止删除
+### SGID (Set Group ID)
 
-## 磁盘配额
+```bash
+# 设置 SGID
+chmod g+s /path/to/dir
+chmod 2755 directory            # 2755 = SGID + 755
 
-## 例行工作
+# 在目录中创建的文件继承目录的组
+```
 
-## 程序管理与进程
+### Sticky Bit
 
-**信号（Signal）**：信号是在软件层次上对中断机制的一种模拟，通过给一个进程发送信号，执行相应的处理函数。
+```bash
+# 设置 Sticky Bit
+chmod +t /tmp
+chmod 1755 directory            # 1755 = Sticky + 755
 
-|     |         |      |                                  |
-| --- | ------- | ---- | -------------------------------- |
-| 2   | SIGINT  | 终止 | 键盘输入中断命令，一般是 CTRL+C  |
-| 9   | SIGKILL | 终止 | 立即停止进程，不能捕获，不能忽略 |
-| 20  | SIGSTP  | 停止 | 停止进程，一般是 CTRL+Z          |
+# 示例：/tmp 目录
+# 只有文件所有者才能删除自己的文件
+```
 
-- type 类似于 which 找到执行文件
+## 进程管理
 
-  显示类型
+### ps - 查看进程
 
-  **内部命令、外部命令**：内部命令不创建进程、外部命令创建进程
+```bash
+# 查看所有进程
+ps aux
+ps -ef
 
-  [Linux shell 内部命令和外部命令](https://blog.csdn.net/coding_dong/article/details/103576071)
+# 查看指定进程
+ps aux | grep nginx
+ps -p 1234                     # 查看 PID 1234
 
-- ps 查看进程属性
+# 树形显示
+ps axjf
+pstree
+```
 
-  ps -a
+### top/htop - 实时监控
 
-- 前台后台
+```bash
+# 实时显示进程
+top
+htop                           # 更友好的界面
 
-  加**&**变成后台：大量计算、查找
+# 常用按键
+M - 按内存排序
+P - 按 CPU 排序
+k - 杀死进程
+q - 退出
+```
 
-  fg = foreground 后台转到前台
+### kill - 终止进程
 
-  ​ bg = background + "%作业号"
+```bash
+# 发送信号
+kill PID                       # 默认发送 SIGTERM (15)
+kill -9 PID                     # 强制终止 SIGKILL (9)
+kill -15 PID                    # 优雅终止 SIGTERM (15)
 
-- 作业、作业号
+# 按名称杀死进程
+killall process_name
+pkill process_name
 
-  查看作业 jobs
+# 常用信号
+SIGTERM (15)  - 优雅终止（可捕获）
+SIGKILL (9)   - 强制终止（不可捕获）
+SIGHUP (1)    - 重新加载配置
+SIGINT (2)    - 中断（Ctrl+C）
+```
 
-  定时执行 at
+### 后台运行
 
-  分号：顺序进行
-  与号：并发执行
+```bash
+# 后台运行
+command &
 
-- 终止进程
+# 将后台进程调到前台
+fg
 
-  <ctrl+C>
+# 将前台进程调到后台
+bg
 
-  kill -9（强制）
+# 查看后台任务
+jobs
 
-  -15 +进程号
+# 脱离终端
+nohup command &
+disown
+```
 
-- 睡眠 sleep n
-
-- &&成功则运行
-
-  || 失败才运行
+## 管道与重定向
 
 ### 管道
 
-管道是进程之间的通讯机制
+```bash
+# 标准管道
+command1 | command2
 
-经过几道手续之后再输出
+# 示例
+ps aux | grep nginx
+cat file.txt | grep pattern
+ls -l | sort -k5
+```
 
-#### tee
-
-中间结果保存
-
-#### cut
-
--d 后面接分割字符 -f 取出第几段的意思
-
--c 以字符的单位去除
-
-[【Linux 篇】cut 命令详解*linux cut*傻啦猫@\_@的博客-CSDN 博客](https://blog.csdn.net/weixin_45842494/article/details/124679008)
-
-#### xargs
-
-命令行可以从参数或标准输入接受输入。在用管道连接命令时，我们将标准输出和标准输入连接起来，但是有些命令，例如`tar` 则需要从参数接受输入。
-
-xargs 默认的命令是 echo，这意味着通过管道传递给 xargs 的输入将会包含换行和空白，不过通过 xargs 的处理，换行和空白将被空格取代。
+### tee - 分支输出
 
 ```bash
-# 实例1
-find /sbin -perm +700 |ls -l       #这个命令是错误的
-find /sbin -perm +700 |xargs ls -l   #这样才是正确的
+# 同时输出到文件和屏幕
+command | tee output.txt
 
-# -d 选项可以自定义一个定界符：
-$ echo "nameXnameXnameXname" | xargs -dX
-name name name name
-
-# 结合 -n 选项使用：
-$ echo "nameXnameXnameXname" | xargs -dX -n2
-name name
-name name
-
-# xargs 结合 find 使用
-用 rm 删除太多的文件时候，可能得到一个错误信息：/bin/rm Argument list too long. 用 xargs 去避免这个问题：
-$ find . -type f -name "*.log" -print0 | xargs -0 rm -f
-
-# 查找所有的 jpg 文件，并且压缩它们
-find . -type f -name "*.jpg" -print | xargs tar -czvf images.tar.gz
-
-# 很多你希望下载的 URL
-$ cat url-list.txt | xargs wget -c
-
-# find -print0 | xargs -0
-分析：第一个 -print0 指定结果集分隔为 null，第二个 -0 指定 xargs 分隔为 null。
-   find -print0表示在find的每一个结果之后加一个NULL字符，而不是默认加一个换行符。find的默认在每一个结果后加一个'\n'，所以输出结果是一行一行的。当使用了-print0之后，就变成一行了。
-   然后xargs -0表示xargs用NULL来作为分隔符。这样前后搭配就不会出现空格和换行符的错误了。选择NULL做分隔符，是因为一般编程语言把NULL作为字符串结束的标志，所以文件名不可能以NULL结尾，这样确保万无一失。
+# 追加模式
+command | tee -a output.txt
 ```
 
 ### 重定向
 
-- 输出
+```bash
+# 标准输出重定向
+command > file.txt             # 覆盖
+command >> file.txt            # 追加
 
-  stdout >>累加 >覆盖
+# 标准错误重定向
+command 2> error.txt
+command 2>> error.txt
 
-  stderr 2>> 累加 2>覆盖
+# 同时重定向
+command &> output.txt          # 标准输出和错误
+command > output.txt 2>&1      # 等价写法
 
-  输出到同一个文件 2>&1
+# 丢弃输出
+command > /dev/null 2>&1
+```
 
-- 输入
+## 系统监控
 
-  stdin <
+### 系统信息
 
-  stdin <<结束输入 ex: <<"eof"
+```bash
+# 系统信息
+uname -a                       # 详细信息
+uname -r                       # 内核版本
+hostname                       # 主机名
 
-## 系统服务
+# 硬件信息
+lscpu                           # CPU 信息
+free -h                         # 内存使用
+df -h                           # 磁盘使用
+lsblk                           # 块设备
 
-## 日志文件
+# 系统负载
+uptime
+top
+```
+
+### 网络监控
+
+```bash
+# 网络连接
+ss -tulpn                       # TCP 连接
+netstat -tulpn                  # 传统方式
+
+# 网络流量
+iftop
+nethogs
+
+# 测试连接
+ping google.com
+traceroute google.com
+mtr google.com
+```
+
+:::tip 权限速查表
+
+| 权限 | 数字 | 说明 |
+|------|------|------|
+| rwxrwxrwx | 777 | 所有人可读写执行 |
+| rwxr-xr-x | 755 | 所有者完全权限，其他人只读 |
+| rw-r--r-- | 644 | 标准文件权限 |
+| rw------- | 600 | 私有文件 |
+| rwxrwxrwt | 1777 | Sticky + 777 |
+| rwsr-xr-x | 2755 | SGID + 755 |
+| rwsr-xr-x | 4755 | SUID + 755 |
+
+:::

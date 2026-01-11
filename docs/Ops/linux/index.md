@@ -1,33 +1,44 @@
-# :fontawesome-brands-linux: Linux 简介
+# Linux 系统入门
 
-!!! note "慢慢地把命令使用整理到这个模块当中"
+Linux 是一套免费使用和自由传播的类 UNIX 操作系统，广泛应用于服务器、嵌入式设备和超级计算机等领域。
 
-linux 通常在指的是**linux 内核**
+## 系统组成
 
-分为四个部分：<u>内核、GNU 工具、图形化桌面环境、应用软件</u>
+Linux 系统由四个主要部分组成：
 
-类 UNIX 的操作系统
+- **内核 (Kernel)** - 系统核心，负责管理硬件资源
+- **GNU 工具** - 命令行工具和实用程序
+- **图形环境** - 桌面环境（如 GNOME、KDE）
+- **应用软件** - 办公、开发、娱乐等各类应用
 
-fedora core 9 , linux kernel
+## 版本类型
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__Linux__assets__index.assets__image-20220914193238844.webp)
+### 内核版本
 
-- 1984 年，**Richard Stallman** 提出 GNU Project 与 Unix 完全兼容
-- 自由软件基金会 FSF 指定共用版权协议 GPL
+由 Linus Torvalds 维护的核心版本号（如 5.15.0）
 
-## 自由软件
+### 发行版本
 
-- 有自由按照自己的意愿**运行**该软件；
-- 有自由**复制**软件并将其送给您的朋友和同事；
-- 有自由通过对源代码的完全控制而**改进**程序；
-- 有**自由发布**改进的版本从而帮助社区建设。（如果您再发布 GNU 软件，您可以为发布拷贝过程中的物理行为收取一定的费用，您也可以赠送拷贝。）
+基于内核打包的完整系统：
 
-## Linux 版本
+- **Debian/Ubuntu** - 适合新手和桌面用户
+- **RHEL/CentOS** - 企业级服务器
+- **Arch Linux** - 滚动更新，适合高级用户
+- **Fedora** - Red Hat 的试验田
 
-- 内核版本
+## 学习路径
 
-- 发行版本
+1. [文件操作](./01-File.md) - 目录管理与文件操作
+2. [Shell 脚本](./02-Shell.md) - 命令行与自动化
+3. [数据处理](./03-DataProcess.md) - 文本处理工具
+4. [用户管理](./04-User.md) - 权限与用户管理
+5. [系统管理](./05-Admin.md) - 进程与服务管理
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__Linux__assets__index.assets__image-20220914202059333.webp)
+## 自由软件原则
 
-[Linux 学习系列一：Linux 的简单介绍以及命令行的基本操作\_奋斗的西瓜瓜的博客-CSDN 博客](https://blog.csdn.net/qq_37085158/article/details/126993054)
+根据 GPL 许可证，Linux 保障四项基本自由：
+
+- ✅ 运行程序的自由
+- ✅ 研究和修改源代码的自由
+- ✅ 重新分发副本的自由
+- ✅ 改进程序并将改进公开发布的自由

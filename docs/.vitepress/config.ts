@@ -39,6 +39,7 @@ export default defineConfig({
           { text: "AI", link: "/AI/" },
           { text: "前端", link: "/Frontend/" },
           { text: "后端", link: "/Backend/" },
+          { text: "云服务", link: "/Cloud/" },
           { text: "运维", link: "/Ops/" },
           { text: "工具", link: "/Tools/" },
           { text: "产品&运营", link: "/PM/" },

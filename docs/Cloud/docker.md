@@ -152,6 +152,409 @@ sudo systemctl status docker
 sudo journalctl -u docker
 ```
 
+### 镜像管理
+
+:::tip 常用镜像操作
+
+**拉取镜像：**
+
+```shell
+# 拉取最新版本
+docker pull nginx
+
+# 拉取指定版本
+docker pull nginx:1.24
+
+# 拉取多个镜像
+docker pull mysql:8.0 redis:7.0
+```
+
+**查看镜像：**
+
+```shell
+# 列出所有镜像
+docker images
+
+# 查看镜像详细信息
+docker inspect nginx:latest
+```
+
+**删除镜像：**
+
+```shell
+# 删除单个镜像
+docker rmi nginx:latest
+
+# 删除多个镜像
+docker rmi nginx redis mysql
+
+# 强制删除运行中的容器镜像
+docker rmi -f nginx
+
+# 删除所有未使用的镜像
+docker image prune -a
+```
+
+**构建镜像：**
+
+```shell
+# 构建镜像并打标签
+docker build -t myapp:v1.0 .
+
+# 使用 Dockerfile 构建并指定文件路径
+docker build -f /path/to/Dockerfile -t myapp .
+```
+
+:::
+
+### 容器管理
+
+:::tip 容器生命周期管理
+
+**运行容器：**
+
+```shell
+# 基本运行
+docker run nginx
+
+# 后台运行并映射端口
+docker run -d -p 8080:80 --name my-nginx nginx
+
+# 交互式运行
+docker run -it ubuntu bash
+
+# 挂载本地目录
+docker run -v /host/path:/container/path nginx
+
+# 设置环境变量
+docker run -e ENV=value -e NODE_ENV=production node-app
+
+# 自动重启（除非手动停止）
+docker run --restart=unless-stopped nginx
+```
+
+**查看容器：**
+
+```shell
+# 查看运行中的容器
+docker ps
+
+# 查看所有容器（包括已停止）
+docker ps -a
+
+# 查看容器详细信息
+docker inspect my-nginx
+
+# 查看容器日志
+docker logs my-nginx
+
+# 实时查看容器日志
+docker logs -f my-nginx
+
+# 查看容器资源使用情况
+docker stats my-nginx
+```
+
+**容器操作：**
+
+```shell
+# 启动已停止的容器
+docker start my-nginx
+
+# 停止运行中的容器
+docker stop my-nginx
+
+# 重启容器
+docker restart my-nginx
+
+# 强制停止容器
+docker kill my-nginx
+
+# 删除已停止的容器
+docker rm my-nginx
+
+# 强制删除运行中的容器
+docker rm -f my-nginx
+
+# 进入运行中的容器
+docker exec -it my-nginx bash
+
+# 在容器中执行命令
+docker exec my-nginx nginx -v
+```
+
+:::
+
+### 数据卷管理
+
+:::tip 数据持久化
+
+**创建和管理数据卷：**
+
+```shell
+# 创建数据卷
+docker volume create my-data
+
+# 列出所有数据卷
+docker volume ls
+
+# 查看数据卷详细信息
+docker inspect my-data
+
+# 删除未使用的数据卷
+docker volume prune
+
+# 删除指定数据卷
+docker volume rm my-data
+```
+
+**使用数据卷：**
+
+```shell
+# 挂载数据卷到容器
+docker run -d -v my-data:/app/data nginx
+
+# 挂载本地目录到容器
+docker run -d -v /path/to/local:/path/in/container nginx
+
+# 只读挂载
+docker run -d -v /path/to/local:/path/in/container:ro nginx
+```
+
+:::
+
+### 网络管理
+
+:::tip 容器网络配置
+
+**网络操作：**
+
+```shell
+# 创建网络
+docker network create my-network
+
+# 列出所有网络
+docker network ls
+
+# 查看网络详细信息
+docker network inspect my-network
+
+# 删除网络
+docker network rm my-network
+
+# 连接容器到网络
+docker network connect my-network my-nginx
+
+# 断开容器网络连接
+docker network disconnect my-network my-nginx
+```
+
+**使用网络运行容器：**
+
+```shell
+# 使用指定网络运行容器
+docker run --network my-network --name my-app nginx
+
+# 创建桥接网络并运行多个容器
+docker network create my-bridge
+docker run --network my-bridge --name web nginx
+docker run --network my-bridge --name api node-app
+```
+
+:::
+
+### Dockerfile 编写指南
+
+:::tip Dockerfile 最佳实践
+
+**基础示例：**
+
+```dockerfile
+# 使用官方镜像作为基础镜像
+FROM node:18-alpine
+
+# 设置工作目录
+WORKDIR /usr/src/app
+
+# 复制依赖文件
+COPY package*.json ./
+
+# 安装依赖
+RUN npm ci --only=production
+
+# 复制应用代码
+COPY . .
+
+# 暴露端口
+EXPOSE 3000
+
+# 设置环境变量
+ENV NODE_ENV=production
+
+# 运行应用
+CMD ["node", "app.js"]
+```
+
+**多阶段构建（优化镜像大小）：**
+
+```dockerfile
+# 构建阶段
+FROM node:18-alpine AS builder
+
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# 运行阶段
+FROM node:18-alpine
+
+WORKDIR /usr/src/app
+COPY --from=builder /usr/src/app/dist ./dist
+COPY package*.json ./
+RUN npm ci --only=production
+
+EXPOSE 3000
+CMD ["node", "dist/app.js"]
+```
+
+**Dockerfile 编写技巧：**
+
+```dockerfile
+# 1. 选择合适的基础镜像
+FROM ubuntu:latest  # ❌ 太大
+FROM ubuntu:20.04   # ✅ 指定版本
+FROM alpine:3.18    # ✅✅ 更小更安全
+
+# 2. 合并 RUN 指令减少层数
+RUN apt-get update        # ❌ 多层
+RUN apt-get install -y curl
+
+RUN apt-get update && \   # ✅ 合并一层
+    apt-get install -y curl && \
+    rm -rf /var/lib/apt/lists/*
+
+# 3. 利用构建缓存
+COPY package*.json ./     # ✅ 先复制依赖文件
+RUN npm install           # ✅ 依赖变化才会重新安装
+COPY . .                  # 最后复制代码
+
+# 4. 使用 .dockerignore
+# node_modules
+# npm-debug.log
+# .git
+# *.md
+
+# 5. 非 root 用户运行
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+USER nodejs
+```
+
+:::
+
+### 实用技巧
+
+:::info 开发工作流
+
+**快速清理：**
+
+```shell
+# 删除所有已停止的容器
+docker container prune
+
+# 删除所有未使用的镜像
+docker image prune -a
+
+# 删除所有未使用的数据卷、网络、镜像、容器
+docker system prune -a --volumes
+
+# 查看 Docker 占用的磁盘空间
+docker system df
+```
+
+**导出和导入：**
+
+```shell
+# 导出镜像
+docker save -o myapp.tar myapp:v1.0
+
+# 导入镜像
+docker load -i myapp.tar
+
+# 导出容器
+docker export my-container > my-container.tar
+
+# 导入容器为新镜像
+docker import my-container.tar new-image:latest
+```
+
+**日志管理：**
+
+```shell
+# 查看容器日志最后 100 行
+docker logs --tail 100 my-nginx
+
+# 查看最近 10 分钟的日志
+docker logs --since 10m my-nginx
+
+# 查看指定时间范围的日志
+docker logs --since "2024-01-01T00:00:00" --until "2024-01-02T00:00:00" my-nginx
+```
+
+:::
+
+### 常见问题
+
+:::warning 故障排查
+
+**容器启动失败：**
+
+```shell
+# 查看容器日志
+docker logs my-container
+
+# 查看容器最近的日志
+docker logs --tail 50 my-container
+
+# 检查容器状态
+docker inspect my-container
+```
+
+**端口冲突：**
+
+```shell
+# 查看端口占用
+sudo netstat -tulpn | grep :8080
+
+# 或使用 lsof
+sudo lsof -i :8080
+
+# 使用不同端口
+docker run -p 8081:80 nginx
+```
+
+**权限问题：**
+
+```shell
+# 将用户添加到 docker 组（避免每次 sudo）
+sudo usermod -aG docker $USER
+
+# 刷新用户组
+newgrp docker
+```
+
+**镜像拉取缓慢：**
+
+```shell
+# 配置镜像加速器（在 daemon.json 中配置）
+# 或使用代理
+docker pull --platform linux/amd64 nginx
+```
+
+:::
+
 ### 文档
 
 :::tip 文档结构

@@ -141,6 +141,55 @@ sed '= file.txt | sed 'N;s/\n/: /'
 echo "https://www.example.com/path" | sed 's|^[^/]*//||' | sed 's|/.*||'
 ```
 
+## jq - JSON 处理
+
+jq 是轻量级的 JSON 命令行处理器。
+
+### JSON 格式化与提取
+
+```bash
+# 格式化输出
+echo '{"name":"test"}' | jq '.'
+
+# 提取字段
+cat data.json | jq '.name'
+cat data.json | jq '.user.name'
+
+# 数组操作
+cat data.json | jq '.[]'           # 展开数组
+cat data.json | jq '.[0]'          # 第一个元素
+cat data.json | jq '.[] | .name'   # 提取所有 name
+```
+
+### JSON 过滤与计算
+
+```bash
+# 过滤
+jq 'select(.status == "active")' input.json
+jq 'map(select(.age > 18))' input.json
+
+# 计算
+jq '[.[] | .price] | add' prices.json
+jq 'length' items.json
+
+# 构造新对象
+jq '{name: .user, email: .contact.email}' input.json
+```
+
+### JSON 处理示例
+
+```bash
+# API 响应处理
+curl api/data | jq '.results[] | select(.active == true)'
+
+# 提取并转换
+cat data.json | jq '.[] | {id, name: .title}'
+
+# 统计
+jq '[.[] | .price] | add / length' prices.json    # 平均值
+jq 'length' items.json                           # 计数
+```
+
 ## awk - 文本分析
 
 awk 是强大的文本处理工具，适合格式化和数据分析。
@@ -358,6 +407,7 @@ grep "ERROR" log.txt | awk '{print $1, $2}' | sort | uniq -c
 - **grep** - 搜索文本
 - **sed** - 替换和编辑文本
 - **awk** - 格式化和分析数据
+- **jq** - 处理 JSON 数据
 - **sort/uniq** - 排序和去重
 - **cut** - 提取列
 - **xargs** - 构建命令参数

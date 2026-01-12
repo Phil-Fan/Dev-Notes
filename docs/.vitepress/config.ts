@@ -9,6 +9,19 @@ export default defineConfig({
   description: "全栈开发资源与知识库",
   lang: "zh-CN",
 
+  // Head 配置 - Microsoft Clarity
+  head: [
+    [
+      "script",
+      {},
+      `(function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "v05tt0i59b");`,
+    ],
+  ],
+
   // 主题配置
   themeConfig: {
     // 导航栏

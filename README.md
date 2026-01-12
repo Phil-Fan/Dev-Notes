@@ -122,10 +122,29 @@ until it's complete, then write the spec to the file.
 ## 工具
 
 - [iTerm2](https://github.com/gnachman/iTerm2)：Mac 下最好的终端
+- [Amphetamine](https://apps.apple.com/cn/app/amphetamine/id937984704?mt=12)：Mac 防休眠工具
 - [tmux](https://github.com/tmux/tmux)
-- [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/doc/install/)
+- [Vim](https://www.vim.org/)
+- [Neovim](https://neovim.io/doc/install/)
   - [lazyvim](https://www.lazyvim.org)
+
+```shell
+brew install --cask font-jetbrains-mono-nerd-font
+```
+
 - [chezmoi](https://github.com/twpayne/chezmoi): Dotfiles 管理工具
+- [tldr](https://github.com/tldr-pages/tldr): 简化的 man pages，社区维护的命令行帮助文档
+- [bat](https://github.com/sharkdp/bat): cat 克隆，支持语法高亮和 Git 集成
+- [ripgrep](https://github.com/BurntSushi/ripgrep): grep 替代品，极速递归搜索
+- [eza](https://github.com/eza-community/eza): ls 替代品，色彩丰富功能更强
+- [fd](https://github.com/sharkdp/fd): find 替代品，极速文件查找
+- [jq](https://jqlang.github.io/jq/): JSON 数据处理命令行工具
+- [zoxide](https://github.com/ajeetdsouza/zoxide): 更智能的 cd 命令，基于使用频率和模式跳转目录
+
+### 文本处理
+
+- [awk](https://www.gnu.org/software/gawk/): 强大的文本分析与报告生成工具
+- [sed](https://www.gnu.org/software/sed/): 流编辑器，用于文本过滤和转换
 
 ## Template
 

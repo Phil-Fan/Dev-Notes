@@ -104,6 +104,11 @@ until it's complete, then write the spec to the file.
 ### 知识库
 
 - [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
+- [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
+
+```shell
+export ANTHROPIC_BASE_URL=https://pmpjfbhq.cn-nb1.rainapp.top
+```
 
 ### 多模态
 

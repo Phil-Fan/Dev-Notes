@@ -1,13 +1,18 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-  // 明确指定源目录为当前目录（docs），避免向上扫描
+  // 明确指定源目录为当前��录（docs），避免向上扫描
   srcDir: ".",
 
   // 站点基础配置
   title: "Awesome Full Stack",
   description: "全栈开发资源与知识库",
   lang: "zh-CN",
+
+  // Google Analytics
+  analytics: {
+    id: "G-S4F7PC3PH4",
+  },
 
   // Head 配置 - Microsoft Clarity
   head: [

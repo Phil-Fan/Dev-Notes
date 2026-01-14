@@ -40,10 +40,15 @@
 - [OpenCode](https://opencode.ai/)：用户体验不错。
   - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
 - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
+- [cc-switch](https://github.com/farion1231/cc-switch): 跨平台桌面 AI 助手工具，统一管理 Claude Code、Codex、Gemini CLI
 - [Codex](https://github.com/openai/codex): Debug 很好，能力很强，但是任务运行时间太久
 - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全，有一些奇怪小 Bug。可以上一些国产模型，比如 MiniMax GLM 等
   - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
 - [Gemini CLI](https://github.com/google/gemini-cli)：UI 可以
+- [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
+  - ```shell
+    export ANTHROPIC_BASE_URL=https://pmpjfbhq.cn-nb1.rainapp.top
+    ```
 
 ```shell
 brew install --cask codex
@@ -104,11 +109,6 @@ until it's complete, then write the spec to the file.
 ### 知识库
 
 - [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
-- [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
-
-```shell
-export ANTHROPIC_BASE_URL=https://pmpjfbhq.cn-nb1.rainapp.top
-```
 
 ### 多模态
 
@@ -145,6 +145,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 - [fd](https://github.com/sharkdp/fd): find 替代品，极速文件查找
 - [jq](https://jqlang.github.io/jq/): JSON 数据处理命令行工具
 - [zoxide](https://github.com/ajeetdsouza/zoxide): 更智能的 cd 命令，基于使用频率和模式跳转目录
+- [xget](https://github.com/xixu-me/xget): 开发者资源一站式加速引擎
 
 ### 文本处理
 
@@ -181,6 +182,7 @@ npx create-next-app@latest my-app
 
 ## 后端
 
+- [Bun](https://bun.sh/): 快速的一体化 JavaScript 运行时
 - [Python](https://www.python.org/)
   - [uv](https://github.com/astral-sh/uv): package and project manager
   - [ruff](https://github.com/astral-sh/ruff): linter and code formatter
@@ -212,10 +214,11 @@ npx create-next-app@latest my-app
 
 - [Docker](https://www.docker.com/)
 - [Kubernetes](https://kubernetes.io/)
+- [宝塔面板](https://www.bt.cn/new/index.html): 简单好用的 Linux/Windows 服务器运维管理面板
 
 ### 网络
 
-- [Caddy](https://github.com/caddyserver/caddy)：反向代理最佳实践
+- [Caddy](https://github.com/caddyserver/caddy): 反向代理最佳实践
 - [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
 
 ### CI/CD
@@ -226,6 +229,7 @@ npx create-next-app@latest my-app
 - [jenkins](https://www.jenkins.io)
 - [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
 - [Drone CI](https://github.com/harness/drone)
+- [qinglong](https://github.com/whyour/qinglong): 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
 
 - commit hooks:
   - [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架

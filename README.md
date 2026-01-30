@@ -35,6 +35,15 @@
   - AI app all in one
   - 知识库、agent 都可以放在一起用
 
+::: note Best Practices
+- 调研技术栈、维护全局技术文档、每次对话即时更新技术文档
+- cc planing 模式做规划，ultrawork 模式写代码
+- cursor antigravity 进行小规模 debug 以及纠错
+- codex 大规模审核与重构、写重要的逻辑
+- 5.2pro & gemini 3p deep research
+- kiro & qcoder & trae 以及其他中转站用于没有余额的时候搞
+:::
+
 ### CLI 工具
 
 - [OpenCode](https://opencode.ai/)：用户体验不错。
@@ -72,6 +81,7 @@ brew install gemini-cli
 - [GitHub MCP](https://github.com/github/github-mcp-server): GitHub's official MCP Server
 - [高德地图 MCP Server](https://lbs.amap.com/api/mcp-server/summary): 高德地图 API 的 MCP Server
 - [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp): Chrome DevTools for coding agents
+- [Pencil](https://pencil.gg/): AI design editor for .pen files with MCP integration
 
 ### Spec Tools
 
@@ -167,6 +177,7 @@ brew install --cask font-jetbrains-mono-nerd-font
   - [biome](https://github.com/biomejs/biome): Next.js 项目
   - [tailwindcss](https://github.com/tailwindlabs/tailwindcss)+[shadcn/ui](https://ui.shadcn.com/)
     - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
+    - [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss): 自动排序类名
   - [motion](https://github.com/motiondivision/motion): 动画库
   - [zustand](https://zustand.docs.pmnd.rs/getting-started/introduction): 前端状态管理库
   - [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview): 数据查询库
@@ -304,6 +315,7 @@ npx create-next-app@latest my-app
 - [Figma](https://www.figma.com/): 产品设计与原型设计
 - [iMockup](https://www.imockup.app/zh): 模型机动画
 - [Jitter](https://jitter.video/templates/devices/): 产品视频介绍模版
+- [Remotion](https://www.remotion.dev/): 用代码创建视频的 React 框架
 - [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具
 - [OBS Studio](https://github.com/obsproject/obs-studio): 免费开源的直播和屏幕录制软件
 

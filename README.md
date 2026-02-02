@@ -313,10 +313,12 @@ npx create-next-app@latest my-app
 ### 产品介绍
 
 - [Figma](https://www.figma.com/): 产品设计与原型设计
-- [iMockup](https://www.imockup.app/zh): 模型机动画
+- [Rotato](https://rotato.app/): 模型机动画
 - [Jitter](https://jitter.video/templates/devices/): 产品视频介绍模版
 - [Remotion](https://www.remotion.dev/): 用代码创建视频的 React 框架
 - [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具
+- [Screen Studio](https://screen.studio/): 录屏软件
+- [Blender](https://www.blender.org/): 3D 建模软件
 - [OBS Studio](https://github.com/obsproject/obs-studio): 免费开源的直播和屏幕录制软件
 
 ### 用户洞察

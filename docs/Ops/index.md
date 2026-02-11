@@ -21,6 +21,5 @@
 - [macOS](/Ops/env/macos.md)
 - [路由器](/Ops/env/router.md)
 - [服务器](/Ops/env/server.md)
-- [软件](/Ops/env/software.md)
 - [Windows WSL](/Ops/env/windows-wsl.md)
 - [Windows](/Ops/env/windows.md)

@@ -36,6 +36,7 @@
   - 知识库、agent 都可以放在一起用
 
 ::: note Best Practices
+
 - 调研技术栈、维护全局技术文档、每次对话即时更新技术文档
 - cc planing 模式做规划，ultrawork 模式写代码
 - cursor antigravity 进行小规模 debug 以及纠错
@@ -55,6 +56,7 @@
   - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
 - [Gemini CLI](https://github.com/google/gemini-cli)：UI 可以
 - [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
+
   - ```shell
     export ANTHROPIC_BASE_URL=https://pmpjfbhq.cn-nb1.rainapp.top
     ```
@@ -312,14 +314,20 @@ npx create-next-app@latest my-app
 
 ### 产品介绍
 
+平面设计
+
+- PowerPoint 永远的神
 - [Figma](https://www.figma.com/): 产品设计与原型设计
+
+视频与动画
+
 - [Rotato](https://rotato.app/): 模型机动画
 - [Jitter](https://jitter.video/templates/devices/): 产品视频介绍模版
 - [Remotion](https://www.remotion.dev/): 用代码创建视频的 React 框架
-- [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具
-- [Screen Studio](https://screen.studio/): 录屏软件
+- 录屏
+  - [Screen Studio](https://screen.studio/): 录屏软件；
+  - [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具，支持一下开源，但是感觉功能不是特别完善
 - [Blender](https://www.blender.org/): 3D 建模软件
-- [OBS Studio](https://github.com/obsproject/obs-studio): 免费开源的直播和屏幕录制软件
 
 ### 用户洞察
 

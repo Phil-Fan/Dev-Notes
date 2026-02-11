@@ -32,14 +32,14 @@ export default defineConfig({
     // 导航栏
     nav: [
       { text: "首页", link: "/" },
-      { text: "资源列表", link: "/awesome/index.html" },
+      { text: "Awesome", link: "/awesome/index.html" },
       {
         text: "知识库",
         items: [
           { text: "AI", link: "/AI/" },
           { text: "前端", link: "/Frontend/" },
           { text: "后端", link: "/Backend/" },
-          { text: "云服务", link: "/Cloud/" },
+          { text: "云原生", link: "/Cloud/" },
           { text: "运维", link: "/Ops/" },
           { text: "工具", link: "/Tools/" },
           { text: "产品&运营", link: "/PM/" },
@@ -55,9 +55,11 @@ export default defineConfig({
           text: "AI",
           collapsed: false,
           items: [
+            { text: "概述", link: "/AI/index" },
             { text: "LSP", link: "/AI/LSP" },
             { text: "MCP", link: "/AI/MCP" },
-            { text: "Skills", link: "/AI/Skills" },
+            { text: "OpenClaw", link: "/AI/openclaw" },
+            { text: "Claude Code", link: "/AI/claude" },
           ],
         },
       ],
@@ -66,6 +68,7 @@ export default defineConfig({
           text: "前端开发",
           collapsed: false,
           items: [
+            { text: "概述", link: "/Frontend/index" },
             { text: "HTML", link: "/Frontend/html" },
             { text: "CSS", link: "/Frontend/css" },
             { text: "JavaScript", link: "/Frontend/javascript" },
@@ -81,6 +84,7 @@ export default defineConfig({
           text: "后端开发",
           collapsed: false,
           items: [
+            { text: "概述", link: "/Backend/index" },
             { text: "Python", link: "/Backend/python" },
             { text: "Java", link: "/Backend/java" },
             { text: "Node.js", link: "/Backend/nodejs" },
@@ -111,10 +115,18 @@ export default defineConfig({
           text: "云服务",
           collapsed: false,
           items: [
+            { text: "概述", link: "/Cloud/index" },
             { text: "阿里云", link: "/Cloud/aliyun" },
-            { text: "CI/CD", link: "/Cloud/cicd" },
             { text: "Docker", link: "/Cloud/docker" },
+            { text: "Docker Compose", link: "/Cloud/docker-compose" },
+            { text: "Runtime", link: "/Cloud/runtime" },
+            { text: "K3s", link: "/Cloud/k3s" },
             { text: "Kubernetes", link: "/Cloud/k8s" },
+            { text: "Helm", link: "/Cloud/helm" },
+            { text: "微服务", link: "/Cloud/microservice" },
+            { text: "Fluid", link: "/Cloud/fluid" },
+            { text: "RBG", link: "/Cloud/rbg" },
+            { text: "CI/CD", link: "/Cloud/cicd" },
           ],
         },
       ],
@@ -146,7 +158,6 @@ export default defineConfig({
                 { text: "macOS", link: "/Ops/env/macos" },
                 { text: "路由器", link: "/Ops/env/router" },
                 { text: "服务器", link: "/Ops/env/server" },
-                { text: "软件", link: "/Ops/env/software" },
                 { text: "Windows WSL", link: "/Ops/env/windows-wsl" },
                 { text: "Windows", link: "/Ops/env/windows" },
               ],
@@ -159,6 +170,7 @@ export default defineConfig({
           text: "工具",
           collapsed: false,
           items: [
+            { text: "概述", link: "/Tools/index" },
             { text: "Git", link: "/Tools/git" },
             { text: "Vim", link: "/Tools/vim" },
             { text: "LaTeX", link: "/Tools/latex" },
@@ -177,7 +189,10 @@ export default defineConfig({
         {
           text: "产品与运营",
           collapsed: false,
-          items: [{ text: "钉钉机器人", link: "/PM/dingbot" }],
+          items: [
+            { text: "概述", link: "/PM/index" },
+            { text: "钉钉机器人", link: "/PM/dingbot" },
+          ],
         },
       ],
     },

@@ -17,7 +17,7 @@
 ### 快速打开终端
 
 | 快捷键 | 功能 |
-|--------|------|
+| --- | --- |
 | `Win + R` → `cmd` | 打开命令提示符 |
 | `Win + X` → `Windows Terminal` | 打开 Windows 终端 |
 
@@ -294,7 +294,7 @@ netsh wlan show profile name="WiFi 名称" key=clear
 ### 清理无用文件
 
 | 方法 | 说明 | 工具 |
-|------|------|------|
+| --- | --- | --- |
 | 磁盘清理 | 删除系统更新残留 | 系统自带 |
 | Geek 卸载 | 彻底卸载软件及注册表 | [Geek Uninstaller](https://geekuninstaller.com/download) |
 | CCleaner | 清理注册表和临时文件 | 官网免费版 |
@@ -333,7 +333,7 @@ cmd /c mklink /D "%USERPROFILE%\.vscode" "D:\.vscode\"
 ### 快捷键
 
 | 快捷键 | 功能 |
-|--------|------|
+| --- | --- |
 | `Ctrl + Tab` | 下一个标签页 |
 | `Ctrl + Shift + Tab` | 上一个标签页 |
 | `Ctrl + H` | 历史记录 |
@@ -381,7 +381,7 @@ g++ -v
 ### 快捷选择
 
 | 快捷键 | 功能 |
-|--------|------|
+| --- | --- |
 | `Ctrl + Shift + ↓` | 选择当前列到底部 |
 | `Ctrl + Shift + →` | 选择当前行到右侧 |
 
@@ -392,7 +392,7 @@ g++ -v
 ### Outlook 添加浙大邮箱
 
 | 配置项 | IMAP | POP3 |
-|--------|------|------|
+| --- | --- | --- |
 | 接收服务器 | `imap.zju.edu.cn:143` | `pop3.zju.edu.cn:110` |
 | SSL 端口 | `993` | `995` |
 | 发送服务器 | `smtp.zju.edu.cn:25` | `smtp.zju.edu.cn:25` |

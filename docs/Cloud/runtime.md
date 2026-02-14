@@ -4,12 +4,12 @@
 
 ## Cloudflare Workers
 
-全球边缘计算平台,在 Cloudflare 的 300+ 数据中心运行代码。
+全球边缘计算平台，在 Cloudflare 的 300+ 数据中心运行代码。
 
 ### 特点
 
 - **全球分布**: 代码在离用户最近的边缘节点执行
-- **零冷启动**: 始终保持热状态,无启动延迟
+- **零冷启动**: 始终保持热状态，无启动延迟
 - **免费额度慷慨**: 每天 100,000 次请求
 - **丰富生态**: 支持 KV、D1 数据库、R2 存储、Durable Objects
 
@@ -101,7 +101,7 @@ export default {
       return response;
     }
 
-    // 缓存未命中,fetch 并缓存
+    // 缓存未命中，fetch 并缓存
     response = await fetch(request);
 
     // 只缓存成功的响应
@@ -159,7 +159,7 @@ export default {
 
 ### 绑定服务
 
-Workers 可以绑定多种 Cloudflare 服务:
+Workers 可以绑定多种 Cloudflare 服务：
 
 ```typescript
 interface Env {
@@ -192,12 +192,12 @@ interface Env {
 
 ## Deno
 
-现代 JavaScript/TypeScript 运行时,由 Node.js 创建者开发。
+现代 JavaScript/TypeScript 运行时，由 Node.js 创建者开发。
 
 ### 特点
 
-- **安全第一**: 默认沙箱,显式权限控制
-- **原生 TypeScript**: 开箱即用,无需配置
+- **安全第一**: 默认沙箱，显式权限控制
+- **原生 TypeScript**: 开箱即用，无需配置
 - **内置工具**: 测试、格式化、linting、打包一体化
 - **兼容性**: Deno 2.0+ 支持 npm 和 Node.js API
 
@@ -309,7 +309,7 @@ Deno.test("async function", async () => {
 });
 ```
 
-### Web 框架: Fresh
+### Web 框架：Fresh
 
 [Fresh](https://fresh.deno.dev/) 是 Deno 官方推荐的现代 Web 框架。
 

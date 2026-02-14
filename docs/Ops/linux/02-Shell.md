@@ -4,7 +4,47 @@ Shell 是 Linux 的命令解释器，也是强大的脚本语言。Bash (Bourne 
 
 ## Shell 基础
 
-### 脚本结构
+### Set
+
+`set -x`会开启 **执行跟踪模式（execution tracing）**。
+
+👉 Bash 会在执行每一条命令前，把“展开后的命令”打印出来（通常输出到 stderr）。
+
+常用于：
+
+* 调试脚本
+* 查看变量展开结果
+* 排查逻辑问题
+
+```bash
+#!/bin/bash
+set -x
+
+echo "Start"
+name="Phil"
+echo "Hello $name"
+ls /tmp
+```
+
+运行：
+
+```text
++ echo Start
+Start
++ name=Phil
++ echo 'Hello Phil'
+Hello Phil
++ ls /tmp
+file1
+file2
+```
+
+| 选项          | 作用         |
+| ----------- | ---------- |
+| -x          | 打印执行过程     |
+| -e          | 遇到错误立即退出   |
+| -u          | 使用未定义变量时报错 |
+| -o pipefail | 管道失败时返回错误  |
 
 ```bash
 #!/bin/bash                    # Shebang - 指定解释器
@@ -47,66 +87,6 @@ echo "$HOME \n"        # 输出: /home/user \n
 
 # ANSI-C 引号：支持 \n、\t 等转义
 echo $'hello\nworld'   # 输出换行
-```
-
-## 变量
-
-### 变量定义与使用
-
-```bash
-# 定义变量（等号两边不能有空格）
-name="John"
-age=25
-
-# 使用变量
-echo $name
-echo ${name}          # 推荐使用花括号
-
-# 只读变量
-readonly PI=3.14
-
-# 删除变量
-unset name
-```
-
-### 变量替换
-
-```bash
-# ${变量:-默认值} - 变量未设置或为空时使用默认值
-echo ${name:-"Guest"}
-
-# ${变量:=默认值} - 变量未设置或为空时设置并使用默认值
-echo ${count:=0}
-
-# ${变量:+替换值} - 变量设置时使用替换值
-echo ${name:+"Hello"}
-
-# ${#变量} - 获取变量长度
-echo ${#name}
-
-# 字符串操作
-echo ${name:0:2}       # 截取子串（从位置 0 开始，长度 2）
-echo ${name/j/J}       # 替换第一个匹配
-echo ${name//j/J}      # 替换所有匹配
-```
-
-### 环境变量
-
-```bash
-# 查看环境变量
-env
-export
-
-# 常用环境变量
-echo $HOME             # 用户主目录
-echo $USER             # 当前用户名
-echo $PATH             # 命令搜索路径
-echo $PWD              # 当前工作目录
-echo $SHELL            # 当前 Shell
-echo $RANDOM           # 随机数（0-32767）
-
-# 导出环境变量（子进程可访问）
-export MY_VAR="value"
 ```
 
 ## 数组
@@ -154,62 +134,7 @@ for key in "${!config[@]}"; do
 done
 ```
 
-## 特殊变量
-
-```bash
-# 脚本参数
-$0          # 脚本名称
-$1 - $9     # 第 1 到第 9 个参数
-$@          # 所有参数（每个参数独立）
-$*          # 所有参数（作为整体）
-$#          # 参数个数
-
-# 返回状态
-$?          # 上一条命令的退出状态（0=成功）
-$$          # 当前脚本的 PID
-$!          # 最近后台进程的 PID
-
-# 命令历史
-!!          # 上一条命令
-!$          # 上一条命令的最后一个参数
-```
-
-## 输入输出
-
-### 用户输入
-
-```bash
-# 读取输入
-read name
-echo "Hello, $name"
-
-# 带提示信息
-read -p "Enter your name: " name
-
-# 超时输入
-read -t 5 -p "Quick input (5s): " answer
-
-# 密码输入（不显示）
-read -s -p "Password: " password
-```
-
-### 输出
-
-```bash
-# 简单输出
-echo "Hello World"
-
-# 不换行输出
-echo -n "No newline: "
-
-# 格式化输出
-printf "Name: %s, Age: %d\n" "John" 25
-
-# 输出到文件
-echo "Log message" >> log.txt
-```
-
-## 条件判断
+## 函数
 
 ### if 语句
 
@@ -236,7 +161,7 @@ else
 fi
 ```
 
-### 条件测试
+### 条件 - 条件测试
 
 ```bash
 # 文件测试
@@ -273,9 +198,7 @@ if [[ $name =~ ^J ]]; then
 fi
 ```
 
-## 循环
-
-### for 循环
+### 循环 - for
 
 ```bash
 # 遍历列表
@@ -299,7 +222,7 @@ for file in *.txt; do
 done
 ```
 
-### while 循环
+### 循环 - while
 
 ```bash
 # 基本用法
@@ -315,7 +238,7 @@ while IFS= read -r line; do
 done < file.txt
 ```
 
-## 函数
+### 自定义函数
 
 ```bash
 # 定义函数
@@ -342,7 +265,27 @@ if check_file "file.txt"; then
 fi
 ```
 
-## 通配符与扩展
+## Argument
+
+### 特殊变量
+
+```bash
+# 脚本参数
+$0          # 脚本名称
+$1 - $9     # 第 1 到第 9 个参数
+$@          # 所有参数（每个参数独立）
+$*          # 所有参数（作为整体）
+$#          # 参数个数
+
+# 返回状态
+$?          # 上一条命令的退出状态（0=成功）
+$$          # 当前脚本的 PID
+$!          # 最近后台进程的 PID
+
+# 命令历史
+!!          # 上一条命令
+!$          # 上一条命令的最后一个参数
+```
 
 ### 通配符
 
@@ -379,3 +322,188 @@ mv old.{txt,md}                   # old.txt -> old.md
 ```
 
 :::
+
+## Stream
+
+### 管道
+
+```bash
+# 标准管道
+command1 | command2
+
+# 示例
+ps aux | grep nginx
+cat file.txt | grep pattern
+ls -l | sort -k5
+```
+
+### tee - 分支输出
+
+```bash
+# 同时输出到文件和屏幕
+command | tee output.txt
+
+# 追加模式
+command | tee -a output.txt
+```
+
+### 重定向
+
+```bash
+# 标准输出重定向
+command > file.txt             # 覆盖
+command >> file.txt            # 追加
+
+# 标准错误重定向
+command 2> error.txt
+command 2>> error.txt
+
+# 同时重定向
+command &> output.txt          # 标准输出和错误
+command > output.txt 2>&1      # 等价写法
+
+# 丢弃输出
+command > /dev/null 2>&1
+```
+
+## Environment Variable
+
+### 变量定义与使用
+
+```bash
+# 定义变量（等号两边不能有空格）
+name="John"
+age=25
+
+# 使用变量
+echo $name
+echo ${name}          # 推荐使用花括号
+
+# 只读变量
+readonly PI=3.14
+
+# 删除变量
+unset name
+```
+
+### 变量替换
+
+```bash
+# ${变量:-默认值} - 变量未设置或为空时使用默认值
+echo ${name:-"Guest"}
+
+# ${变量:=默认值} - 变量未设置或为空时设置并使用默认值
+echo ${count:=0}
+
+# ${变量:+替换值} - 变量设置时使用替换值
+echo ${name:+"Hello"}
+
+# ${#变量} - 获取变量长度
+echo ${#name}
+
+# 字符串操作
+echo ${name:0:2}       # 截取子串（从位置 0 开始，长度 2）
+echo ${name/j/J}       # 替换第一个匹配
+echo ${name//j/J}      # 替换所有匹配
+```
+
+### 命令替换
+
+Command Substitution（命令替换）
+
+把一个命令的输出，当成字符串插入到另一个命令中。
+
+语法：
+
+```bash
+$(command)
+```
+
+旧语法（不推荐）：
+
+```bash
+`command`
+```
+
+例 1
+
+```bash
+echo "Today is $(date)"
+```
+
+会变成：
+
+```bash
+echo "Today is Tue Feb 14 ..."
+```
+
+例 2: 把文件复制为带今天日期的备份文件
+
+```bash
+cp notes.txt notes_$(date +%Y-%m-%d).txt
+```
+
+### 环境变量
+
+```bash
+# 查看环境变量
+env
+export
+
+# 常用环境变量
+echo $HOME             # 用户主目录
+echo $USER             # 当前用户名
+echo $PATH             # 命令搜索路径
+echo $PWD              # 当前工作目录
+echo $SHELL            # 当前 Shell
+echo $RANDOM           # 随机数（0-32767）
+
+export MY_VAR="value"
+```
+
+## Signals
+
+Signals（信号）是 Linux 中的一种**软件中断机制**，用于进程之间或内核向进程发送通知。
+
+当进程收到信号时，会：
+
+1. 暂停当前执行
+2. 处理信号（默认行为或自定义处理）
+3. 决定是否继续执行或退出
+
+### 常见信号及作用
+
+| 信号      | 含义              | 常见触发方式         |
+| ------- | --------------- | -------------- |
+| SIGINT  | 中断进程            | Ctrl-C         |
+| SIGQUIT | 退出并生成 core dump | Ctrl-\         |
+| SIGTERM | 请求优雅退出          | kill PID       |
+| SIGKILL | 强制终止（不可捕获）      | kill -9 PID    |
+| SIGSTOP | 暂停进程            | kill -STOP PID |
+| SIGTSTP | 终端暂停            | Ctrl-Z         |
+| SIGHUP  | 终端关闭            | 关闭终端           |
+
+### 常见命令
+
+```bash
+bg # 恢复后台运行
+fg # 恢复前台运行
+jobs # 查看任务
+```
+
+当关闭终端时：
+
+* Shell 会发送 SIGHUP
+* 所有子进程默认会退出
+
+```bash
+nohup sleep 2000 &
+```
+
+输出写入：
+
+```text
+nohup.out
+```
+
+nohup 会忽略 SIGHUP。

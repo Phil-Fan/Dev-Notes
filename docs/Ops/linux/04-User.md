@@ -249,49 +249,6 @@ nohup command &
 disown
 ```
 
-## 管道与重定向
-
-### 管道
-
-```bash
-# 标准管道
-command1 | command2
-
-# 示例
-ps aux | grep nginx
-cat file.txt | grep pattern
-ls -l | sort -k5
-```
-
-### tee - 分支输出
-
-```bash
-# 同时输出到文件和屏幕
-command | tee output.txt
-
-# 追加模式
-command | tee -a output.txt
-```
-
-### 重定向
-
-```bash
-# 标准输出重定向
-command > file.txt             # 覆盖
-command >> file.txt            # 追加
-
-# 标准错误重定向
-command 2> error.txt
-command 2>> error.txt
-
-# 同时重定向
-command &> output.txt          # 标准输出和错误
-command > output.txt 2>&1      # 等价写法
-
-# 丢弃输出
-command > /dev/null 2>&1
-```
-
 ## 系统监控
 
 ### 系统信息

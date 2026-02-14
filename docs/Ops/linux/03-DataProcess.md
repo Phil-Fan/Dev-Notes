@@ -145,49 +145,179 @@ echo "https://www.example.com/path" | sed 's|^[^/]*//||' | sed 's|/.*||'
 
 jq 是轻量级的 JSON 命令行处理器。
 
-### JSON 格式化与提取
+1. 一切从 `.` 开始
+2. `[]` 表示遍历数组
+3. `|` 管道传递
+4. `select()` 过滤
+5. `{}` 构造新 JSON
+6. `map()` 批量处理
+7. `group_by()` 分组
 
-```bash
-# 格式化输出
-echo '{"name":"test"}' | jq '.'
+假设你有一个 `experiments.json`：
 
-# 提取字段
-cat data.json | jq '.name'
-cat data.json | jq '.user.name'
-
-# 数组操作
-cat data.json | jq '.[]'           # 展开数组
-cat data.json | jq '.[0]'          # 第一个元素
-cat data.json | jq '.[] | .name'   # 提取所有 name
+```json
+{
+  "project": "image-classification",
+  "experiments": [
+    {
+      "id": 1,
+      "model": "resnet50",
+      "dataset": "cifar10",
+      "metrics": {
+        "accuracy": 0.91,
+        "loss": 0.32
+      },
+      "epochs": 20,
+      "gpu": true
+    },
+    {
+      "id": 2,
+      "model": "vit",
+      "dataset": "cifar10",
+      "metrics": {
+        "accuracy": 0.94,
+        "loss": 0.21
+      },
+      "epochs": 30,
+      "gpu": true
+    },
+    {
+      "id": 3,
+      "model": "resnet18",
+      "dataset": "mnist",
+      "metrics": {
+        "accuracy": 0.98,
+        "loss": 0.05
+      },
+      "epochs": 10,
+      "gpu": false
+    }
+  ]
+}
 ```
 
-### JSON 过滤与计算
+### 案例 1️⃣：读取字段（最基础）
+
+查看项目名
 
 ```bash
-# 过滤
-jq 'select(.status == "active")' input.json
-jq 'map(select(.age > 18))' input.json
-
-# 计算
-jq '[.[] | .price] | add' prices.json
-jq 'length' items.json
-
-# 构造新对象
-jq '{name: .user, email: .contact.email}' input.json
+jq '.project' experiments.json
 ```
 
-### JSON 处理示例
+输出：
+
+```json
+"image-classification"
+```
+
+查看所有实验
 
 ```bash
-# API 响应处理
-curl api/data | jq '.results[] | select(.active == true)'
+jq '.experiments' experiments.json
+```
 
-# 提取并转换
-cat data.json | jq '.[] | {id, name: .title}'
+`.` 表示当前 JSON 对象
+`.key` 访问字段
 
-# 统计
-jq '[.[] | .price] | add / length' prices.json    # 平均值
-jq 'length' items.json                           # 计数
+### 案例 2️⃣：访问嵌套字段（模型精度）
+
+```bash
+jq '.experiments[].metrics.accuracy' experiments.json
+```
+
+输出：
+
+```text
+0.91
+0.94
+0.98
+```
+
+- `.experiments[]` 遍历数组
+- `.metrics` 访问嵌套字段
+
+### 案例 3️⃣：筛选实验（filter）
+
+找 accuracy > 0.93 的模型
+
+```bash
+jq '.experiments[] | select(.metrics.accuracy > 0.93)' experiments.json
+```
+
+输出：
+
+```json
+{
+  "id": 2,
+  ...
+}
+{
+  "id": 3,
+  ...
+}
+```
+
+只输出模型名和准确率
+
+```bash
+jq '.experiments[] 
+    | select(.metrics.accuracy > 0.93) 
+    | {model, accuracy: .metrics.accuracy}' experiments.json
+```
+
+输出：
+
+```json
+{
+  "model": "vit",
+  "accuracy": 0.94
+}
+{
+  "model": "resnet18",
+  "accuracy": 0.98
+}
+```
+
+```text
+|      管道
+select() 过滤
+{...}    构造新 JSON
+```
+
+### 案例 4️⃣：统计 & 聚合（机器学习常用）
+
+```bash
+jq '[.experiments[].metrics.accuracy] | add / length' experiments.json
+```
+
+输出：`0.9433333333`
+
+### 案例 5️⃣：按 dataset 分组，并计算平均 accuracy
+
+```bash
+jq '
+.experiments
+| group_by(.dataset)
+| map({
+    dataset: .[0].dataset,
+    avg_accuracy: (map(.metrics.accuracy) | add / length)
+  })
+' experiments.json
+```
+
+输出：
+
+```json
+[
+  {
+    "dataset": "cifar10",
+    "avg_accuracy": 0.925
+  },
+  {
+    "dataset": "mnist",
+    "avg_accuracy": 0.98
+  }
+]
 ```
 
 ## awk - 文本分析

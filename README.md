@@ -6,17 +6,6 @@
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re) [![GitHub Stars](https://img.shields.io/github/stars/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/network/members) [![GitHub Issues](https://img.shields.io/github/issues/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/issues) [![CC0 License](https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/blob/main/LICENSE)
 
-## 信息源
-
-- [Linux.do](https://linux.do/)
-- [Hacker News](https://news.ycombinator.com/)
-- [OSPP](https://summer-ospp.ac.cn)
-- [X](https://x.com/)
-- [小红书](https://www.xiaohongshu.com/)
-- [小宇宙](https://www.xiaoyuzhoufm.com/)
-- [即刻](https://web.okjike.com)
-- [Folo](https://github.com/RSSNext/Folo): All-in-one RSS reader.
-
 ## AI 相关
 
 > [!TIP]
@@ -45,6 +34,11 @@
 - kiro & qcoder & trae 以及其他中转站用于没有余额的时候搞
 :::
 
+### 配置
+
+- [AGENTS.md](https://github.com/agentsmd/agents.md)
+- [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
+
 ### CLI 工具
 
 - [OpenCode](https://opencode.ai/)：用户体验不错。
@@ -57,9 +51,11 @@
 - [Gemini CLI](https://github.com/google/gemini-cli)：UI 可以
 - [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
 
-  - ```shell
+    ```shell
     export ANTHROPIC_BASE_URL=https://pmpjfbhq.cn-nb1.rainapp.top
     ```
+- [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
+- [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
 
 ```shell
 brew install --cask codex
@@ -76,14 +72,18 @@ brew install gemini-cli
 
 ### MCP
 
+General
+
 - [Context7 MCP](https://github.com/upstash/context7)
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
-- [shadcn MCP](https://ui.shadcn.com/)
 - [Exa MCP](https://docs.exa.ai/reference/exa-mcp)
+
+Dev
+
 - [GitHub MCP](https://github.com/github/github-mcp-server): GitHub's official MCP Server
 - [高德地图 MCP Server](https://lbs.amap.com/api/mcp-server/summary): 高德地图 API 的 MCP Server
 - [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp): Chrome DevTools for coding agents
-- [Pencil](https://pencil.gg/): AI design editor for .pen files with MCP integration
+- [shadcn MCP](https://ui.shadcn.com/)
 
 ### Spec Tools
 
@@ -114,7 +114,7 @@ until it's complete, then write the spec to the file.
 
 - [planning-with-files](https://github.com/OthmanAdi/planning-with-files): Manus 风格持久化 Markdown 规划
 - [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): 多平台专业 UI/UX 设计智能
-- [notebooklm-skill](https://github.com/PleasePrompto/notebooklm-skill): Claude Code 与 Google NotebookLM 通信，查询上传文档并获取基于引用的答案
+- [notebooklm-py](https://github.com/teng-lin/notebooklm-py)
 - [obsidian-skills](https://github.com/kepano/obsidian-skills): Obsidian 的 Claude Skills 集合
 - [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code): Claude Code 精选命令、文件和工作流列表
 
@@ -141,23 +141,12 @@ until it's complete, then write the spec to the file.
 - [iTerm2](https://github.com/gnachman/iTerm2)：Mac 下最好的终端
 - [Amphetamine](https://apps.apple.com/cn/app/amphetamine/id937984704?mt=12)：Mac 防休眠工具
 - [tmux](https://github.com/tmux/tmux)
+  - [A Quick and Easy Guide to tmux - Ham Vocke](https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
+  - [Make tmux Pretty and Usable - Ham Vocke](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/)
 - [Vim](https://www.vim.org/)
-- [Neovim](https://neovim.io/doc/install/)
-  - [lazyvim](https://www.lazyvim.org)
-
-```shell
-brew install --cask font-jetbrains-mono-nerd-font
-```
 
 - [chezmoi](https://github.com/twpayne/chezmoi): Dotfiles 管理工具
-- [tldr](https://github.com/tldr-pages/tldr): 简化的 man pages，社区维护的命令行帮助文档
-- [bat](https://github.com/sharkdp/bat): cat 克隆，支持语法高亮和 Git 集成
-- [ripgrep](https://github.com/BurntSushi/ripgrep): grep 替代品，极速递归搜索
-- [eza](https://github.com/eza-community/eza): ls 替代品，色彩丰富功能更强
-- [fd](https://github.com/sharkdp/fd): find 替代品，极速文件查找
-- [jq](https://jqlang.github.io/jq/): JSON 数据处理命令行工具
-- [zoxide](https://github.com/ajeetdsouza/zoxide): 更智能的 cd 命令，基于使用频率和模式跳转目录
-- [xget](https://github.com/xixu-me/xget): 开发者资源一站式加速引擎
+- [dot-files](https://github.com/Phil-Fan/dot-files): 我的 dotfiles
 
 ### 文本处理
 
@@ -219,9 +208,9 @@ npx create-next-app@latest my-app
 
 - [Supabase](https://github.com/supabase/supabase)
 
-### 中间件
+### 缓存
 
-- [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
+- [Redis](https://redis.io/)
 
 ### 应用部署
 
@@ -233,28 +222,6 @@ npx create-next-app@latest my-app
 
 - [Caddy](https://github.com/caddyserver/caddy): 反向代理最佳实践
 - [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
-
-### CI/CD
-
-- [GitHub Actions](https://github.com/features/actions)
-- [dokploy](https://dokploy.com)
-- [coolify](https://coolify.io)
-- [jenkins](https://www.jenkins.io)
-- [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
-- [Drone CI](https://github.com/harness/drone)
-- [qinglong](https://github.com/whyour/qinglong): 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
-
-- commit hooks:
-  - [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
-  - [husky](https://github.com/typicode/husky) 适合前端项目
-
-- Linter:
-  - [eslint/eslint](https://github.com/eslint/eslint): JavaScript/TypeScript 静态分析
-  - [prettier/prettier](https://github.com/prettier/prettier): 代码格式化
-    - [rbubley/mirrors-prettier](https://github.com/rbubley/mirrors-prettier) for pre-commit
-  - [biomejs/biome](https://github.com/biomejs/biome): 一体化 Linter & Formatter & Bundler（ESLint + Prettier 替代）
-  - [markdownlint](https://github.com/DavidAnson/markdownlint): Markdown 静态分析
-  - [autocorrect](https://github.com/huacnlee/autocorrect): CJK 排版自动修正
 
 ### 运维与监控
 
@@ -270,7 +237,49 @@ npx create-next-app@latest my-app
 - [Stream](https://apps.apple.com/app/stream/id1312141691) iOS 抓包
 - [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12，Mac 不可用
 
-## 云服务
+## Code Quality
+
+### Testing
+
+- test-driven
+- regression tests
+- property-based tests
+
+### Code Coverage
+
+- [Codecov](https://app.codecov.io)
+
+### Formatter & Linter
+
+- [eslint/eslint](https://github.com/eslint/eslint): JavaScript/TypeScript 静态分析
+- [prettier/prettier](https://github.com/prettier/prettier): 代码格式化，可配置性强
+  - [rbubley/mirrors-prettier](https://github.com/rbubley/mirrors-prettier) for pre-commit
+- [biomejs/biome](https://github.com/biomejs/biome): 一体化 Linter & Formatter & Bundler（ESLint + Prettier 替代）
+- [markdownlint](https://github.com/DavidAnson/markdownlint): Markdown 静态分析
+- [autocorrect](https://github.com/huacnlee/autocorrect): CJK 排版自动修正
+
+### commit hooks
+
+- [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
+- [husky](https://github.com/typicode/husky) 适合前端项目
+
+### CI/CD
+
+- [GitHub Actions](https://github.com/features/actions)
+- [dokploy](https://dokploy.com)
+- [coolify](https://coolify.io)
+- [jenkins](https://www.jenkins.io)
+- [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
+- [Drone CI](https://github.com/harness/drone)
+- [qinglong](https://github.com/whyour/qinglong): 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
+
+## 云
+
+### 云原生
+
+- Docker
+- Kubernetes
+- Helm
 
 ### 厂商
 
@@ -288,16 +297,21 @@ npx create-next-app@latest my-app
 
 ## 运营
 
-### 宣传
+### 信息源与宣传
 
-- [Product Hunt](https://www.producthunt.com/)
 - [X](https://x.com/)
+- [Linux.do](https://linux.do/)
+- [Hacker News](https://news.ycombinator.com/)
+- [X](https://x.com/)
+- [小红书](https://www.xiaohongshu.com/)
+- [小宇宙](https://www.xiaoyuzhoufm.com/)
+- [即刻](https://web.okjike.com)
+- [Product Hunt](https://www.producthunt.com/)
+- [Folo](https://github.com/RSSNext/Folo): All-in-one RSS reader.
 
 ### 多平台内容分发
 
 - [蚁小二](https://www.yixiaoer.cn/vip): 多平台内容分发订阅服务，支持平台较全
-- [Multipost](https://multipost.app/): 开源免费的多平台内容分发工具
-- [Buffer](https://publish.buffer.com/all-channels): 海外多平台内容分发工具
 - [TurboPush](https://www.turbopush.top/)
 
 ### 内容与文档

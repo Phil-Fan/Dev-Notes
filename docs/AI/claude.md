@@ -1,10 +1,10 @@
 # MCP/Skills? Claude Code 使用实践、洞察
 
-今天凌晨，Anthropic 发布了 Opus 4.6 模型，OpenAI 发布了 GPT 5.3 Codex，而在不久后的春节假期，更是可以预见的会有一大波新模型和新产品发布。Cowork、OpenClaw 的各种新闻可谓刷爆了互联网平台。
+就在最近，Anthropic 发布了 Opus 4.6 模型，OpenAI 发布了 GPT 5.3 Codex，而国内也开启了百模大战：Seeddance\ MiniMax\Kimi\GLM\Deepseek，而在不久后的春节假期，更是可以预见的会有一大波新模型和新产品发布。
 
-真的让人感觉 **“坐地日行八万里”** ，真的无法预测一个月后的技术是什么景象。
+真的让人感觉 **“坐地日行八万里”** ，无法预测一个月后的技术是什么景象。
 
-分享一下 LZ 最近几个月了解、学习和使用到的 Agent 工具，以及基于此**开发的产品——Poco**
+分享一下最近几个月了解、学习和使用到的 Agent 工具，以及基于此**开发的产品——Poco**
 
 ## 能不能好好说话 —— 这些名词到底是什么意思
 
@@ -16,13 +16,11 @@
 
 ![Skills 示例截图](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/20260206190733885.webp)
 
-这里放一个[宝玉](https://baoyu.io)博客当中总结的图片
+这里放一个[宝玉](https://baoyu.io)佬博客当中总结的图片
 
 ![MCP 与 Skills 渐进式披露示意图](https://s.baoyu.io/imgs/2026-01-20/mcp-vs-skills/illustration-progressive-disclosure.png)
 
 - **Subagents**: 子 Agent，相当给不同 agents 分不同的角色，有不同的任务
-
----
 
 和 Agent 交互有时候并不像野兽先生的游戏，你只要付钱（token），agent 就会按照你的要求完成各种任务。假设一个场景，假如你作为一个 Agent，被锁在一个单独的房间里，接受主人的任务。下面两种情况你会选择哪种？
 

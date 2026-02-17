@@ -24,9 +24,7 @@
 
 [Mkdocs Material 文档](https://squidfunk.github.io/mkdocs-material/)
 
-[Mkdocs Material 使用记录 - shafish.cn](https://shafish.cn/blog/mkdocs/#%E5%9B%9B%E9%83%A8%E7%BD%B2)
-
-[Mkdocs 中文教程 - Wcowin](https://wcowin.work/Mkdocs-Wcowin/blog/MIT.html)
+[Mkdocs 中文教程（Wcowin）](https://wcowin.work/Mkdocs-Wcowin/)
 
 ## Build From Scratch
 
@@ -450,7 +448,7 @@ plugins:
 
 使用 mkdocs-jupyter 插件可以支持 jupyter notebook 文件
 [mkdocs-jupyter](https://pypi.org/project/mkdocs-jupyter/)
-[Jupytext demo (.py) - mkdocs-jupyter demo](https://mkdocs-jupyter.danielfrg.com/demo-script/)
+[Jupytext demo (mkdocs-jupyter)](https://mkdocs-jupyter.danielfrg.com/)
 
 [mkdocs-jupyter/demo/mkdocs.yml at main · danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter/blob/main/demo/mkdocs.yml)
 
@@ -614,7 +612,7 @@ plugins:
   - comments
 ```
 
-[mkdocs-material 集成评论系统 - 知识库 (geodoer.github.io)](https://geodoer.github.io/Z-工具/博客相关工具/mkdocs/mkdocs-material/评论系统/#commentshtml)
+[mkdocs-material 评论系统（官方文档）](https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/)
 [为 Mkdocs 网站添加评论系统（以 giscus 为例）\_giscus mkdocs-CSDN 博客](https://blog.csdn.net/m0_63203517/article/details/133819706)
 
 ### changelog

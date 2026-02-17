@@ -18,7 +18,7 @@
 
 这里放一个[宝玉](https://baoyu.io)佬博客当中总结的图片
 
-![MCP 与 Skills 渐进式披露示意图](https://s.baoyu.io/imgs/2026-01-20/mcp-vs-skills/illustration-progressive-disclosure.png)
+![MCP 与 Skills 渐进式披露示意图](https://img.philfan.cn/2026/02/b0b420a43da93ced1ea97b5de4fca457.webp)
 
 - **Subagents**: 子 Agent，相当给不同 agents 分不同的角色，有不同的任务
 
@@ -80,7 +80,7 @@
 
 1. 处理生成 docx、ppt 等不同格式的文件：官方自带的 docx ppt excel 等 skill 可以对很多不同格式的文件进行处理和生成
 2. Nano Banana Pro 的 skill 用来画图与 PPT 制作 [op7418/NanoBanana-PPT-Skills](https://github.com/op7418/NanoBanana-PPT-Skills)
-3. 图像绘制：在 [这篇帖子](https://www.cc98.org/topic/6420038)当中，给出了一个生成四格漫画的 workflow，其实稍加修改就可以做成一个可以复用的 Skills，并和其他工作流进行结合
+3. 图像绘制：在 `https://www.cc98.org/topic/6420038` 当中，给出了一个生成四格漫画的 workflow，其实稍加修改就可以做成一个可以复用的 Skills，并和其他工作流进行结合
 4. 软件使用：在开发的过程中，有一个 part 需要使用 blender 帮我做一个模型，但是我完全没有接触过 Blender，但是有一个 Blender MCP，我就可以使用 CC 控制 Blender，帮我做模型
 5. 视频剪辑：Remotion、[Ceeon/videocut-skills](https://github.com/Ceeon/videocut-skills)
 
@@ -113,7 +113,7 @@
 - [claude-scientific-skills](https://github.com/k-dense-ai/claude-scientific-skills): A set of ready to use scientific skills for Claude
 - [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs)：AI 类研究的 Skills
 
-![AI research SKILLs 仓库示意图](https://github.com/Orchestra-Research/AI-research-SKILLs/raw/main/docs/skills.png)
+示意图可查看仓库文档目录：[skills.png](https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/docs/skills.png)
 
 如果有其他有趣的 MCP 或者 Skill，也欢迎大家在下面不吝分享一下！
 

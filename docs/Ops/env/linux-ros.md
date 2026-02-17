@@ -76,7 +76,7 @@ ROS 不是传统意义上的操作系统，而是一个**中间件**或**框架*
 
 ### 一键安装（推荐）
 
-使用 [鱼香 ROS](https://fishros.org.cn) 的一键安装脚本：
+使用 [鱼香 ROS 安装脚本](https://github.com/fishros/install) 的一键安装脚本：
 
 ```bash
 # 下载安装脚本
@@ -591,6 +591,6 @@ if __name__ == '__main__':
 
 ## 参考资源
 
-- [鱼香 ROS](https://fishros.org.cn) - 国内最好的 ROS 中文教程
+- [鱼香 ROS 安装脚本](https://github.com/fishros/install) - 一键安装工具
 - [ROS Wiki](http://wiki.ros.org/) - 官方文档
 - [古月居 ROS 21 讲](https://www.bilibili.com/video/BV1zt411T7zA) - 视频教程

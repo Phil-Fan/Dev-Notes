@@ -323,7 +323,7 @@ deno task dev
 ### Deno 相关链接
 
 - [官方文档](https://docs.deno.com/runtime/)
-- [标准库](https://deno.land/std)
+- [标准库](https://docs.deno.com/runtime/fundamentals/standard_library/)
 - [Fresh 框架](https://fresh.deno.dev/)
 - [GitHub](https://github.com/denoland/deno)
 

@@ -242,7 +242,7 @@ $conn->close();
 
 PHP 是弱类型的原因，我们可以利用这样的特性去绕过一些判断
 
-#### [BUUCTF[极客大挑战 2019]PHP](https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019]PHP)
+#### BUUCTF [极客大挑战 2019] PHP
 
 ![image](https://img.philfan.cn/CS__Dev__Backend__assets__PHP.assets__20240801190745.webp)
 
@@ -369,7 +369,7 @@ else echo "are you trolling?";
 ?>
 ```
 
-#### [[网鼎杯 2020 青龙组]AreUSerialz](https://buuoj.cn/challenges#[%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84]AreUSerialz)
+#### [网鼎杯 2020 青龙组] AreUSerialz
 
 ```php
 <?php

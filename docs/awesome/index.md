@@ -39,7 +39,7 @@
 - [Codex](https://github.com/openai/codex): Debug 很好，能力很强，但是任务运行时间太久
 - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全，有一些奇怪小 Bug。可以上一些国产模型，比如 MiniMax GLM 等
   - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
-- [Gemini CLI](https://github.com/google/gemini-cli)：UI 可以
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli)：UI 可以
 
 ```shell
 brew install --cask codex
@@ -145,7 +145,7 @@ npx create-next-app@latest my-app
 - [Python](https://www.python.org/)
   - [uv](https://github.com/astral-sh/uv): package and project manager
   - [ruff](https://github.com/astral-sh/ruff): linter and code formatter
-  - [pyrefly](https://github.com/jakevandenburg/pyrefly): 快速的 Python LSP 和 linter
+  - [pyrefly](https://github.com/facebook/pyrefly): 快速的 Python LSP 和 linter
   - [fastapi](https://github.com/tiangolo/fastapi)
 - [Go](https://go.dev/)
   - [gin](https://github.com/gin-gonic/gin)

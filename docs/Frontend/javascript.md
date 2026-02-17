@@ -281,7 +281,7 @@ npm run build
 | Parcel    | 零配置打包           | [https://github.com/parcel-bundler/parcel](https://github.com/parcel-bundler/parcel) |
 | Vite      | 极速开发 + 构建      | [https://github.com/vitejs/vite](https://github.com/vitejs/vite)                     |
 | esbuild   | 极快打包 & 转译      | [https://github.com/evanw/esbuild](https://github.com/evanw/esbuild)                 |
-| Turbopack | Next.js 官方 bundler | [https://github.com/vercel/turbopack](https://github.com/vercel/turbopack)           |
+| Turbopack | Next.js 官方 bundler | [https://turbo.build/pack](https://turbo.build/pack)                                 |
 | Snowpack  | 构建 & dev server    | [https://github.com/snowpackjs/snowpack](https://github.com/snowpackjs/snowpack)     |
 
 ---
@@ -330,7 +330,7 @@ npm run build
 | Chakra UI         | React UI 框架  | [https://github.com/chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui)           |
 | Tailwind CSS      | 原子化 CSS     | [https://github.com/tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) |
 | Headless UI       | 无样式 UI 组件 | [https://github.com/tailwindlabs/headlessui](https://github.com/tailwindlabs/headlessui)   |
-| Storybook         | UI 组件文档    | [https://github.com/storybook/storybook](https://github.com/storybook/storybook)           |
+| Storybook         | UI 组件文档    | [https://github.com/storybookjs/storybook](https://github.com/storybookjs/storybook)       |
 
 ### 数据库 & ORM
 

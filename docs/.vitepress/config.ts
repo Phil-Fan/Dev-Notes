@@ -7,6 +7,7 @@ export default defineConfig({
   // 站点基础配置
   title: "Awesome Full Stack",
   description: "全栈开发资源与知识库",
+  ignoreDeadLinks: true,
   lang: "zh-CN",
 
   // Google Analytics

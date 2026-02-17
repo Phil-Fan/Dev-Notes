@@ -106,7 +106,7 @@ unset http_proxy && unset https_proxy
 
 [Hugging Face Forums - Hugging Face Community Discussion](https://discuss.huggingface.co/)
 
-[OSError: We couldn‘t connect to‘https://huggingface.co‘to load this file, couldn‘t find it(亲测有效)\_checkout your internet connection or see how to ru-CSDN 博客](https://blog.csdn.net/l8947943/article/details/143099409)
+[Hugging Face 连接失败排查（CSDN）](https://blog.csdn.net/l8947943/article/details/143099409)
 
 1. 科学上网，访问该网址
    通过全局代理的方式，实现模型的下载。

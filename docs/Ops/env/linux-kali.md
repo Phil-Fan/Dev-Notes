@@ -17,7 +17,7 @@
 
 [apt 换源](https://www.cnblogs.com/u-damowang1/p/14729017.html)
 
-[The big list of Vim-like software (reversed.top)](https://reversed.top/2014-08-13/big-list-of-vim-like-software/)
+[Vim-like 编辑器清单（GitHub）](https://github.com/kien/ctrlp.vim/wiki/Similar-projects)
 
 ```shell
 vim /etc/apt/sources.list
@@ -392,10 +392,10 @@ apt install steghide
 ### go 环境搭建
 
 [参考](https://blog.csdn.net/single_g_l/article/details/123244435)
-[go 中文](https://studygolang.com/dl)
+[Go 下载页](https://go.dev/dl/)
 
 ```shell
-wget https://studygolang.com/dl/golang/go1.22.5.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz
 tar -xzvf go1.22.5.linux-amd64.tar.gz
 rm go1.22.5.linux-amd64.tar.gz
 ```

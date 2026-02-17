@@ -210,7 +210,7 @@ start explorer.exe
 
 ### WinDBG 分析 DMP 文件
 
-**下载 WinDBG：** [64 位下载](https://download.microsoft.com/download/A/A/A/AAAC035D-DA3F-4F0C-ADA4-37C8E5D34E3D/setup/WinSDKDebuggingTools_amd64/dbg_amd64.msi)
+**下载 WinDBG：** [官方安装文档](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/)
 
 **配置步骤：**
 
@@ -239,7 +239,7 @@ SRV*C:\Symbols*http://msdl.microsoft.com/download/symbols
 
 - **memory_management** - 内存管理问题
 
-[参考：Windows Bug Check Code](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference)
+[参考：Windows Bug Check Code](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2)
 
 ---
 

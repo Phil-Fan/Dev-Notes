@@ -54,4 +54,4 @@ features:
 
 欢迎提交 PR 或 Issue 来完善这个资源列表！
 
-[查看贡献指南](https://github.com/Phil-Fan/Dev-Notes/blob/main/CONTRIBUTING.md)
+[查看贡献指南](../.github/CONTRIBUTING.md)

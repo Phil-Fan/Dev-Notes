@@ -1,4 +1,9 @@
 repos:
+  - repo: https://github.com/AlexanderDokuchaev/md-dead-link-check
+    rev: "v1.3.0"
+    hooks:
+      - id: md-dead-link-check
+
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.13.0
     hooks:

@@ -184,7 +184,7 @@ zju 有企业账号，SSO 登陆输入 ZJU，验证登陆即可
 ## conda 环境
 
 [Miniconda — Anaconda documentation](https://docs.anaconda.com/miniconda/)
-[miniconda 下载 m1/m2](https://repo.anaconda.com/minpiconda/Miniconda3-latest-MacOSX-arm64.sh)
+[miniconda 下载 m1/m2](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh)
 [MAC OS m2 安装和卸载 miniconda - 知乎](https://zhuanlan.zhihu.com/p/619566718)
 安装
 

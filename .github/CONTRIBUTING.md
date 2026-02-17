@@ -24,8 +24,8 @@
 
 ## 报告问题
 
-- 使用 [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) 模版反馈链接失效、描述错误等问题。
-- 使用 [Feature / Resource Request](.github/ISSUE_TEMPLATE/feature_request.md) 模版建议新增分类、脚本或资源。
+- 使用 [Bug Report](./ISSUE_TEMPLATE/bug_report.md) 模版反馈链接失效、描述错误等问题。
+- 使用 [Feature / Resource Request](./ISSUE_TEMPLATE/feature_request.md) 模版建议新增分类、脚本或资源。
 - 如果问题涉及安全或敏感信息，请在 issue 中标注“confidential”并仅提供必要细节，后续可私下沟通。
 
 ## 提交 Pull Request

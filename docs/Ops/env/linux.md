@@ -176,7 +176,7 @@ nautilus .
 - 使用 screen
 - 使用键盘上面的 print screen
 
-[如何在 Ubuntu 中截取屏幕截图（5 种简单方法）](https://techblik.com/%E5%A6%82%E4%BD%95%E5%9C%A8-ubuntu-%E4%B8%AD%E6%88%AA%E5%8F%96%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%EF%BC%885-%E7%A7%8D%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%EF%BC%89/)
+[Ubuntu 官方截图文档](https://help.ubuntu.com/stable/ubuntu-help/screen-shot-record.html.en)
 
 ## 系统管理 - 网络
 
@@ -252,7 +252,7 @@ sudo netplan apply
 
 2.改文件的编辑必须严格按照格式来，**是分层的**，用空格来退格
 
-[启动 netplan-wpa-wlan0.sevice 失败：未找到单元 netplan-wpa-wlan0.service - ubuntu](https://askoverflow.dev/ubuntu/question/1291424/failed-to-start-netplan-wpa-wlan0-sevice-unit-netplan-wpa-wlan0-service-not-fou/)
+[Netplan YAML 配置文档](https://netplan.readthedocs.io/en/latest/netplan-yaml/)
 :::tip 注意事项
 :::
 

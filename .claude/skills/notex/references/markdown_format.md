@@ -11,6 +11,7 @@
 ```
 
 **示例：**
+
 ```markdown
 - [Next.js](https://nextjs.org/): React 全栈框架
 - [shadcn/ui](https://ui.shadcn.com/): 可复用的 React 组件集合
@@ -20,11 +21,12 @@
 
 ```markdown
 - [主项目](链接): 主描述
-  - [子项目1](链接): 子描述
-  - [子项目2](链接): 子描述
+  - [子项目 1](链接): 子描述
+  - [子项目 2](链接): 子描述
 ```
 
 **示例：**
+
 ```markdown
 - [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client
   - 可以当做 API key 管理器
@@ -42,6 +44,7 @@
 ```
 
 **示例：**
+
 ```markdown
 - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全
   - 可以上一些国产模型，比如 MiniMax GLM 等
@@ -59,11 +62,13 @@
 ```
 
 **示例：**
+
 ```markdown
-```shell
+\```shell
 brew install --cask claude-code
 npx create-next-app@latest my-app
-```
+\```
+
 ```
 
 ### 代码示例格式
@@ -120,6 +125,7 @@ hero:
 ```
 
 **示例：**
+
 ```markdown
 > [!TIP]
 >

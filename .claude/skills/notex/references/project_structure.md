@@ -4,7 +4,7 @@ VitePress 文档站点的目录结构和组织规范。
 
 ## 目录结构
 
-```
+```text
 develop/
 ├── README.md              # 主资源列表（awesome list 风格）
 ├── docs/                  # VitePress 文档源目录
@@ -90,6 +90,7 @@ README.md 是项目的主资源列表，采用 Awesome List 风格组织：
 **用途：** AI 工具、框架、服务
 
 **包含内容：**
+
 - LLM 相关（GPT, Claude, Gemini）
 - MCP（Model Context Protocol）
 - AI 编程工具（Claude Code, Cursor）
@@ -101,6 +102,7 @@ README.md 是项目的主资源列表，采用 Awesome List 风格组织：
 **用途：** 后端开发技术
 
 **包含内容：**
+
 - 后端框架（FastAPI, Django, Spring, NestJS）
 - 编程语言（Python, Go, Java）
 - 数据库（PostgreSQL, MongoDB, Supabase）
@@ -112,6 +114,7 @@ README.md 是项目的主资源列表，采用 Awesome List 风格组织：
 **用途：** 前端开发技术
 
 **包含内容：**
+
 - 前端框架（Next.js, React, Vue）
 - UI 组件库（shadcn/ui, Tailwind）
 - 跨平台开发（Taro, uni-app, Electron）
@@ -123,16 +126,18 @@ README.md 是项目的主资源列表，采用 Awesome List 风格组织：
 **用途：** 云服务和基础设施
 
 **包含内容：**
+
 - 容器化（Docker, Kubernetes）
 - CI/CD（GitHub Actions, Jenkins）
-- 云平台（阿里云, Vercel, Cloudflare）
-- 网络（CDN, 反向代理, 内网穿透）
+- 云平台（阿里云，Vercel, Cloudflare）
+- 网络（CDN, 反向代理，内网穿透）
 
 ### Ops/ 目录
 
 **用途：** 运维和监控
 
 **包含内容：**
+
 - 监控工具（Prometheus, Grafana）
 - 日志分析（Logfire）
 - 抓包工具（Wireshark, Reqable）
@@ -143,16 +148,18 @@ README.md 是项目的主资源列表，采用 Awesome List 风格组织：
 **用途：** 产品管理和运营
 
 **包含内容：**
+
 - 产品设计（Figma, iMockup）
 - 用户洞察（Google Analytics, Microsoft Clarity）
 - 内容分发（Product Hunt, Buffer）
-- 合规流程（软著, 专利, 备案）
+- 合规流程（软著，专利，备案）
 
 ### Tools/ 目录
 
 **用途：** 开发工具
 
 **包含内容：**
+
 - 版本控制（Git）
 - 编辑器（Vim, Neovim, VS Code）
 - 终端工具（iTerm2, tmux）
@@ -179,6 +186,7 @@ README.md 是项目的主资源列表，采用 Awesome List 风格组织：
 3. **需要深度**：教程、深度指南、完整配置说明
 
 **创建位置：**
+
 - 技术教程 → `docs/<分类>/<技术名>.md`
 - 例如：`docs/Frontend/nextjs-optimization.md`
 

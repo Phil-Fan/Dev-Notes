@@ -107,7 +107,7 @@ js\:|Js: javascript:\ $S; JavaScript
 
 ## 简介
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__vim.assets__20240706181314.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__vim.assets__20240706181314.webp)
 
 ## 用法
 

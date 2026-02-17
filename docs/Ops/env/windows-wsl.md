@@ -355,17 +355,17 @@ nvidia-smi
 
 右上角 `CUDA Version` 显示支持的最高版本。
 
-![nvidia-smi](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-wsl.assets__image-20250816210945859.webp)
+![nvidia-smi](https://img.philfan.cn/Tools__Environment__assets__settings-wsl.assets__image-20250816210945859.webp)
 
 :::warning WSL CUDA 限制
 
 限制
 
-![Limitations](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-wsl.assets__image-20250816204530654.webp)
+![Limitations](https://img.philfan.cn/Tools__Environment__assets__settings-wsl.assets__image-20250816204530654.webp)
 
 不支持的功能
 
-![Banned Features](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-wsl.assets__image-20250816204600671.webp)
+![Banned Features](https://img.philfan.cn/Tools__Environment__assets__settings-wsl.assets__image-20250816204600671.webp)
 :::
 
 ### 安装 CUDA Toolkit

@@ -447,18 +447,18 @@ CUDA 是向前和向后兼容的：这意味着，安装较新版本的 CUDA 驱
 
 下载地址[CUDA Toolkit Archive | NVIDIA Developer](https://developer.nvidia.com/cuda-toolkit-archive)
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829195225.webp)
+![image](https://img.philfan.cn/Tools__Language__assets__Python.assets__20240829195225.webp)
 
 点击符合的版本选择下载，直接安装。注意安装路径要装在自己记得住的地方下，要预留好空间，最好不要装在 C 盘。
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829195549.webp)
+![image](https://img.philfan.cn/Tools__Language__assets__Python.assets__20240829195549.webp)
 
 **安装验证方法：**
 
 1. cmd 中输入`nvcc -V`，有信息说明成功
 2. 安装路径下`\extras\demo_suite\deviceQuery.exe`，运行这个文件，有`PASS`说明成功（查询一下本机的 gpu 设备
-   ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829200019.webp)
+   ![image](https://img.philfan.cn/Tools__Language__assets__Python.assets__20240829200019.webp)
 3. 安装路径下`\extras\demo_suite\bandwidthTest.exe`，运行这个文件，有`PASS`说明成功
-   ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240829200006.webp)
+   ![image](https://img.philfan.cn/Tools__Language__assets__Python.assets__20240829200006.webp)
 
 [Installation Guide Windows :: CUDA Toolkit Documentation](https://docs.nvidia.com/cuda/archive/11.6.0/cuda-installation-guide-microsoft-windows/index.html#system-requirements)
 
@@ -514,7 +514,7 @@ print(torch.cuda.device_count()) # 查看可用的 CUDA 数量
 print(torch.version.cuda) # 查看 CUDA 的版本号
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Python.assets__20240903112501.webp)
+![image](https://img.philfan.cn/Tools__Language__assets__Python.assets__20240903112501.webp)
 
 ## Pycharm
 

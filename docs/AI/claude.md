@@ -14,7 +14,7 @@
 
 - **Skills**: 技能，其实就是一些 Markdown 文件 + 操作脚本，其核心思想是「**渐进式披露**」，即分层加载，需要的时候把对应的需要的内容加载到上下文当中。这里以官方的 PPTX skill 举例
 
-![Skills 示例截图](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/20260206190733885.webp)
+![Skills 示例截图](https://img.philfan.cn/20260206190733885.webp)
 
 这里放一个[宝玉](https://baoyu.io)佬博客当中总结的图片
 
@@ -56,13 +56,13 @@
 
 等待了一些时间，地图上确实出现了文中所有提到的咖啡店。当然它并没有一轮就把所有点位就标注清楚，所以经过我 2-3 轮的「你标注错了 xxx，重新搜！」，它确实将紫金港校区的点位都标记正确了，
 
-![高德 MCP 标注咖啡店地图截图](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/20260206193528547.webp)
+![高德 MCP 标注咖啡店地图截图](https://img.philfan.cn/20260206193528547.webp)
 
 接下来，我给 MCP 的**核心指令**是「帮我找到玉泉校区附近尽可能多的咖啡馆、酒吧清吧、livehouse，并按照我的数据结构进行标注」。这样，「早 C 晚 A」核心概念的网站就搭建完成了。而我在其中并没有手动搜索或者标记坐标点位，完全由 CC+ 高德 MCP 自己完成，MCP 在这里的作用就是接收 CC 的调用请求，去访问高德对应的 API 接口信息后，拿到返回信息后让 CC 来判断如何进行接下来的操作。
 
 后面，我还测试了与搜索 MCP 的联动：我希望让星巴克、瑞幸和库迪**呈现对应品牌 Logo 的颜色**，这里我并没有直接告诉 CC 他们 logo 的颜色具体是什么，而是让 CC 自己去网络上搜索（我安装了一个**exa 搜索 mcp**）
 
-![通过搜索 MCP 获取品牌配色截图](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/20260206192928004.webp)
+![通过搜索 MCP 获取品牌配色截图](https://img.philfan.cn/20260206192928004.webp)
 
 这个功能只进行了一轮对话就完成了。
 
@@ -171,7 +171,7 @@ claude mcp add exa -e EXA_API_KEY=your-api-key -- npx -y exa-mcp-server
 2. 它需要 **Bash**（Bash 是一个命令行解释器，可以执行命令，比如 ls、cd、mkdir、rm 等），这样它就可以使用已经有着丰富生态的 shell 工具，完成搜索、检查、运行生成的文件，操作你的 word、excel、代码、浏览器，拿到结果和报错，把人从「胶水工」中解放出来
 3. 它需要一个 **容器**，让 agent 运行更安全，不会把你的文件都删光光（`rm -rf /*`）
 
-![Agent SDK Loop 架构图](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/20260109191832998.webp)
+![Agent SDK Loop 架构图](https://img.philfan.cn/20260109191832998.webp)
 
 如果你现在使用 AI 解决问题的流程是：与 Chatgpt、Gemini、Claude 这种 ChatBot 进行对话，把对话的结果复制到编辑器当中，运行一下，如果报错了或者文字不满意，经过我 Review 以后，把对应的问题复制会 Chatbot 当中进行解决。
 
@@ -181,7 +181,7 @@ claude mcp add exa -e EXA_API_KEY=your-api-key -- npx -y exa-mcp-server
 
 ## 我们的产品 Poco - Your Pocket Coworker
 
-![Poco 产品海报](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/20260121000302111.webp)
+![Poco 产品海报](https://img.philfan.cn/20260121000302111.webp)
 
 Poco 意思是 Your Pocket Coworker，是 @光头不砍树 和我在经过了使用了 Claude Code 后进行的产品化探索。
 

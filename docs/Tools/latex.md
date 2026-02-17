@@ -38,9 +38,9 @@
 :::
 
 这里分享 4 个我自己魔改的模版，基本上覆盖到了大部分的日常学习场景。
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240629181605.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240629181605.webp)
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240629181704.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240629181704.webp)
 
 - [Template1：日常课程小作业](https://www.overleaf.com/read/hqckgzcdwscq#d182d9)
 - [Template2：中文课程论文](https://www.overleaf.com/read/yqgsngdxvvcd#a149e2)
@@ -57,7 +57,7 @@
 
 > 如果上面都没有，你想要边写边排也是可以的:laughing:
 
-<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628200644890.webp" alt="界面介绍" style="zoom:50%;" />
+<img src="https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240628200644890.webp" alt="界面介绍" style="zoom:50%;" />
 
 ### 工具栏与快捷键
 
@@ -65,7 +65,7 @@
 
 > 如果你还是一头雾水，不要着急，慢慢拆分一个个讲解
 
-<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628201309401.webp" alt="image-20240628201309401" style="zoom:50%;" />
+<img src="https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240628201309401.webp" alt="image-20240628201309401" style="zoom:50%;" />
 
 `ctrl+B`:加粗
 
@@ -80,7 +80,7 @@
 
 先填好自己的个人信息，包括姓名、学号
 
-<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628203915349.webp" alt="image-20240628203915349" style="zoom:70%;" />
+<img src="https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240628203915349.webp" alt="image-20240628203915349" style="zoom:70%;" />
 
 ### 标题与小标题
 
@@ -101,14 +101,14 @@
 
 - 还可以使用`excel2latex`等 excel 的插件，不过感觉使用体验没有第二种方法好。
 
-<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628205446618.webp" alt="image-20240628205446618" style="zoom:33%;" />
+<img src="https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240628205446618.webp" alt="image-20240628205446618" style="zoom:33%;" />
 
 ### 图片怎么插入
 
 - 方法一：点击工具栏里边的图片按钮
 - 方法二：直接在编辑窗口粘贴你想要的图片
 
-<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628203629409.webp" alt="image-20240628203629409" style="zoom: 50%;" />
+<img src="https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240628203629409.webp" alt="image-20240628203629409" style="zoom: 50%;" />
 
 插入之后编辑区域就会出现这样的代码
 
@@ -173,10 +173,10 @@
 :::info
 
 方式一：从你找到论文的网页获取
-<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210459330.webp" alt="image-20240628210459330" style="zoom: 50%;" />
+<img src="https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240628210459330.webp" alt="image-20240628210459330" style="zoom: 50%;" />
 
 方式 2：使用`endnote`或者`zotero`等文献管理软件
-<img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240628210840951.webp" alt="image-20240628210840951" style="zoom:50%;" />
+<img src="https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240628210840951.webp" alt="image-20240628210840951" style="zoom:50%;" />
 
 方式 3——GPT
 :::
@@ -233,7 +233,7 @@
 
 点击右上角的`share`按钮，就可以打开共享链接，分为两种权限——只读和可编辑。发给同伴以后就可以一起编辑了。
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240629191400.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240629191400.webp)
 
 ### 其他
 
@@ -368,7 +368,7 @@ xelatex -v
 bibtex -v
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904110729.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240904110729.webp)
 
 #### Texstudio 下载
 
@@ -377,11 +377,11 @@ bibtex -v
 - 将语言设置为中文。依次选择 Opitions->Configure TeXstudio
 
 - 修改中文界面后，我们可以选择左侧命令设置不同编译器，外部 PDF 查看器，和参看文献的执行程序。点击 1 处，可以将上述提到的 3，4，5 等的路径设置为 TeXlive 安装路径下对应的 exe 执行程序。点击 2 处，就可恢复默认。
-  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904105850.webp)
+  ![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240904105850.webp)
 - 默认编译器、默认 PDF 查看器、默认文献工具等设置；点击构建选项，可以修改默认编译器、PDF 查看器和默认文献工具等。若写中文论文，则需修改默认编译器为 XelaTeX. 若为英文，则用 PdfLaTex。
-  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904105924.webp)
+  ![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240904105924.webp)
 - 设置默认字体编码和添加行号：点击编辑器选项，一般默认字体编码为 UTF-8（一般不修改）。显示行号默认：所有行号。添加行号，可以快速定位某个词或句的位置。此外，当程序报错时，可快速定位到出错位置，方便修改。
-  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904110012.webp)
+  ![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240904110012.webp)
 
 ```latex title="测试代码"
 \documentclass{article}
@@ -411,13 +411,13 @@ If you can see this document with the title, sections, and the equation above, t
 ```
 
 编译后显示下面的页面，说明编译成功
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240904110244.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240904110244.webp)
 
 #### 参考文献编译
 
 在设置页面，选择 bibtex 为默认
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240731211334.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240731211334.webp)
 
 对于 texstudio 来说，应该是 F6+F8+F6+F6
 
@@ -664,7 +664,7 @@ F1 输入`Open Keyboard Shortcuts`
     可以先把图片注释掉，看看能不能调好
 
 点击左侧的编译和查看 pdf，就可以啦~
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20240630191728.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20240630191728.webp)
 
 ### `IguanaTex` | LaTeX in PPT
 
@@ -700,7 +700,7 @@ required to use pdflatex/xelatex/lualatex.
 
 :::
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__image-20240609200702478.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__image-20240609200702478.webp)
 
 ```latex
 \documentclass{article}
@@ -730,7 +730,7 @@ required to use pdflatex/xelatex/lualatex.
 
 按`F1`,输入 shortcut，打开快捷键设置，把 latex workshop 中的 `ctrl+alt+v` 预览去掉（因为和 paste image 的快捷键冲突了）
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__latex.assets__20250314153206120.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__latex.assets__20250314153206120.webp)
 
 然后就可以使用快捷键`ctrl+alt+v`插入图片了，可以根据需要修改快捷键和插入的格式。
 

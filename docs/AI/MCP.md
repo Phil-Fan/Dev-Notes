@@ -2,7 +2,7 @@
 
 ## 简介与洞见
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__MCP.assets__20250408080715.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__MCP.assets__20250408080715.webp)
 
 MCP 类似一个拓展坞，让大模型理解如何使用工具。
 

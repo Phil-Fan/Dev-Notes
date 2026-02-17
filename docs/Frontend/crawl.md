@@ -115,7 +115,7 @@ Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻
 
 - 第一种是用电脑给手机提供热点，相当于电脑当作了手机的流量来源，直接在电脑上使用抓包工具（如`wireshark`等）进行分析即可。
 
-  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__image-20240318085112013.webp)
+  ![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__image-20240318085112013.webp)
 
 - 第二种我也没有试过，直接使用手机端的抓包 APP 进行分析。
 
@@ -127,11 +127,11 @@ Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻
 
 打开 zdty，体测预约，看到类似如下信息说明可以抓到
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__image-20240318082144366.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__image-20240318082144366.webp)
 
 以 4 月 12 日体测为例，点开体测预约，我们发现有一个报文
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__image-20240318082347175.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__image-20240318082347175.webp)
 
 > **由课上知识我们知道**：
 >
@@ -143,7 +143,7 @@ Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻
 
 （朴素认知下，这是不是意味着只要嗅探到你的浙大体艺预约报文，就可以获得你的 token，~~进而可以取消你的预约~~）
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__image-20240318082934711.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__image-20240318082934711.webp)
 
 分析上图我们可以发现请求头的一些信息，重复刚才的步骤多次可以找到一定规律
 
@@ -155,7 +155,7 @@ Burp Suite 是一个集成化的渗透测试工具，它包含了多个用于攻
 
 再试着点一次预约，我们发现了一个新的报文
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__image-20240318083929415.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__image-20240318083929415.webp)
 
 分析这个请求的 URL，发现多了几个参数
 
@@ -219,7 +219,7 @@ schedule_appointment("3322", "2024-04-12", "13:30-14:00")
 
 可以发现，我的体测地点变成了快乐星球（😂
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__d519771d06acb8610067b01d27799f0.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__d519771d06acb8610067b01d27799f0.webp)
 
 同理，可以抓到取消预约的 URL
 
@@ -258,9 +258,9 @@ def cancel_appointment(scheduled_id):
 
 6. 把选项 **代理** 从 **无** 改成 **手动** ，选项 **主机名** 设置为`192.168.127.1`，选项 **代理服务器端口** 改为`1125`，确认即可
 
-   <img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__Screenshot_202024-02-02_20at_2000.24.51.jpeg.webp" alt="Screenshot 2024-02-02 at 00.24.51.jpeg" style="zoom: 25%;" />
+   <img src="https://img.philfan.cn/Tools__Software__assets__Web.assets__Screenshot_202024-02-02_20at_2000.24.51.jpeg.webp" alt="Screenshot 2024-02-02 at 00.24.51.jpeg" style="zoom: 25%;" />
 
-   <img src="https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__Screenshot_202024-02-02_20at_2000.25.19.jpeg.webp" alt="Screenshot 2024-02-02 at 00.25.19.jpeg" style="zoom: 25%;" />
+   <img src="https://img.philfan.cn/Tools__Software__assets__Web.assets__Screenshot_202024-02-02_20at_2000.25.19.jpeg.webp" alt="Screenshot 2024-02-02 at 00.25.19.jpeg" style="zoom: 25%;" />
 
 ## 使用“共享文件夹”实现 iPhone 与 PC 间文件快速传输
 
@@ -274,9 +274,9 @@ def cancel_appointment(scheduled_id):
 
 （2）完全控制权限慎选。
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__v2-39f794731fac3c347391bf965fcf9490_1440w.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__v2-39f794731fac3c347391bf965fcf9490_1440w.webp)
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__v2-44103f753f47d507913fe5ab3a66a8c2_1440w.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__v2-44103f753f47d507913fe5ab3a66a8c2_1440w.webp)
 
 - 获取 IP 地址
 
@@ -286,4 +286,4 @@ def cancel_appointment(scheduled_id):
 
 打开 iPhone 端“文件”——点击右上角三个点——选择“连接服务器”——输入 IP 地址——点击连接——选择注册用户——输入电脑名称及密码——完成。然后打开“文件”应用，就可以看到共享文件夹了。
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Web.assets__v2-5d3c86fd875daf87211ce71fa8e1f548_1440w.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__Web.assets__v2-5d3c86fd875daf87211ce71fa8e1f548_1440w.webp)

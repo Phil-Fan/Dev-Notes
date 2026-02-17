@@ -160,9 +160,9 @@ cd .ssh
 cat id_rsa.pub # 复制到 github 的 ssh 设置中
 ```
 
-![ssh key](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Git.assets__20240816111626.webp)
+![ssh key](https://img.philfan.cn/Tools__Software__assets__Git.assets__20240816111626.webp)
 点击右上角的 settings
-![ssh key](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Git.assets__20240816111700.webp)
+![ssh key](https://img.philfan.cn/Tools__Software__assets__Git.assets__20240816111700.webp)
 
 将刚才复制的内容粘贴到这里
 
@@ -173,7 +173,7 @@ ssh -T git@github.com
 ```
 
 显示如下信息表明设置成功
-![ssh key](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Git.assets__20240816111807.webp)
+![ssh key](https://img.philfan.cn/Tools__Software__assets__Git.assets__20240816111807.webp)
 
 ### SSH
 

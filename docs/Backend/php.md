@@ -111,7 +111,7 @@ foreach($age as $x=>$x_value)
 
 - 松散比较：使用两个等号 `==` 比较，只比较值，不比较类型。
 - 严格比较：用三个等号 `===` 比较，除了比较值，也比较类型。
-  ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/CS__Dev__Backend__assets__PHP.assets__20240702171832.webp)
+  ![image](https://img.philfan.cn/CS__Dev__Backend__assets__PHP.assets__20240702171832.webp)
 
 ```php
 <?php
@@ -244,7 +244,7 @@ PHP 是弱类型的原因，我们可以利用这样的特性去绕过一些判�
 
 #### [BUUCTF[极客大挑战 2019]PHP](https://buuoj.cn/challenges#[%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019]PHP)
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/CS__Dev__Backend__assets__PHP.assets__20240801190745.webp)
+![image](https://img.philfan.cn/CS__Dev__Backend__assets__PHP.assets__20240801190745.webp)
 
 一进来是一个猫猫抓球的界面，你别说还挺好玩的嘞，不知道是怎么实现的。
 
@@ -504,8 +504,8 @@ if($this->op === "2")
 O:11:"FileHandler":3:{s:2:"op";i:2;s:8:"filename";s:8:"flag.php";s:7:"content";s:3:"AAA";}"
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/CS__Dev__Backend__assets__PHP.assets__83c9510802e2eb9530436cae79d0c66.webp)
+![image](https://img.philfan.cn/CS__Dev__Backend__assets__PHP.assets__83c9510802e2eb9530436cae79d0c66.webp)
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/CS__Dev__Backend__assets__PHP.assets__6ffadb51805af7763ee6b9e5cc1eb81.webp)
+![image](https://img.philfan.cn/CS__Dev__Backend__assets__PHP.assets__6ffadb51805af7763ee6b9e5cc1eb81.webp)
 
 这个 flag 跑了两个实例貌似是不一样的，所以贴 flag 貌似没什么用。

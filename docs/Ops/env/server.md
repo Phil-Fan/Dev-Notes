@@ -469,7 +469,7 @@ webServer.user = "admin"                # 后台登录用户名
 webServer.password = "admin"            # 后台登录密码
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__20250318114804586.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__20250318114804586.webp)
 
 访问公网 ip 的 7500 端口，可以查看 frp 服务状态以及统计信息
 
@@ -579,21 +579,21 @@ sudo firewall-cmd --reload
 
 Tools->Deployment->Configuration
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__fac49e9753f2ab5a3c262724b13ace42.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__fac49e9753f2ab5a3c262724b13ace42.webp)
 
 #### 2. 建立 Mapping
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__5ada3773c2ea98000fdf257681baa67f.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__5ada3773c2ea98000fdf257681baa67f.webp)
 
 #### 3. 实现代码自动上传
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__642e7fe6b4c620483aed45e51615ca92.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__642e7fe6b4c620483aed45e51615ca92.webp)
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__eba75696543b972e5fc6289fe9648940.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__eba75696543b972e5fc6289fe9648940.webp)
 
 #### 4. 设置 Python Interpreter
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__1e5ffb013eb5acda4148f924aafe9f3b.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__1e5ffb013eb5acda4148f924aafe9f3b.webp)
 
 ### vscode
 
@@ -821,7 +821,7 @@ taskkill /PID 进程号 -F -T
 
 使用 workbench，在文件一栏中选择"打开新文件树"
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-server.assets__20241118233039.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__20241118233039.webp)
 
 ### OSS
 

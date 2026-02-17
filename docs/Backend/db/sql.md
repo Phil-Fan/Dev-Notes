@@ -251,7 +251,7 @@ SELECT group_concat(col_name1, col_name2…) FROM table_name /*整合行、
 > MySQL 是最流行的关系型数据库管理系统，在 WEB 应用方面 MySQL 是最好的 RDBMS(Relational Database Management System：关系数据库管理系统) 应用软件之一。
 
 MySQL 为关系型数据库 (Relational Database Management System), 这种所谓的"关系型"可以理解为"表格"的概念，一个关系型数据库由一个或数个表格组成
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__20240702184602.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__20240702184602.webp)
 
 - 表头 (header): 每一列的名称;
 - 列 (col): 具有相同数据类型的数据的集合;
@@ -259,7 +259,7 @@ MySQL 为关系型数据库 (Relational Database Management System), 这种所�
 - 值 (value): 行的具体信息，每个值必须与该列的数据类型相同;
 - **键 (key): 键的值在当前列中具有唯一性。**
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__20240801213130.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__20240801213130.webp)
 
 [Mysql 之自带四库之 sys 库\_mysql sys 库-CSDN 博客](https://blog.csdn.net/carefree2005/article/details/113798841)
 
@@ -609,7 +609,7 @@ sqlmap 的绕过脚本在目录 usr/share/golismero/tools/sqlmap/tamper 下
 ### 实例 1 [SchoolBus - SQL injection](https://zjusec.com/challenges/16)
 
 打开网站，发现是一个问答的网站，非常明显的 sql 注入点
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__20240801183459.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__20240801183459.webp)
 
 因为提示了检测空格，所以使用了 tamper 的 space2comment.py
 
@@ -628,7 +628,7 @@ sqlmap -u http://10.214.160.13:10002/?questionid=0 --current-db --tamper space2r
 
 使用上面的语句可以一步步使用 sqlmap 获取 flag
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__cc3a0a22acb55bd08b8eed78d0c2d20.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__cc3a0a22acb55bd08b8eed78d0c2d20.webp)
 
 ### 实例 2 [SchoolBus - php include 文件注入](http://10.214.160.13:10001/index.php?f=upload.php)
 
@@ -639,7 +639,7 @@ sqlmap -u http://10.214.160.13:10002/?questionid=0 --current-db --tamper space2r
 > - [Kali linux 菜刀 (weevely3)](https://blog.csdn.net/weixin_41489908/article/details/115875988) 这个最后没用到
 
 打开网站是一个上传文件的页面，上传文件之后会显示文件文件名
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__20240801182113.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__20240801182113.webp)
 
 提示构造一句话木马，所以写了一个 php 文件
 
@@ -659,18 +659,18 @@ sqlmap -u http://10.214.160.13:10002/?questionid=0 --current-db --tamper space2r
 http://10.214.160.13:10001/index.php?f=upload/20240801xxxxxx.png
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__dfb524f36bde612006171278b5b5ec8.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__dfb524f36bde612006171278b5b5ec8.webp)
 
 这个时候就可以使用蚁剑等工具进行文件操作，上传文件，执行命令等了。
 
 右键选择“添加数据”，填入上面的 url 路径，和我们构造的 php 密码。
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__20240801182913.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__20240801182913.webp)
 
 点击“测试链接”，发现可以。
 
 直接连接后会出现网站的管理界面。
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__20240801183043.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__20240801183043.webp)
 
 相当于取得了网站的管理权限。就可以拿到 flag 了。
 
@@ -708,7 +708,7 @@ flag = AAA{m310dy_1s_wAitinG_4_y0u_h3r3_qq_qun_386796080}
 ?>
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__0e185ed04c09d30db92fed5775aa16a.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__0e185ed04c09d30db92fed5775aa16a.webp)
 
 ### 实例 3
 
@@ -730,7 +730,7 @@ nginx/1.10.0 (Ubuntu)
 人工注入感觉我的 sql 水平应该达不到，所以尝试使用 sqlmap 进行注入
 
 这里学习了一下 post 注入的方法
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__20240801201104.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__20240801201104.webp)
 
 先将 burp 的报文保存到一个文件中，然后使用 sqlmap 进行注入，使用`-r`参数加载文件，使用`-p`参数指定注入点
 
@@ -916,7 +916,7 @@ Table: USERS
 AAA{now_y0u_can_try_web_400_lol}
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__SQL.assets__57e4e1a1e9d5e59769ac273e5d580a0.webp)
+![image](https://img.philfan.cn/Tools__Software__assets__SQL.assets__57e4e1a1e9d5e59769ac273e5d580a0.webp)
 
 这里拿不到 shell 权限尊都很难受啊
 

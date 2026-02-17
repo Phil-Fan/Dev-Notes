@@ -73,7 +73,7 @@ jobs:
 
 - 设置 deploy from branch
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__Mkdocs.assets__20240707225202.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__Mkdocs.assets__20240707225202.webp)
 
 ### 自定义域名
 
@@ -170,7 +170,7 @@ jobs:
 
 1.打开 B 站的视频 2.点击“分享”按钮，获取“嵌入代码”：B 站视频的下一行，点击“分享”按钮，下方弹出分享页面。
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__Mkdocs.assets__20241031230641.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__Mkdocs.assets__20241031230641.webp)
 
 禁用方法很简单，就是在视频 url 链接最后加上 autoplay=0。例如：
 
@@ -427,7 +427,7 @@ plugins:
 
 所以第一步是在 github 的仓库中设置 secret
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__Mkdocs.assets__image-20250817151216756.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__Mkdocs.assets__image-20250817151216756.webp)
 
 第二步是在 github actions 中设置环境变量
 
@@ -725,7 +725,7 @@ picgo 中的设置如下
 4. 存储路径默认设置 img/即可
 5. 如果自己有已经备案的域名，可以填写设定自定义域名，如果没有不填即可。
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Efficiency__assets__Mkdocs.assets__20240813014140.webp)
+![image](https://img.philfan.cn/Tools__Efficiency__assets__Mkdocs.assets__20240813014140.webp)
 
 #### 图床的迁移
 

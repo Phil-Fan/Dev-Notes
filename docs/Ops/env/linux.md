@@ -88,7 +88,7 @@ scp -P 2222 file.txt user@192.168.1.100:/home/user/
 systemctl status bluetooth
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20240914224410.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20240914224410.webp)
 
 ```shell
 sudo service bluetooth start
@@ -102,7 +102,7 @@ sudo /etc/init.d/bluetooth restart
 bluetoothctl
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20240914224418.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20240914224418.webp)
 输入以下命令
 
 ```shell
@@ -419,8 +419,8 @@ apt-get install -y cifs-utils
 #### windows 做服务器
 
 [在 windows 上共享文件夹](https://zhuanlan.zhihu.com/p/402820328)
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20241026225133.webp)
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20241026225143.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20241026225133.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20241026225143.webp)
 
 #### windows 作客户端
 
@@ -428,15 +428,15 @@ apt-get install -y cifs-utils
 
 点击"启用或关闭 windows 功能"
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20241123092300.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20241123092300.webp)
 
 把 smb 的几个都点开，然后点击确定，立即重启
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20241123092342.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20241123092342.webp)
 
 然后直接在 explorer 中输入 ip 地址即可。
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20241123092550.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20241123092550.webp)
 
 注意输入的格式：
 
@@ -856,7 +856,7 @@ service ssh restart
 service ssh status
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux.assets__20240711175232.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux.assets__20240711175232.webp)
 
 #### 开机自启动
 

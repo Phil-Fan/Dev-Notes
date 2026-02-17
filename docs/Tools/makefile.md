@@ -8,7 +8,7 @@
 
 下载最新版的安装包，然后解压
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Language__assets__Makefile.assets__20250306141532912.webp)
+![image](https://img.philfan.cn/Tools__Language__assets__Makefile.assets__20250306141532912.webp)
 
 命令行进入到 make 的安装文件夹下，需要先有安装 mingw-w64，然后在命令行中执行：
 

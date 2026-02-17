@@ -281,7 +281,7 @@ V2Ray 订阅 → Subconverter → Clash 订阅
 
 1. 打开订阅转换网页 (以 [acl4ssr](https://acl4ssr-sub.github.io/) 为例)
 2. 在远程配置（**不是后端地址**）输入`https://raw.githubusercontent.com/SubConv/ZJU-Rule/main/Clash/config/ZJU.ini`，并点击下拉栏中的地址
-   ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-router.assets__20250503215349.webp)
+   ![image](https://img.philfan.cn/Tools__Environment__assets__settings-router.assets__20250503215349.webp)
 3. 如果用 [acl4ssr](https://acl4ssr-sub.github.io/) 的话，有个后端地址选项，并不是所有后端口可用，自己试试看
 4. 在订阅链接位置处粘贴订阅链接，如果需要配置 ZJU-Connect，需要在最后一行加入`tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect`，然后在规则配置界面选择`ZJU-Connect`
 
@@ -292,7 +292,7 @@ vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1h
 tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-router.assets__image-20250715010941873.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-router.assets__image-20250715010941873.webp)
 
 ```text
 你的设备 → TUN 虚拟网卡 → Clash（规则匹配，ZJU-Rule） → SOCKS5/V2Ray 代理 (ZJU-Connect) → 目标网站

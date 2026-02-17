@@ -21,7 +21,7 @@
 
 [Choose an open source license | Choose a License](https://choosealicense.com/)
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/CS__Dev__assets__rules.assets__20240714184808.webp)
+![image](https://img.philfan.cn/CS__Dev__assets__rules.assets__20240714184808.webp)
 
 [x-lab 课程 第一讲](https://xlab2017.yuque.com/staff-kbz9wp/ut3q7i/uipcr0gbxd7d3kvx?singleDoc)
 

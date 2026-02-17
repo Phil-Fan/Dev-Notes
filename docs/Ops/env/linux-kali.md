@@ -78,7 +78,7 @@ apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-pl
 ```
 
 桌面出现了！
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux-kali.assets__20241119103146.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux-kali.assets__20241119103146.webp)
 
 ### 桌面不显示
 
@@ -316,7 +316,7 @@ rip-git.pl -s -v -u http://www.example.com/.git/
 [linux 解决 " command not found: shopt "的 "\~/.bashrc" 配置问题-CSDN 博客](https://blog.csdn.net/qq_36148847/article/details/79261067)
 
 1. 安装[java 环境](https://www.oracle.com/java/technologies/downloads/?er=221886)
-    ![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux-kali.assets__20240710122150.webp)
+    ![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux-kali.assets__20240710122150.webp)
 
         ```shell
         tar -xzvf jdk-12_linux-x64_bin.tar.gz
@@ -363,7 +363,7 @@ mv StegSolve-1.4.jar StegSolve
 java -jar StegSolve
 ```
 
-![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-linux-kali.assets__20240710122852.webp)
+![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux-kali.assets__20240710122852.webp)
 
 :::warning 若执行`source ~/.bashrc`会报错
 :::

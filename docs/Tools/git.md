@@ -2,206 +2,91 @@
 
 ## 使用
 
-### 个人使用：init、rm、commit、push、pull
+- [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN): 可视化学习 Git 操作
 
-```shell
-git init
-git remote -v
-git remote add origin + ssh
-git remote rm origin
+### 基本命令（Basics）
 
-git pull origin [branch]:[master]
-git add .
-git commit -m ""
-git push origin [master]:[branch]
+- `git init`：创建新的本地仓库（生成 .git 目录）
+- `git status`：显示当前仓库状态
+- `git add <文件名>`：将文件添加到暂存区
+- `git commit`：提交暂存区内容为新提交  
+  *Tips: Write good commit messages!*
+- `git checkout <版本号>`：切换到指定提交或分支（如切换分支时，同时切换 HEAD）
 
-# 本地初始化项目
-git config --global user.name "你的名字或昵称"
-git config --global user.email "你的邮箱"
-```
+### 信息查看
 
-### 分支操作
+- `git help <command>`：查看某个命令的帮助文档
+- `git log`：显示提交历史
+- `git log --all --graph --decorate`：以 D.A.G 图的形式展示提交历史
+- `git diff <文件名>`：比较工作区与暂存区的差异
+- `git diff <版本号> <文件名>`：比较两个快照间文件的差异
+- `git show` 查看某个提交的详细信息
+- `git blame`：逐行显示最后一次修改的提交
+- `git bisect`：二分查找 bug 所在的提交
 
-```shell
-# 创建分支、更改
-git checkout -b <branch_name>
-git branch -a
-git branch -d <branch_name> //删除分支
-```
+### 分支与合并
 
-```shell title="删除远端分支"
-git push origin --delete <branch_name>
-```
+- `git branch`：查看本地分支
+- `git branch <分支名>`：新建分支
+- `git switch <分支名>`：切换分支
+- `git checkout -b <分支名>`：新建并切换到该分支（等价于上面两条的组合）
+- `git merge <分支名>`：将指定分支合并到当前分支
+- `git mergetool`：使用可视化工具解决合并冲突
+  - `Ctrl-w w` 移动窗口
+  - `:only` 关闭其他窗口，只留 MERGED
+  - `:diffg LO` 用当前分支
+  - `:diffg RE` 用对方分支
+  - `git merge --continue`
+- `git rebase`：变基（将一个分支的提交移到新基底上）
+- `git rebase -i`：交互式变基操作
 
-### 回退
+### 远程仓库管理（Remotes）
 
-```shell title="查看详细历史记录"
-git log
-```
+- `git remote`：列出所有远程仓库
+- `git remote add <名称> <url>`：添加远程仓库
+- `git push <远程> <本地分支>:<远程分支>`：推送本地分支到远程并更新引用
+- `git branch --set-upstream-to=<远程>/<远程分支>`：设置本地分支与远程分支的跟踪关系
+- `git fetch`：从远程获取对象和引用
+- `git pull`：等同于 fetch + merge（拉取并合并）
+- `git clone <url>`：克隆远程仓库
+- `git clone --depth=1`：浅克隆，仅拉取最新历史
 
-```shell
-git log --pretty=oneline
-```
+### 文件恢复与撤销（Undo）
 
-格式化 log 形式，每条 log 只有一行，只包含 完整的 hash 值 和 提交的备注；
+- `git commit --amend`：修改最近一次提交的信息或内容
+- `git reset <文件>`：将文件从暂存区移除
+- `git restore`：还原工作区文件
+- `git stash`：暂存当前修改，保持工作区整洁
+- `git add -p`：交互式暂存文件部分内容
+- `git revert`：新建一个提交用于撤销某次历史提交
+- `git clean -n`：查看将要删除的文件
+- `git clean -f`：删除所有未跟踪的文件
 
-```shell title="只展示最新的几条日志"
-git log -n 3
-```
+**`git stash` 本质上是把当前工作区和暂存区的修改打包成一个临时 commit 存到 `refs/stash` 里，并把工作区恢复干净。**
 
-```shell title="展示历史分支路线"
-git log --graph
-```
+```bash
+# 保存当前修改
+git stash
+git stash list
+# 应用但不删除
+git stash apply stash@{0}
 
-```shell title="回退任意版本"
-git reset --hard + commit_id
-```
+# 应用并删除（常用）
+git stash pop
 
-```shell
-git reset --hard HEAD^
-```
+# 删除某个 stash
+git stash drop stash@{0}
 
-只能后退，一个 ^ 表示回退一个版本，两个^ 表示回退两个版本，依次类推
-
-```shell title="回退 n 个版本"
-git reset --hard HEAD~n
-```
-
-### Tag
-
-```bash title="创建轻量标签"
-git tag v1.0.0
-```
-
-```bash title="创建含信息标签"
-git tag -a v1.0.0 -m "Release version 1.0.0"
-```
-
-```bash title="推送单个标签"
-git push origin v1.0.0
-```
-
-```bash title="推送所有本地标签"
-git push origin --tags
-```
-
-```bash title="删除本地标签"
-git tag -d v1.0.0
-```
-
-```bash title="删除远端标签"
-git push origin --delete v1.0.0
-```
-
-```bash title="删除远端标签"
-git push origin :refs/tags/v1.0.0
-```
-
-### Pull Request
-
-PR，全称 Pull Request（拉取请求），是一种非常重要的协作机制
-
-![Merge Request](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Software__assets__Git.assets__20240926134813.webp)
-
-1. fork 原仓库 A 到我的仓库 B（B 是 A 的 fork 版本）
-2. 将仓库 B clone 到我本地电脑
-3. 在本地创建一个分支，如 bugfix/issue-12，该分支用于存放我的代码修改。同时在我的 github 上的仓库 B 也创建一个同名的该分支
-4. 切换到该分支 bugfix/issue-12，修改代码
-
-```shell
-git checkout -b bugfix/issue-12
-```
-
-1. 修改好了，add，commit，然后 push 到我远程的仓库 B 的 bugfix/issue-12 分支
-
-```shell
-git push -u origin bugfix/issue-12
-```
-
-1. 在我的 github 的仓库 B 中创建 pull request。选择仓库 B 的该分支，推送到原仓库 A 的某一个分支。具体是哪个分支，参考仓库 A 的 contributing 说明，一般是 dev 分支；如果没说，就只能选择 master 分支咯
-
-[【Git】PR 是啥？一篇文章学会 Pull Request 到底是干嘛的\_github pull request-CSDN 博客](https://blog.csdn.net/Supreme7/article/details/136813376)
-
-### `git commit`规范
-
-为了方便使用，我们避免了过于复杂的规定，格式较为简单且不限制中英文：
-
-```txt title="commit 规范"
-&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
-// 注意冒号 : 后有空格
-// 如 feat(miniprogram): 增加了小程序模板消息相关功能
-```
-
-**scope 选填**表示 commit 的作用范围，如数据层、视图层，也可以是目录名称
-
-**subject 必填**用于对 commit 进行简短的描述
-
-**type 必填**表示提交类型，值有以下几种：
-
-- feat - 新功能 feature
-- fix - 修复 bug
-- docs - 文档注释
-- style - 代码格式 (不影响代码运行的变动)
-- refactor - 重构、优化 (既不增加新功能，也不是修复 bug)
-- perf - 性能优化
-- test - 增加测试
-- chore - 构建过程或辅助工具的变动
-- revert - 回退
-- build - 打包
-
-## 合并
-
-### 合并 commit
-
-#### git rebase 合并最近 N 个 commit
-
-```shell
-git rebase -i HEAD~N
-```
-
-### squash 写法（关键）
-
-```text
-pick   commit1
-squash commit2
-squash commit3
-```
-
-#### 规则：第一个必须是 pick，后面才能 squash
-
-### 操作流程
-
-1. `git rebase -i HEAD~N`
-2. 保留第一个 pick，其余改成 squash
-3. 保存退出
-4. 编辑最终 commit message
-5. `git rebase --continue`
-
-### merge vs rebase vs squash
-
-| 方式     | 本质         | 历史形态      | 是否改历史 | 什么时候用         |
-| -------- | ------------ | ------------- | ---------- | ------------------ |
-| `merge`  | 两条线合并   | 有 merge 节点 | 否         | 公共分支、安全第一 |
-| `rebase` | 把提交挪位置 | 一条直线      | 是         | 整理个人提交       |
-| `squash` | 多个变一个   | 一条直线      | 是         | 提 PR / 上 main    |
-
-### 放弃本地修改，强制覆盖
-
-```shell title="快速使用云端"
-# 1. 放弃本地所有修改（包括未提交的、冲突的）
-git reset --hard HEAD
-
-# 2. 拉取远程最新版本，强制覆盖本地
-git fetch origin
-git reset --hard origin/main
-
-# 3. 清理未跟踪文件
-git clean -fd
-
-# 现在本地与云端完全一致
+# 清空所有 stash
+git stash clear
 ```
 
 ## 进阶
+
+- `git config`：配置和个性化 Git
+- `git worktree`：支持多工作区，便于同时检出多个分支
+- `.gitignore`：设置忽略跟踪的文件或目录
+- 
 
 ### Pre-Commit
 

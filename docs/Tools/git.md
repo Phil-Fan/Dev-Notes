@@ -86,7 +86,7 @@ git stash clear
 - `git config`：配置和个性化 Git
 - `git worktree`：支持多工作区，便于同时检出多个分支
 - `.gitignore`：设置忽略跟踪的文件或目录
-- 
+-
 
 ### Pre-Commit
 

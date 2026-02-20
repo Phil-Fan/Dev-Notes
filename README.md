@@ -41,35 +41,31 @@
 
 ### CLI 工具
 
+跨端使用
+
+- [slopus/happy](https://github.com/slopus/happy): mobile & web client
+- [OpenClaw](https://openclaw.ai/): Personal AI Assistant
+- [poco-agent](https://github.com/poco-ai/poco-agent)
+
+终端
+
+- [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全，有一些奇怪小 Bug。可以上一些国产模型，比如 MiniMax GLM 等
+  - [ccusage](https://github.com/ryoppippi/ccusage)
+  - [cc-switch](https://github.com/farion1231/cc-switch): 跨平台桌面 AI 助手工具，统一管理 Claude Code、Codex、Gemini CLI
+  - [everything-claude-code](https://github.com/affaan-m/everything-claude-code)
+  - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
+  - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
 - [OpenCode](https://opencode.ai/)：用户体验不错。
   - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
-- [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
-- [cc-switch](https://github.com/farion1231/cc-switch): 跨平台桌面 AI 助手工具，统一管理 Claude Code、Codex、Gemini CLI
-- [Codex](https://github.com/openai/codex): Debug 很好，能力很强，但是任务运行时间太久
-- [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全，有一些奇怪小 Bug。可以上一些国产模型，比如 MiniMax GLM 等
-  - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
+- [Codex](https://github.com/openai/codex): Debug 很好，能力很强
+  - [oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex)
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli)：UI 可以
+
+供给平台
+
 - [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
-
-    ```shell
-    export ANTHROPIC_BASE_URL=https://pmpjfbhq.cn-nb1.rainapp.top
-    ```
-
 - [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
 - [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
-
-```shell
-brew install --cask codex
-brew install --cask claude-code
-brew install gemini-cli
-```
-
-### IDE
-
-- [Cursor](https://cursor.com/home)：Tab 神器，新上 Plan 模式和网页模式挺有意思的。
-- [Antigravity](https://antigravity.google/), [Windsurf](https://windsurf.com/download/editor)
-- [Trae CN](https://www.trae.cn)
-- [Visual Studio Code](https://code.visualstudio.com/)
 
 ### MCP
 
@@ -85,6 +81,26 @@ Dev
 - [高德地图 MCP Server](https://lbs.amap.com/api/mcp-server/summary): 高德地图 API 的 MCP Server
 - [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp): Chrome DevTools for coding agents
 - [shadcn MCP](https://ui.shadcn.com/)
+
+### Plugins
+
+- [obra/superpowers: An agentic skills framework & software development methodology that works.](https://github.com/obra/superpowers)
+
+### Skills
+
+```shell
+/plugin marketplace add anthropics/skills
+```
+
+```shell
+/plugin
+```
+
+- [planning-with-files](https://github.com/OthmanAdi/planning-with-files): Manus 风格持久化 Markdown 规划
+- [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): 多平台专业 UI/UX 设计智能
+- [notebooklm-py](https://github.com/teng-lin/notebooklm-py)
+- [obsidian-skills](https://github.com/kepano/obsidian-skills): Obsidian 的 Claude Skills 集合
+- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code): Claude Code 精选命令、文件和工作流列表
 
 ### Spec Tools
 
@@ -103,21 +119,12 @@ be very in-depth and continue interviewing me continually
 until it's complete, then write the spec to the file.
 ```
 
-### Skills
+### IDE
 
-```shell
-/plugin marketplace add anthropics/skills
-```
-
-```shell
-/plugin
-```
-
-- [planning-with-files](https://github.com/OthmanAdi/planning-with-files): Manus 风格持久化 Markdown 规划
-- [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): 多平台专业 UI/UX 设计智能
-- [notebooklm-py](https://github.com/teng-lin/notebooklm-py)
-- [obsidian-skills](https://github.com/kepano/obsidian-skills): Obsidian 的 Claude Skills 集合
-- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code): Claude Code 精选命令、文件和工作流列表
+- [Cursor](https://cursor.com/home)：Tab 神器，新上 Plan 模式和网页模式挺有意思的。
+- [Antigravity](https://antigravity.google/), [Windsurf](https://windsurf.com/download/editor)
+- [Trae CN](https://www.trae.cn)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ### 知识库
 
@@ -168,12 +175,15 @@ until it's complete, then write the spec to the file.
   - [TypeScript](https://github.com/microsoft/TypeScript)
   - [biome](https://github.com/biomejs/biome): Next.js 项目
   - [tailwindcss](https://github.com/tailwindlabs/tailwindcss)+[shadcn/ui](https://ui.shadcn.com/)
-    - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
     - [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss): 自动排序类名
   - [motion](https://github.com/motiondivision/motion): 动画库
   - [zustand](https://zustand.docs.pmnd.rs/getting-started/introduction): 前端状态管理库
   - [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview): 数据查询库
   - [react-hook-form](https://react-hook-form.com/get-started): 表单库
+
+- [tweakcn](https://tweakcn.com/editor/theme): 风格模版
+- [react-bits](https://github.com/DavidHDev/react-bits): 组件动画库
+- [60fps](https://60fps.design/):  UI/UX animation inspiration for mobile & web apps
 
 ```shell
 npx create-next-app@latest my-app
@@ -318,7 +328,6 @@ npx create-next-app@latest my-app
 ### 内容与文档
 
 - [MkDocs](https://www.mkdocs.org/)
-- [VuePress](https://vuepress.vuejs.org)
 - [fumadocs](https://github.com/fuma-nama/fumadocs)
 - [Jekyll](https://jekyllrb.com)
   - [minima](https://github.com/jekyll/minima)
@@ -327,22 +336,40 @@ npx create-next-app@latest my-app
 - [reveal-md](https://github.com/webpro/reveal-md)
 - [Slidev](https://sli.dev/)
 
-### 产品介绍
+### 设计
 
-平面设计
+设计
 
 - PowerPoint 永远的神
 - [Figma](https://www.figma.com/): 产品设计与原型设计
+- [Blender](https://www.blender.org/): 3D 建模软件
+
+Icon
+
+- [iconfont-阿里巴巴矢量图标库](https://www.iconfont.cn/)
+- [Simple Icons](https://simpleicons.org/)
+- [Font Awesome](https://fontawesome.com/)
+
+字体
+
+- [Google Fonts](https://fonts.google.com/)
+
+颜色
+
+- [Happy Hues](https://www.happyhues.co/): Curated colors in context.
+
+### 产品介绍
 
 视频与动画
 
 - [Rotato](https://rotato.app/): 模型机动画
 - [Jitter](https://jitter.video/templates/devices/): 产品视频介绍模版
 - [Remotion](https://www.remotion.dev/): 用代码创建视频的 React 框架
-- 录屏
-  - [Screen Studio](https://screen.studio/): 录屏软件；
-  - [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具，支持一下开源，但是感觉功能不是特别完善
-- [Blender](https://www.blender.org/): 3D 建模软件
+
+录屏
+
+- [Screen Studio](https://screen.studio/): 录屏软件；
+- [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具，支持一下开源，但是感觉功能不是特别完善
 
 ### 用户洞察
 

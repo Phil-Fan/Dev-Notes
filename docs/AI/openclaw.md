@@ -1,5 +1,11 @@
 # OpenClaw
 
+## 模型配置
+
+403
+
+[【排障】OpenClaw 接中转站常见坑与解决方案 - 开发调优 - LINUX DO](https://linux.do/t/topic/1667136)
+
 ## Docker 部署
 
 ```shell

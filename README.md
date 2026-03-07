@@ -16,7 +16,6 @@
 > - 确定好技术栈，用**脚手架和模板**框定 AI 能力边界！用**脚手架和模板**框定 AI 能力边界！
 > - 需求对话占据 80% 的时间，然后 DEBUG 和迭代占据 20% 的时间。
 > - 白嫖很好，但有时候免费的才是最贵的。
-> - 任务不要太长，记得 /compact
 > - 睡前可以挂一个免费的模型跑任务 😆
 
 - [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
@@ -68,6 +67,8 @@
 - [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
 
 ### MCP
+
+- [MCP APP](https://github.com/modelcontextprotocol/ext-apps/tree/main)
 
 General
 
@@ -137,6 +138,7 @@ until it's complete, then write the spec to the file.
 - Image
   - 🍌
     - [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
+    - [YouMind提示词库](https://youmind.com/zh-CN/nano-banana-pro-prompts)
 - Video
   - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
   - [Veo - Google DeepMind](https://deepmind.google/models/veo/)
@@ -189,6 +191,7 @@ until it's complete, then write the spec to the file.
 npx create-next-app@latest my-app
 ```
 
+- [ni](https://github.com/antfu-collective/ni): 💡 Use the right package manager
 - [Taro](https://docs.taro.zone/docs/): 使用 React/Vue 开发多平台小程序应用
 - [uni-app](https://uniapp.dcloud.net.cn/): 使用 Vue 开发多平台应用（小程序、H5、App）
 - [electron](https://github.com/electron/electron): Build cross-platform desktop apps with JavaScript, HTML, and CSS
@@ -217,7 +220,11 @@ npx create-next-app@latest my-app
 
 ### 数据库
 
-- [Supabase](https://github.com/supabase/supabase)
+- cloudflare D1
+- [Supabase](https://github.com/supabase/supabase) 免费量比较小
+
+- mysql
+- postgres
 
 ### 缓存
 

@@ -229,16 +229,15 @@ Poco 的诞生，基于以下一些认知
 - [Claude Agent SDK [Full Workshop] — Thariq Shihipar, Anthropic - YouTube](https://www.youtube.com/watch?v=TqC1qOfiVcQ&t=356s): Claude 的 Workshop，干货很多
 - [Agent Skills 终极指南：入门、精通、预测 - 一泽 Eze](https://mp.weixin.qq.com/s/jUylk813LYbKw0sLiIttTQ)
 - [Building Agents with Skills: Equipping Agents for Specialized Work | Claude](https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work)
+- [怀温情与敬意，看 Agent 突飞猛进的这一年](https://mp.weixin.qq.com/s/aLwKRCSyMTVx2zuqBDWkjQ?scene=1)
 - [Claude Code 创始人最佳实践分享](https://x.com/bcherny/status/2007179832300581177)
+- [万字解析 Manus 的 PMF 和 AI Agent 赛道竞争的稳态约束](https://mp.weixin.qq.com/s/bS1uAqBlAC4rOURqfWXPvQ?scene=1)
+- [Clawdbot是一场马斯克发动的中登炒作](https://mp.weixin.qq.com/s/HYpLVozJhUJhKYTGH8LoZw?scene=1)
+- [云端OpenClaw更是路边一条](https://mp.weixin.qq.com/s/VdnN6TsU2tIeZEiWFjCcNg?scene=1)
+- [OpenClaw不如狗一条](https://mp.weixin.qq.com/s/Thn6wLmoquqcE2GMJLrROA?scene=1)
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
-
-一些论坛上比较有趣的讨论
-
-- @我叫杨帅昊 [我永远都不会原谅那个 24 小时待命的赛博工贼... - CC98 论坛](https://webvpn.zju.edu.cn/https/77726476706e69737468656265737421e7e056d22433310830079bab/topic/6420852)
-- @九月天温凉 [CC98 十大 skill](https://www.cc98.org/topic/6403987)
-- @ephemerall [四格漫画](https://www.cc98.org/topic/6420038)
-- @ParadoxZ [纯靠 AI 做出了一个满意的 ToDo 软件 - CC98 论坛](https://www.cc98.org/topic/6419965)
-- @舒肤佳肥皂 [【编程技术】纯靠 ai，上线了我的第一个 app](https://www.cc98.org/topic/6419933)
+- [Thariq@ClaudeCode - Lessons from Building Claude Code: Seeing like an Agent](https://x.com/trq212/status/2027463795355095314)
+- [@OpenAI - harness-engineering](https://openai.com/index/harness-engineering/)
 
 最后的最后，本文没有使用任何 AI 进行润色，有些表达有漏洞的话见谅
 

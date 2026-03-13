@@ -23,3 +23,12 @@
 - [服务器](./env/server.md)
 - [Windows WSL](./env/windows-wsl.md)
 - [Windows](./env/windows.md)
+
+### 硬件
+
+- [Arduino](./hardware/Arduino.md)
+- [DGX Spark](./hardware/DGXSpark.md)
+- [FPGA](./hardware/FPGA.md)
+- [Jetson Orin Nano](./hardware/JetsonNano.md)
+- [Jetson Thor](./hardware/JetsonThor.md)
+- [Raspberry Pi](./hardware/RaspberryPi.md)

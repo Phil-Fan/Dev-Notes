@@ -97,6 +97,8 @@ http://192.168.31.1/cgi-bin/luci/;stok=<你的 stok>/api/misystem/set_config_iot
 - 软件包管理（OpenVPN、L2TP、AdGuardHome）
 - 支持 IPv6、Shell 编程
 
+[OpenClash 内核更新失败解决方法 | Netanio 博客](https://blog.netanio.com/article/1919c71a-5dda-8013-8bfe-e339a814bd39)
+
 **Padavan** - 稳定易用
 
 - 轻量化、高效
@@ -344,3 +346,21 @@ vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1h
 ZJU-Connect 服务配置[zju-connect/docs/service.md at main · Mythologyli/zju-connect](https://github.com/Mythologyli/zju-connect/blob/main/docs/service.md)
 
 [PlistEdit Pro - Advanced Mac plist and JSON editor](https://www.fatcatsoftware.com/plisteditpro/)
+
+## 常见问题
+
+### 所有节点都超时
+
+- 系统时间和网络时间不一致
+
+[北京时间校准 - 时分秒毫秒在线显示](http://time.syiban.com/xiaozhun.php)
+
+```shell
+sudo apt-get install chrony -y
+sudo systemctl start chronyd
+sudo systemctl enable chronyd
+sudo chronyd -q 'server cn.pool.ntp.org iburst'
+sudo systemctl restart chronyd
+chronyc tracking
+chronyc sources -v
+```

@@ -232,12 +232,13 @@ Poco 的诞生，基于以下一些认知
 - [怀温情与敬意，看 Agent 突飞猛进的这一年](https://mp.weixin.qq.com/s/aLwKRCSyMTVx2zuqBDWkjQ?scene=1)
 - [Claude Code 创始人最佳实践分享](https://x.com/bcherny/status/2007179832300581177)
 - [万字解析 Manus 的 PMF 和 AI Agent 赛道竞争的稳态约束](https://mp.weixin.qq.com/s/bS1uAqBlAC4rOURqfWXPvQ?scene=1)
-- [Clawdbot是一场马斯克发动的中登炒作](https://mp.weixin.qq.com/s/HYpLVozJhUJhKYTGH8LoZw?scene=1)
-- [云端OpenClaw更是路边一条](https://mp.weixin.qq.com/s/VdnN6TsU2tIeZEiWFjCcNg?scene=1)
-- [OpenClaw不如狗一条](https://mp.weixin.qq.com/s/Thn6wLmoquqcE2GMJLrROA?scene=1)
+- [Clawdbot 是一场马斯克发动的中登炒作](https://mp.weixin.qq.com/s/HYpLVozJhUJhKYTGH8LoZw?scene=1)
+- [云端 OpenClaw 更是路边一条](https://mp.weixin.qq.com/s/VdnN6TsU2tIeZEiWFjCcNg?scene=1)
+- [OpenClaw 不如狗一条](https://mp.weixin.qq.com/s/Thn6wLmoquqcE2GMJLrROA?scene=1)
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
 - [Thariq@ClaudeCode - Lessons from Building Claude Code: Seeing like an Agent](https://x.com/trq212/status/2027463795355095314)
 - [@OpenAI - harness-engineering](https://openai.com/index/harness-engineering/)
+- [Agent 大规模落地难点 - 小红书](https://www.xiaohongshu.com/explore/69a12b09000000001a0222d6?xsec_token=AB8ubls5cSOvPiY_E6WEdhpFVbj51RVraNOmQh46tXFmM=&xsec_source=pc_search&source=web_profile_page)
 
 最后的最后，本文没有使用任何 AI 进行润色，有些表达有漏洞的话见谅
 

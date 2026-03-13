@@ -138,7 +138,7 @@ until it's complete, then write the spec to the file.
 - Image
   - 🍌
     - [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
-    - [YouMind提示词库](https://youmind.com/zh-CN/nano-banana-pro-prompts)
+    - [YouMind 提示词库](https://youmind.com/zh-CN/nano-banana-pro-prompts)
 - Video
   - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
   - [Veo - Google DeepMind](https://deepmind.google/models/veo/)

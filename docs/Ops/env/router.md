@@ -99,13 +99,20 @@ http://192.168.31.1/cgi-bin/luci/;stok=<你的 stok>/api/misystem/set_config_iot
 
 [OpenClash 内核更新失败解决方法 | Netanio 博客](https://blog.netanio.com/article/1919c71a-5dda-8013-8bfe-e339a814bd39)
 
-**Padavan** - 稳定易用
+#### 汉化 
 
-- 轻量化、高效
-- 支持 IPv6、VPN、代理
-- Web UI 友好
+```shell
+opkg update && opkg install luci-i18n-base-zh-cn
+```
 
----
+- 进入【System】—>【System】—>【Language and Style】。
+- 在【Language】选项中选择【简体中文 (Chinese Simplified)】。
+- 点击【Save & Apply】保存应用。
+
+### openclash
+
+[OpenWrt安装OpenClash - Forever Young](https://www.luxiyue.com/openwrt/openwrt%e5%ae%89%e8%a3%85openclash/)
+
 
 ## 代理基础
 

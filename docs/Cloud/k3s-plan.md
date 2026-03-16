@@ -135,8 +135,8 @@ sudo cat /var/lib/rancher/k3s/server/node-token
 
 ```bash
 curl -sfL https://get.k3s.io | \
-  K3S_URL=https://192.168.50.10:6443 \
-  K3S_TOKEN=<上一步的token> \
+  K3S_URL=https://10.162.61.178:6443 \
+  K3S_TOKEN=K105a233cc05cc8543f6d7651fb9f59828c6c52611f92e6f75cd8efa69a789b5c61::server:cdd1481c2c3ced181ab8cd906a74ace9 \
   sh -
 ```
 

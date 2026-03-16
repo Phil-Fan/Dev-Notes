@@ -2,6 +2,10 @@
 
 ## ECS
 
+[阿里云 Tailscale DNS互斥难题 | 高效码农](https://www.xugj520.cn/archives/aliyun-cgnat-tailscale-conflict.html)
+
+Tailscale 和 Aliyun 的内网 DNS 会冲突，需要把 DNS Server 改成 `8.8.8.8` 和 `1.1.1.1`（前提是不使用 OSS 等服务）
+
 ## CDN
 
 ## 域名
@@ -10,8 +14,6 @@
 
 [数字证书管理服务管理控制台](https://yundunnext.console.aliyun.com/?spm=a2c4g.11186623.0.0.30cd27b8XwwRFJ&p=cas#/certExtend/free/cn-hangzhou?currentPage=1&pageSize=10&keyword=&statusCode=)
 [在 Linux 环境的 Nginx 或 Tengine 服务器上安装国际标准 SSL 证书 - 数字证书管理服务（原 SSL 证书）- 阿里云](https://help.aliyun.com/zh/ssl-certificate/user-guide/install-ssl-certificates-on-nginx-servers-or-tengine-servers?spm=5176.2020520163.console-base_help.dexternal.3ad1cfALcfAL96#6f3a67c335p0g)
-
-## 备案
 
 ## OSS
 

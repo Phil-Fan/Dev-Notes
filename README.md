@@ -16,21 +16,19 @@
 > - 确定好技术栈，用**脚手架和模板**框定 AI 能力边界！用**脚手架和模板**框定 AI 能力边界！
 > - 需求对话占据 80% 的时间，然后 DEBUG 和迭代占据 20% 的时间。
 > - 白嫖很好，但有时候免费的才是最贵的。
-> - 睡前可以挂一个免费的模型跑任务 😆
 
 - [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
   - 可以当做 API key 管理器
   - AI app all in one
   - 知识库、agent 都可以放在一起用
+- [Token Arena](https://token.poco-ai.com/): check token usage in one place.
 
 ::: note Best Practices
-
 - 调研技术栈、维护全局技术文档、每次对话即时更新技术文档
 - cc planing 模式做规划，ultrawork 模式写代码
 - cursor antigravity 进行小规模 debug 以及纠错
 - codex 大规模审核与重构、写重要的逻辑
 - 5.2pro & gemini 3p deep research
-- kiro & qcoder & trae 以及其他中转站用于没有余额的时候搞
 :::
 
 ### 配置
@@ -49,15 +47,16 @@
 终端
 
 - [Claude Code](https://code.claude.com/docs/zh-CN/overview#homebrew): 生态最完善，功能最齐全，有一些奇怪小 Bug。可以上一些国产模型，比如 MiniMax GLM 等
-  - [ccusage](https://github.com/ryoppippi/ccusage)
   - [cc-switch](https://github.com/farion1231/cc-switch): 跨平台桌面 AI 助手工具，统一管理 Claude Code、Codex、Gemini CLI
   - [everything-claude-code](https://github.com/affaan-m/everything-claude-code)
+  - [superpower](https://github.com/obra/superpowers)
   - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
   - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
 - [OpenCode](https://opencode.ai/)：用户体验不错。
   - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
 - [Codex](https://github.com/openai/codex): Debug 很好，能力很强
   - [oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex)
+- Copilot: 有[学生优惠](https://github.com/education)可以用
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli)：UI 可以
 
 供给平台
@@ -68,11 +67,13 @@
 
 ### MCP
 
+注：MCP 可能在不久的将来过时
+
 - [MCP APP](https://github.com/modelcontextprotocol/ext-apps/tree/main)
 
 General
 
-- [Context7 MCP](https://github.com/upstash/context7)
+- [Context7](https://github.com/upstash/context7)
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp)
 - [Exa MCP](https://docs.exa.ai/reference/exa-mcp)
 
@@ -104,6 +105,8 @@ Dev
 - [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code): Claude Code 精选命令、文件和工作流列表
 
 ### Spec Tools
+
+注：目前用的比较少了
 
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
 - [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
@@ -148,30 +151,29 @@ until it's complete, then write the spec to the file.
 
 ## 工具
 
-- [iTerm2](https://github.com/gnachman/iTerm2)：Mac 下最好的终端
+- [cmux](https://github.com/shuveb/cmux): 多终端管理工具
+  - [iTerm2](https://github.com/gnachman/iTerm2)：Mac 下最好的终端
 - [Amphetamine](https://apps.apple.com/cn/app/amphetamine/id937984704?mt=12)：Mac 防休眠工具
 - [tmux](https://github.com/tmux/tmux)
   - [A Quick and Easy Guide to tmux - Ham Vocke](https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
   - [Make tmux Pretty and Usable - Ham Vocke](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/)
-- [Vim](https://www.vim.org/)
-
+- [Nvim](https://neovim.io/): 现代的 Vim 替代品
+  - [Vim](https://www.vim.org/)
 - [chezmoi](https://github.com/twpayne/chezmoi): Dotfiles 管理工具
-- [dot-files](https://github.com/Phil-Fan/dot-files): 我的 dotfiles
+  - [dot-files](https://github.com/Phil-Fan/dot-files): 我的 dotfiles
 
 ### 文本处理
 
 - [awk](https://www.gnu.org/software/gawk/): 强大的文本分析与报告生成工具
 - [sed](https://www.gnu.org/software/sed/): 流编辑器，用于文本过滤和转换
 
-## Template
-
-> 好用的开发模版
-
-- [Next.js & shadcn/ui Admin Dashboard](https://github.com/arhamkhnz/next-shadcn-admin-dashboard)
-- [next‑shadcn‑dashboard‑starter](https://github.com/Kiranism/next-shadcn-dashboard-starter)
-- [shadcn-admin-starter-template](https://github.com/MinPyaeKyaw/shadcn-admin-starter-template)
-
 ## 前端
+
+- [ni](https://github.com/antfu-collective/ni): package manager by [Antfu](https://antfu.me)
+
+```shell
+npx create-next-app@latest my-app
+```
 
 - [Next.js](https://nextjs.org/)
   - [TypeScript](https://github.com/microsoft/TypeScript)
@@ -183,15 +185,15 @@ until it's complete, then write the spec to the file.
   - [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview): 数据查询库
   - [react-hook-form](https://react-hook-form.com/get-started): 表单库
 
+灵感与参考
+
 - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
-- [react-bits](https://github.com/DavidHDev/react-bits): 组件动画库
+- [React Bits](https://www.reactbits.dev/): UI 组件库
 - [60fps](https://60fps.design/):  UI/UX animation inspiration for mobile & web apps
+- [Variant](https://variant.com/)
 
-```shell
-npx create-next-app@latest my-app
-```
+## 多平台
 
-- [ni](https://github.com/antfu-collective/ni): 💡 Use the right package manager
 - [Taro](https://docs.taro.zone/docs/): 使用 React/Vue 开发多平台小程序应用
 - [uni-app](https://uniapp.dcloud.net.cn/): 使用 Vue 开发多平台应用（小程序、H5、App）
 - [electron](https://github.com/electron/electron): Build cross-platform desktop apps with JavaScript, HTML, and CSS
@@ -213,8 +215,16 @@ npx create-next-app@latest my-app
   - [Vitest](https://vitest.dev/): 单元测试
   - [Playwright](https://playwright.dev/): 端到端测试
 
+### 包管理
+
+- [PYPI](https://pypi.org/)
+- [NPM](https://www.npmjs.com/)
+- [Cargo](https://doc.rust-lang.org/cargo/)
+- [Homebrew](https://brew.sh/)
+
 ### 用户管理与认证
 
+- [better-auth](https://github.com/better-auth/better-auth): 现代化的用户管理与认证解决方案
 - [Casdoor](https://github.com/casdoor/casdoor)
 - [next-auth](https://next-auth.js.org)
 
@@ -223,23 +233,17 @@ npx create-next-app@latest my-app
 - cloudflare D1
 - [Supabase](https://github.com/supabase/supabase) 免费量比较小
 
-- mysql
-- postgres
+- [sqlite](https://www.sqlite.org/): 轻量级的关系型数据库
+- [postgres](https://www.postgresql.org/)
 
 ### 缓存
 
 - [Redis](https://redis.io/)
 
-### 应用部署
-
-- [Docker](https://www.docker.com/)
-- [Kubernetes](https://kubernetes.io/)
-- [宝塔面板](https://www.bt.cn/new/index.html): 简单好用的 Linux/Windows 服务器运维管理面板
-
 ### 网络
 
 - [Caddy](https://github.com/caddyserver/caddy): 反向代理最佳实践
-- [Tailscale](https://tailscale.com/download/linux) / [ZeroTier](https://www.zerotier.com/) 内网穿透工具
+- [Tailscale](https://tailscale.com/download/linux): 内网穿透工具
 
 ### 运维与监控
 
@@ -281,6 +285,8 @@ npx create-next-app@latest my-app
 - [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
 - [husky](https://github.com/typicode/husky) 适合前端项目
 
+## 云
+
 ### CI/CD
 
 - [GitHub Actions](https://github.com/features/actions)
@@ -291,13 +297,12 @@ npx create-next-app@latest my-app
 - [Drone CI](https://github.com/harness/drone)
 - [qinglong](https://github.com/whyour/qinglong): 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
 
-## 云
-
 ### 云原生
 
-- Docker
-- Kubernetes
-- Helm
+- [Docker](https://www.docker.com/)
+- [k3s](https://k3s.io/): 轻量级的 Kubernetes 发行版
+- [Kubernetes](https://kubernetes.io/)
+- [宝塔面板](https://www.bt.cn/new/index.html): 简单好用的 Linux/Windows 服务器运维管理面板
 
 ### 厂商
 
@@ -325,6 +330,7 @@ npx create-next-app@latest my-app
 - [小宇宙](https://www.xiaoyuzhoufm.com/)
 - [即刻](https://web.okjike.com)
 - [Product Hunt](https://www.producthunt.com/)
+- [观猹](https://watcha.cn)
 - [Folo](https://github.com/RSSNext/Folo): All-in-one RSS reader.
 
 ### 多平台内容分发
@@ -354,6 +360,7 @@ npx create-next-app@latest my-app
 Icon
 
 - [iconfont-阿里巴巴矢量图标库](https://www.iconfont.cn/)
+- [quiver.ai](https://quiver.ai/): svg 设计工具
 - [Simple Icons](https://simpleicons.org/)
 - [Font Awesome](https://fontawesome.com/)
 
@@ -364,6 +371,7 @@ Icon
 颜色
 
 - [Happy Hues](https://www.happyhues.co/): Curated colors in context.
+- [NIPPON COLORS - 日本の伝統色](https://nipponcolors.com/)
 
 ### 产品介绍
 

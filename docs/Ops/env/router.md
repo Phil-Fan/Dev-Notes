@@ -371,3 +371,29 @@ sudo systemctl restart chronyd
 chronyc tracking
 chronyc sources -v
 ```
+
+### 有线网络与 Wi-Fi 节点优先级设置
+
+请复制以下命令并运行（会提示输入 sudo 密码）：
+
+```bash
+# 将 Wi-Fi 优先级调高 (Metric 设为 50)
+sudo nmcli connection modify "ZJUWLAN-Secure" ipv4.route-metric 50
+
+# 将有线连接优先级调低 (Metric 设为 1000)
+sudo nmcli connection modify "有线连接 3" ipv4.route-metric 1000
+```
+
+为了让修改后的 Metric 立即生效，我们需要将网卡“断开再重连”一次：
+
+```bash
+# 重启 Wi-Fi
+sudo nmcli connection down "ZJUWLAN-Secure" && sudo nmcli connection up "ZJUWLAN-Secure"
+
+# 重启有线连接
+sudo nmcli connection down "有线连接 3" && sudo nmcli connection up "有线连接 3"
+```
+
+```bash
+ip route
+```

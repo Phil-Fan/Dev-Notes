@@ -43,6 +43,7 @@
 - [slopus/happy](https://github.com/slopus/happy): mobile & web client
 - [OpenClaw](https://openclaw.ai/): Personal AI Assistant
 - [poco-agent](https://github.com/poco-ai/poco-agent)
+- [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw)
 
 终端
 
@@ -64,6 +65,11 @@
 - [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
 - [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
 - [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
+
+搜索
+
+- [Tavily](https://www.tavily.com/)
+- [eze-is/web-access](https://github.com/eze-is/web-access)
 
 ### MCP
 
@@ -300,6 +306,7 @@ npx create-next-app@latest my-app
 ### 云原生
 
 - [Docker](https://www.docker.com/)
+  - [LinuxMirrors](https://linuxmirrors.cn/): 国内 Docker 镜像站
 - [k3s](https://k3s.io/): 轻量级的 Kubernetes 发行版
 - [Kubernetes](https://kubernetes.io/)
 - [宝塔面板](https://www.bt.cn/new/index.html): 简单好用的 Linux/Windows 服务器运维管理面板

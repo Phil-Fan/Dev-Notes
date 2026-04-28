@@ -6,8 +6,6 @@
 - **[SuLingGG](https://github.com/SuLingGG)** - OpenWrt 编译
 - **[ZJU-Connect](https://github.com/Mythologyli/ZJU-Connect)** - 校园网 RVPN 客户端
 
----
-
 ## 路由器基础
 
 ### LAN vs WAN
@@ -181,7 +179,10 @@ Clash + 内网穿透
 
 :::
 
----
+### Tailscale
+
+- [Tailscale + Clash - 使用 Tailscale 和 Clash 实现内网穿透](https://blog.ichr.me/post/tailscale-mihomo-quantumult-x/)
+- [Tailscale 与 clash 共存](https://jiz4oh.com/2024/09/tailscale-with-clash/#google_vignette)
 
 ## 代理协议
 
@@ -202,8 +203,6 @@ Clash + 内网穿透
 | 适用场景 | 全局代理、游戏 | 浏览器网页访问 |
 
 **SOCKS5** 更底层，可以代理所有流量（包括游戏、BT 下载）。
-
----
 
 ## 代理工具
 
@@ -239,8 +238,6 @@ V2Ray 订阅 → Subconverter → Clash 订阅
 - 规则合并
 - 自定义规则
 
----
-
 ## IPv6
 
 **IPv6** 是互联网协议第六版，解决 IPv4 地址耗尽问题。
@@ -258,8 +255,6 @@ V2Ray 订阅 → Subconverter → Clash 订阅
 - 内置安全性（IPSec）
 - 自动配置（SLAAC 和 DHCPv6）
 
----
-
 ## 静态路由
 
 **静态路由**：手动配置的路由规则，不会自动更新。
@@ -276,8 +271,6 @@ V2Ray 订阅 → Subconverter → Clash 订阅
 当网络拓扑特殊时（如校园网多出口），需要手动指定流量走向。
 
 :::
-
----
 
 ## ZJU-Rule + ZJU-Connect
 

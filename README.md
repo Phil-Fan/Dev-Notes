@@ -64,6 +64,7 @@
 
 - [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
 - [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
+- [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) 中转
 - [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
 
 搜索

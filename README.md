@@ -255,9 +255,15 @@ npx create-next-app@latest my-app
 ### 运维与监控
 
 - [Logfire](https://logfire.pydantic.dev/)：Python 日志分析与可视化
-- [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+- [Uptime Kuma](https://github.com/louislam/uptime-kuma): 自托管的网站与服务可用性监控工具
+- [Beszel](https://github.com/henrygd/beszel): 轻量级服务器资源监控平台
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
+
+### 自动化 RPA
+
+- [aria2](https://github.com/aria2/aria2): 轻量级多协议命令行下载工具
+- [qinglong](https://github.com/whyour/qinglong): 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
 
 ### 抓包
 
@@ -302,7 +308,6 @@ npx create-next-app@latest my-app
 - [jenkins](https://www.jenkins.io)
 - [Dagger](https://dagger.io/)：可编排的 CI/CD 引擎
 - [Drone CI](https://github.com/harness/drone)
-- [qinglong](https://github.com/whyour/qinglong): 支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台
 
 ### 云原生
 

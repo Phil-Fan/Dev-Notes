@@ -59,6 +59,7 @@
   - [oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex)
 - Copilot: 有[学生优惠](https://github.com/education)可以用
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli)：UI 可以
+- [ghostty-org/ghostty](https://github.com/ghostty-org/ghostty)
 
 供给平台
 
@@ -159,12 +160,12 @@ until it's complete, then write the spec to the file.
   - [PPT 生成与四格漫画 Workflow](https://github.com/op7418/NanoBanana-PPT-Skills) 可复用到其他工作流
   - [Nano Banana 创意合集](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): 46+ 种 AI 图像/视频生成玩法
 - Video
-  - seeddance
+  - [seeddance](https://jimeng.jianying.com)
   - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
   - [Veo](https://deepmind.google/models/veo/)
 - Audio
   - TTS: [ElevenLabs](https://elevenlabs.io)
-  - 语音输入法：微信输入法、豆包输入法
+  - [微信输入法](https://z.weixin.qq.com)、[豆包输入法](https://www.doubao.com)
 
 ## 工具
 
@@ -208,6 +209,10 @@ npx create-next-app@latest my-app
 - [React Bits](https://www.reactbits.dev/): UI 组件库
 - [60fps](https://60fps.design/):  UI/UX animation inspiration for mobile & web apps
 - [Variant](https://variant.com/)
+
+TUI
+
+- [SBoudrias/Inquirer.js](https://github.com/SBoudrias/Inquirer.js):  common interactive command line user interfaces.
 
 ## 多平台
 
@@ -283,6 +288,8 @@ npx create-next-app@latest my-app
 - [WeChatOpenDevTools](https://github.com/JaveleyQAQ/WeChatOpenDevTools-Python) 微信强制开启 F12，Mac 不可用
 
 ## Code Quality
+
+### 可观测
 
 ### Testing
 

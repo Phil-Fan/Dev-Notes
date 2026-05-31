@@ -303,6 +303,63 @@ sudo ufw allow 443/tcp          # HTTPS
 sudo ufw status verbose
 ```
 
+## 系统功能
+
+### WiFi
+
+```bash
+sudo systemctl status NetworkManager
+```
+
+### 蓝牙
+
+```bash
+sudo systemctl status bluetooth
+```
+
+### 打印机
+
+Linux 里最省事的方式就是直接使用 CUPS 的 `lp` 命令。
+
+```bash
+# 1. 先确认 CUPS 服务在运行
+sudo systemctl status cups
+
+# 2. 直接发送打印任务
+lp 文件.pdf
+
+# 3. 指定打印机、份数、双面打印
+lp -d 打印机名 -n 2 -o sides=two-sided-long-edge 文件.pdf
+
+# 4. 查看打印队列
+lpq
+
+# 5. 取消任务
+cancel <任务ID>
+```
+
+指定页码
+
+通过 `page-ranges` 控制打印页数：
+
+```bash
+# 打印第 2-4 页
+lp -d 打印机名 -o page-ranges=2-4 文件.pdf
+
+# 只打印第 1、3、5 页
+lp -d 打印机名 -o page-ranges=1,3,5 文件.pdf
+
+# 同时指定份数、双面、页数组合
+lp -d 打印机名 -n 2 -o sides=two-sided-long-edge -o page-ranges=1-3,5 文件.pdf
+```
+
+如果个别驱动不支持该选项，可以先把指定页拆出来再打印：
+
+```bash
+pdfseparate -f 2 -l 4 原文件.pdf 子文件.pdf
+lp -d 打印机名 子文件.pdf
+```
+
 ## 备份与恢复
 
 ### 文件备份

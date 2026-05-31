@@ -207,6 +207,11 @@ ssh name@ip
 ssh -p <port> name@ip
 ```
 
+```shell title="登录后直接执行命令（适合让远程工具代跑指令）"
+ssh name@ip "命令 1; 命令 2"
+ssh -p <port> name@ip "cd /path && ./run.sh"
+```
+
 ```shell title="退出登录"
 exit
 ```

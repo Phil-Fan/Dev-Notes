@@ -2,7 +2,7 @@
 
 ## ECS
 
-[阿里云 Tailscale DNS互斥难题 | 高效码农](https://www.xugj520.cn/archives/aliyun-cgnat-tailscale-conflict.html)
+[阿里云 Tailscale DNS 互斥难题 | 高效码农](https://www.xugj520.cn/archives/aliyun-cgnat-tailscale-conflict.html)
 
 Tailscale 和 Aliyun 的内网 DNS 会冲突，需要把 DNS Server 改成 `8.8.8.8` 和 `1.1.1.1`（前提是不使用 OSS 等服务）
 

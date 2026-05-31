@@ -24,11 +24,11 @@
 - [Token Arena](https://token.poco-ai.com/): check token usage in one place.
 
 ::: note Best Practices
+
 - 调研技术栈、维护全局技术文档、每次对话即时更新技术文档
 - cc planing 模式做规划，ultrawork 模式写代码
-- cursor antigravity 进行小规模 debug 以及纠错
+- cursor 进行小规模 debug 以及纠错
 - codex 大规模审核与重构、写重要的逻辑
-- 5.2pro & gemini 3p deep research
 :::
 
 ### 配置
@@ -141,20 +141,30 @@ until it's complete, then write the spec to the file.
 
 - [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
 
+### 观测
+
+- [langfuse/langfuse](https://github.com/langfuse/langfuse)
+
+### 注册相关
+
+- [beilunyang/moemail](https://github.com/beilunyang/moemail): 邮箱服务
+- [QuantumNous/new-api](https://github.com/QuantumNous/new-api) 中转站
+- [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) 中转站
+
 ### 多模态
 
-- [ComfyUI](https://www.comfy.org/zh-cn/): 用 AI 生成视频、图像、音频
-
-- Image
+- Image && PPT
   - 🍌
-    - [ZHO-nano-banana-Creation](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): Nano-banana 创意玩法大合集，包含 46+ 种 AI 图像/视频生成创意玩法
-    - [YouMind 提示词库](https://youmind.com/zh-CN/nano-banana-pro-prompts)
+  - Image-2
+  - [PPT 生成与四格漫画 Workflow](https://github.com/op7418/NanoBanana-PPT-Skills) 可复用到其他工作流
+  - [Nano Banana 创意合集](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): 46+ 种 AI 图像/视频生成玩法
 - Video
+  - seeddance
   - [Sora](https://apps.apple.com/us/app/sora-by-openai/id6744034028)
-  - [Veo - Google DeepMind](https://deepmind.google/models/veo/)
+  - [Veo](https://deepmind.google/models/veo/)
 - Audio
-  - 调用类：[ElevenLabs](https://elevenlabs.io), [火山引擎](https://www.volcengine.com/product/tts), [科大讯飞](https://www.xfyun.cn/services/smart-tts), [Fish Audio](https://fishspeech.net/zh), [OpenAI TTS](https://platform.openai.com/docs/guides/text-to-speech), [SiliconFlow](https://siliconflow.cn/), [腾讯云](https://cloud.tencent.com/product/tts), [阿里云百炼](https://ai.aliyun.com/nls/tts)
-  - 本地部署类：[EdgeTTS](https://github.com/rany2/edge-tts), [Fish Speech](https://github.com/fishaudio/fish-speech), [GPT-SoVITS V2](https://github.com/v3ucn/GPT-SoVITS-V2), [GPT-SoVITS V3](https://github.com/RVC-Boss/GPT-SoVITS), [Index-TTS](https://github.com/index-tts/index-tts), [PaddleSpeech](https://github.com/PaddlePaddle/PaddleSpeech)
+  - TTS: [ElevenLabs](https://elevenlabs.io)
+  - 语音输入法：微信输入法、豆包输入法
 
 ## 工具
 

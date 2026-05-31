@@ -12,10 +12,10 @@
 >
 > My Best Practices
 >
-> - 能用 AI 做，不要自己做，逐渐放手。领悟的最好方法是让 Agent Tool 在你的专业领域完成你指定的工作，然后查看效果。
+> - 能用 AI 做，不要自己做，逐渐放手。
 > - 确定好技术栈，用**脚手架和模板**框定 AI 能力边界！用**脚手架和模板**框定 AI 能力边界！
 > - 需求对话占据 80% 的时间，然后 DEBUG 和迭代占据 20% 的时间。
-> - 白嫖很好，但有时候免费的才是最贵的。
+> - 免费的才是最贵的。
 
 - [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
   - 可以当做 API key 管理器
@@ -60,13 +60,6 @@
 - Copilot: 有[学生优惠](https://github.com/education)可以用
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli)：UI 可以
 - [ghostty-org/ghostty](https://github.com/ghostty-org/ghostty)
-
-供给平台
-
-- [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
-- [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
-- [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) 中转
-- [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
 
 搜索
 
@@ -142,21 +135,19 @@ until it's complete, then write the spec to the file.
 
 - [腾讯 IMA](https://ima.qq.com/): 腾讯良心产品
 
-### 观测
-
-- [langfuse/langfuse](https://github.com/langfuse/langfuse)
-
 ### 注册相关
 
 - [beilunyang/moemail](https://github.com/beilunyang/moemail): 邮箱服务
-- [QuantumNous/new-api](https://github.com/QuantumNous/new-api) 中转站
+- [new-api](https://github.com/QuantumNous/new-api): AI 模型聚合管理与分发系统，支持 OpenAI/Claude/Gemini 统一格式调用
 - [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) 中转站
+- [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
+- [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
 
 ### 多模态
 
 - Image && PPT
-  - 🍌
   - Image-2
+  - Nano-Banana
   - [PPT 生成与四格漫画 Workflow](https://github.com/op7418/NanoBanana-PPT-Skills) 可复用到其他工作流
   - [Nano Banana 创意合集](https://github.com/ZHO-ZHO-ZHO/ZHO-nano-banana-Creation): 46+ 种 AI 图像/视频生成玩法
 - Video
@@ -267,14 +258,6 @@ TUI
 - [Caddy](https://github.com/caddyserver/caddy): 反向代理最佳实践
 - [Tailscale](https://tailscale.com/download/linux): 内网穿透工具
 
-### 运维与监控
-
-- [Logfire](https://logfire.pydantic.dev/)：Python 日志分析与可视化
-- [Uptime Kuma](https://github.com/louislam/uptime-kuma): 自托管的网站与服务可用性监控工具
-- [Beszel](https://github.com/henrygd/beszel): 轻量级服务器资源监控平台
-- [Prometheus](https://prometheus.io/)
-- [Grafana](https://grafana.com/)：指标与日志可视化
-
 ### 自动化 RPA
 
 - [aria2](https://github.com/aria2/aria2): 轻量级多协议命令行下载工具
@@ -290,6 +273,25 @@ TUI
 ## Code Quality
 
 ### 可观测
+
+细粒度
+
+- [Logfire](https://logfire.pydantic.dev/)：Python 日志分析与可视化
+- [Weights & Biases](https://wandb.ai/site): wandb
+- [langfuse/langfuse](https://github.com/langfuse/langfuse)
+- [eunomia-bpf/agentsight](https://github.com/eunomia-bpf/agentsight): observability in eBPF
+
+粗粒度/系统侧
+
+- [Uptime Kuma](https://github.com/louislam/uptime-kuma): 自托管的网站与服务可用性监控工具
+- [Beszel](https://github.com/henrygd/beszel): 轻量级服务器资源监控平台
+- [Prometheus](https://prometheus.io/)
+- [Grafana](https://grafana.com/)：指标与日志可视化
+
+用户侧
+
+- [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
+- [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 
 ### Testing
 
@@ -309,11 +311,17 @@ TUI
 - [biomejs/biome](https://github.com/biomejs/biome): 一体化 Linter & Formatter & Bundler（ESLint + Prettier 替代）
 - [markdownlint](https://github.com/DavidAnson/markdownlint): Markdown 静态分析
 - [autocorrect](https://github.com/huacnlee/autocorrect): CJK 排版自动修正
+- [millionco/react-doctor](https://github.com/millionco/react-doctor)
 
 ### commit hooks
 
 - [pre-commit](https://github.com/pre-commit/pre-commit)：多语言 pre-commit hooks 管理框架
 - [husky](https://github.com/typicode/husky) 适合前端项目
+
+### 版本管理
+
+- [changesets/changesets](https://github.com/changesets/changesets): monorepos
+- [googleapis/release-please](https://github.com/googleapis/release-please): generate release PRs based on the conventionalcommits.org spec
 
 ## 云
 
@@ -415,11 +423,6 @@ Icon
 
 - [Screen Studio](https://screen.studio/): 录屏软件；
 - [Open Screen](https://openscreen.vercel.app/): 免费开源的演示视频工具，支持一下开源，但是感觉功能不是特别完善
-
-### 用户洞察
-
-- [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
-- [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 
 ### 流程与合规
 

@@ -21,6 +21,7 @@
 - [macOS](./env/macos.md)
 - [路由器](./env/router.md)
 - [服务器](./env/server.md)
+- [软件](./env/software.md)
 - [Windows WSL](./env/windows-wsl.md)
 - [Windows](./env/windows.md)
 

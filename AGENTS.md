@@ -30,15 +30,24 @@
 └── .pre-commit-config.yaml    # Markdown 规范检查与自动修复
 ```
 
-## 3) 技术栈
+## 3) 技术栈规范
 
-- 文档框架：`VitePress`（`docs/package.json`）
-- 包管理器：`pnpm`（workspace）
-- 规范检查：
-  - `markdownlint-cli2`
-  - `autocorrect`
-  - `pre-commit`
-- 语言：Markdown、TypeScript（VitePress 配置）
+| 层 | 规范 | 当前基准 |
+|----|------|----------|
+| 包管理 | **pnpm workspace** | 根 `pnpm-workspace.yaml` → `packages: ["docs"]` |
+| 文档框架 | **VitePress 1.x**（仅 docs 子包依赖） | `docs` 内 `vitepress@^1.6.4` |
+| 语言 | 正文 **Markdown**；配置 **TypeScript** | `docs/.vitepress/config.ts`、theme |
+| 站点根 | 内容与配置在 **`docs/`** | 首页 `docs/index.md` |
+| 质量 | **pre-commit** 全量：`markdownlint-cli2` + **autocorrect** | 根脚本 `pnpm lint` |
+| 构建 | 根脚本转发子包 | `pnpm dev/build/preview` → filter docs |
+| 非目标 | 不是 Next/React 应用仓 | 禁止无故引入应用框架依赖到根 |
+
+**硬性约定**
+
+- 依赖只加在需要的 package（通常 `docs/package.json`），保持根精简。
+- 新增文档必须注册 sidebar（及按需 nav）；链接以仓库内真实路径为准。
+- Markdown：一级标题、代码块语言、图片 alt；提交前 `pnpm lint`，导航改动建议 `pnpm build`。
+- 不与 `hobby` 的 config 文件名混用约定时注意：本仓为 `config.ts`（hobby 为 `config.mts`）。
 
 ## 4) 常用命令
 
@@ -90,7 +99,46 @@ pnpm build
 
 确保链接和页面构建正常。
 
-## 6) Agent 工作约定
+## 6) Conventional Commits（必须）
+
+所有提交必须遵循 [Conventional Commits](https://www.conventionalcommits.org/)：
+
+```text
+<type>(<optional-scope>): <short-description>
+
+[optional body]
+
+[optional footer]
+```
+
+| Type | 用途 |
+|------|------|
+| `feat` | 新功能或站点能力（主题、组件、脚本等） |
+| `fix` | 缺陷修复（错误链接、构建失败等） |
+| `docs` | 文档/笔记内容变更（本仓最常用） |
+| `style` | 纯格式（不影响语义） |
+| `refactor` | 结构调整且行为不变 |
+| `perf` | 性能 |
+| `test` | 测试 |
+| `build` / `ci` / `chore` | 构建、CI、依赖与维护 |
+
+**推荐 scope**：`ai`、`frontend`、`backend`、`cloud`、`ops`、`tools`、`pm`、`awesome`、`nav`、`config`、`deps`
+
+**示例**：
+
+```text
+docs(frontend): add react server components notes
+docs(ops): update linux networking cheatsheet
+fix(nav): correct sidebar path for Cloud section
+chore(deps): bump vitepress
+```
+
+约束：
+
+- 一次提交一个主题；摘要用祈使句、小写 type。
+- 仅改 Markdown 时用 `docs`；改 VitePress 配置可用 `chore(config)` 或 `fix(nav)`。
+
+## 7) Agent 工作约定
 
 - 优先做“最小必要改动”，不要无关重构。
 - 不要删除或回滚与当前任务无关的用户改动。

@@ -1,4 +1,4 @@
-name: Markdown Quality Check
+name: Quality Check
 
 on:
   push:
@@ -7,19 +7,13 @@ on:
     branches: [main]
 
 jobs:
-  markdown-check:
+  pre-commit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: AutoCorrect
-        uses: huacnlee/autocorrect-action@main
-
-      - name: Markdown Lint
-        uses: DavidAnson/markdownlint-cli2-action@v20
+      - uses: actions/setup-python@v5
         with:
-          config: ".github/.markdownlint.yaml"
-          globs: |
-            docs/**/*.md
-            docs/*.md
-            *.md
+          python-version: "3.12"
+
+      - uses: pre-commit/action@v3.0.1

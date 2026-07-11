@@ -38,7 +38,8 @@
 | 文档框架 | **VitePress 1.x**（仅 docs 子包依赖） | `docs` 内 `vitepress@^1.6.4` |
 | 语言 | 正文 **Markdown**；配置 **TypeScript** | `docs/.vitepress/config.ts`、theme |
 | 站点根 | 内容与配置在 **`docs/`** | 首页 `docs/index.md` |
-| 质量 | **pre-commit** 全量：`markdownlint-cli2` + **autocorrect** | 根脚本 `pnpm lint` |
+| 质量 | **pre-commit** + CI `Quality Check` | `markdownlint-cli2` + autocorrect |
+| CI | `.github/workflows/check.yml` | `pre-commit/action` |
 | 构建 | 根脚本转发子包 | `pnpm dev/build/preview` → filter docs |
 | 非目标 | 不是 Next/React 应用仓 | 禁止无故引入应用框架依赖到根 |
 
@@ -47,7 +48,7 @@
 - 依赖只加在需要的 package（通常 `docs/package.json`），保持根精简。
 
 - 新增文档必须注册 sidebar（及按需 nav）；链接以仓库内真实路径为准。
-- Markdown：一级标题、代码块语言、图片 alt；提交前 `pnpm lint`，导航改动建议 `pnpm build`。
+- Markdown：一级标题、代码块语言、图片 alt；**提交前必须** `pnpm lint`，导航改动建议 `pnpm build`。
 - 不与 `hobby` 的 config 文件名混用约定时注意：本仓为 `config.ts`（hobby 为 `config.mts`）。
 
 ## 4) 常用命令
@@ -90,21 +91,27 @@ pnpm lint     # 执行 pre-commit 全量检查
 - 新文件优先使用小写英文和短横线（与现有结构保持一致）
 - 如果是系列文档，可沿用现有编号风格（如 `01-File.md`）
 
-### 5.4 提交前自检
-
-- 至少运行一次：
+### 5.4 提交前质量检查（强制）
 
 ```bash
-pnpm lint
+pre-commit install                 # 克隆后一次
+pnpm lint                          # = pre-commit run --all-files
+# 或
+pre-commit run --all-files
 ```
 
-- 若改动了导航，建议额外运行：
+| 检查 | 工具 |
+|------|------|
+| Markdown lint / 自动修 | markdownlint-cli2（`.github/.markdownlint.yaml`） |
+| 中文排版 | autocorrect-pre-commit |
+
+CI：push / PR 到 `main` → `.github/workflows/check.yml`。勿默认 `--no-verify`。
+
+- 若改动了导航，建议额外：
 
 ```bash
 pnpm build
 ```
-
-确保链接和页面构建正常。
 
 ## 6) Conventional Commits（必须）
 

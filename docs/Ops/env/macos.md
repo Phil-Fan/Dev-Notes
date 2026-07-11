@@ -51,6 +51,41 @@
 - ++command+arrow-left++ / ++command+arrow-right++ 在不同标签页之间切换
 - ++option+command+arrow-left++ / ++option+command+arrow-right++ 在同一标签页的分屏面板之间切换
 
+- ++command+r++ / ++ctrl+l++ 清屏
+- ++ctrl+u++ 清除当前行
+- ++ctrl+d++ 删除当前光标的字符
+- ++ctrl+h++ 删除光标之前的字符
+- ++ctrl+w++ 删除光标之前的单词
+- ++ctrl+k++ 删除到文本末尾
+- ++ctrl+t++ 交换光标处文本
+- ++ctrl+a++ 光标移动到行首
+- ++ctrl+e++ 光标移动到行末
+
+!!! tip 实战示例：快速编辑一条长命令
+
+假设你在终端中输入了以下命令，但发现路径和参数都有误：
+
+```bash
+cat /var/log/system.log | grep "ERROR" | tail -n 100 > /tmp/output.txt
+```
+
+现在你想把它改成：
+
+```bash
+cat /var/log/app.log | grep "WARN" | tail -n 50 > /tmp/warn.txt
+```
+
+操作步骤：
+
+1. **++ctrl+a++** — 光标跳到行首
+2. **++ctrl+f++** 或方向键向右移动到 `/var/log/` 之后，输入 `app`，然后用 **++ctrl+d++** 逐个删除 `system` 的字符
+3. 继续向右移动到 `"ERROR"`，用 **++ctrl+w++** 删除 `"ERROR"`（光标在 `"` 后时按 ++ctrl+w++ 删除整个单词），然后输入 `"WARN"`
+4. 移动到 `100`，用 **++ctrl+u++** 清除整行重新输入（或用 **++ctrl+w++** 逐段删除后修改为 `50`）
+5. 按 **++ctrl+e++** 跳到行末，用 **++ctrl+h++** 删除 `t`，再输入 `warn`
+6. 按回车执行，然后用 **++ctrl+l++** 清屏查看结果
+
+> 💡 **技巧**：对于这种大幅修改，也可以直接按 ++ctrl+u++ 清空当前行后重新输入，或使用 ++ctrl+r++ 清屏后重新键入命令。
+
 ## 系统设置
 
 - 三指拖移：设置 - 辅助功能 - 指针控制 - 触控板选项 - 拖移样式

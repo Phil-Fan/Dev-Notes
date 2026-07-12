@@ -447,12 +447,11 @@ ss -tulpn | grep :22
 sudo tcpdump -i eth0 port 80
 ```
 
-:::tip 维护建议
-
-1. **定期更新系统** - `sudo apt update && sudo apt upgrade`
-2. **监控系统资源** - 使用 `htop`、`iotop` 等工具
-3. **定期备份重要数据** - 使用 `rsync` 或 `tar`
-4. **查看日志文件** - `/var/log/syslog`、`journalctl`
-5. **定期清理磁盘** - `apt autoremove`、清理日志
-
-:::
+> [!TIP]
+> 
+> 1. **定期更新系统** - `sudo apt update && sudo apt upgrade`
+> 2. **监控系统资源** - 使用 `htop`、`iotop` 等工具
+> 3. **定期备份重要数据** - 使用 `rsync` 或 `tar`
+> 4. **查看日志文件** - `/var/log/syslog`、`journalctl`
+> 5. **定期清理磁盘** - `apt autoremove`、清理日志
+> 

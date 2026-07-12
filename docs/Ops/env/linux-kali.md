@@ -1,14 +1,12 @@
 # Kali Linux
 
-:::tip 本篇记录一下 Kali Linux 的配置
-
-:::
+> [!TIP]
+> 
 
 ## 系统烧录
 
-:::tip 准备
-
-:::
+> [!TIP]
+> 
 
 > [Kali Linux | Penetration Testing and Ethical Hacking Linux Distribution](https://www.kali.org/)
 > [Kali 虚拟机安装，设置中文等详细教程，Linux 最新免镜像版\_kali 安装中文语言包-CSDN 博客](https://blog.csdn.net/l2872253606/article/details/123592717)
@@ -82,36 +80,34 @@ apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-pl
 
 ### 桌面不显示
 
-:::warning 建议操作之前请创建快照！！！
+> [!WARNING]
+> 
 
-:::
-
-:::info
-
-方法 1 在 kali 终端执行以下命令：
-
-```shell
-sudo metacity --replace      #打开窗口管理器
-```
-
-如果没有 metacity 这个命令，就下载一下
-
-```shell
-apt-get install metacity          #下载 metacity 命令
-```
-
-下载之后再执行一遍上面那个命令就好了
-
-但有一个问题：每次打开 kali 都需要运行一遍上面第 1 条命令
-
-方法 2 重装 lightdm，命令如下：
-
-```shell
-sudo apt-get remove --purge lightdm
-sudo apt-get install lightdm
-```
-
-:::
+> [!NOTE]
+> 
+> 方法 1 在 kali 终端执行以下命令：
+> 
+> ```shell
+> sudo metacity --replace      #打开窗口管理器
+> ```
+> 
+> 如果没有 metacity 这个命令，就下载一下
+> 
+> ```shell
+> apt-get install metacity          #下载 metacity 命令
+> ```
+> 
+> 下载之后再执行一遍上面那个命令就好了
+> 
+> 但有一个问题：每次打开 kali 都需要运行一遍上面第 1 条命令
+> 
+> 方法 2 重装 lightdm，命令如下：
+> 
+> ```shell
+> sudo apt-get remove --purge lightdm
+> sudo apt-get install lightdm
+> ```
+> 
 
 ## conda 环境
 
@@ -365,8 +361,7 @@ java -jar StegSolve
 
 ![image](https://img.philfan.cn/Tools__Environment__assets__settings-linux-kali.assets__20240710122852.webp)
 
-:::warning 若执行`source ~/.bashrc`会报错
-:::
+> [!WARNING]
 
 [bash - shopt command not found in .bashrc after shell updation - Stack Overflow](https://stackoverflow.com/questions/26616003/shopt-command-not-found-in-bashrc-after-shell-updation)
 

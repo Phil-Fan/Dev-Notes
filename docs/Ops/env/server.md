@@ -1,8 +1,7 @@
 # Server
 
-:::tip
-备忘记录一些实验室服务器和云服务器的操作，以 linux 为主
-:::
+> [!TIP]
+> 备忘记录一些实验室服务器和云服务器的操作，以 linux 为主
 
 ## 最常用指令
 
@@ -141,49 +140,48 @@ export HF_TOKEN=your_huggingface_token
 
 ### 模型下载
 
-:::info
-
-方法 1 huggingface-cli
-
-```shell title="下载指令 cli"
-export HF_ENDPOINT=https://hf-mirror.com
-huggingface-cli download --resume-download <model_name> --local-dir <path>
-```
-
-方法 2 hf download
-
-```shell
-pip install -U "huggingface_hub[cli]
-```
-
-```shell
-hf download <model_name>
-```
-
-方法 3 git-lfs
-
-```shell
-apt install git-lfs -y
-git lfs install
-cd <folder_path>
-git clone https://huggingface.co/<model_name>
-```
-
-方法 4 在代码头部加入
-
-```python title="在代码头部加入"
-import subprocess
-import os
-
-result = subprocess.run('bash -c "source /etc/network_turbo && env | grep proxy"', shell=True, capture_output=True, text=True)
-output = result.stdout
-for line in output.splitlines():
-   if '=' in line:
-      var, value = line.split('=', 1)
-      os.environ[var] = value
-```
-
-:::
+> [!NOTE]
+> 
+> 方法 1 huggingface-cli
+> 
+> ```shell title="下载指令 cli"
+> export HF_ENDPOINT=https://hf-mirror.com
+> huggingface-cli download --resume-download <model_name> --local-dir <path>
+> ```
+> 
+> 方法 2 hf download
+> 
+> ```shell
+> pip install -U "huggingface_hub[cli]
+> ```
+> 
+> ```shell
+> hf download <model_name>
+> ```
+> 
+> 方法 3 git-lfs
+> 
+> ```shell
+> apt install git-lfs -y
+> git lfs install
+> cd <folder_path>
+> git clone https://huggingface.co/<model_name>
+> ```
+> 
+> 方法 4 在代码头部加入
+> 
+> ```python title="在代码头部加入"
+> import subprocess
+> import os
+> 
+> result = subprocess.run('bash -c "source /etc/network_turbo && env | grep proxy"', shell=True, capture_output=True, text=True)
+> output = result.stdout
+> for line in output.splitlines():
+>    if '=' in line:
+>       var, value = line.split('=', 1)
+>       os.environ[var] = value
+> ```
+> 
 
 ### 使用 modelscope 下载
 
@@ -238,9 +236,9 @@ ssh-copy-id -p 10086 name@ip
 ssh <alias>
 ```
 
-:::tip 免密登录的操作是针对用户的，切换其他用户就不可以了
-可以结合公私钥文件进行理解
-:::
+> [!TIP]
+> 免密登录的操作是针对用户的，切换其他用户就不可以了
+> 可以结合公私钥文件进行理解
 
 ## 任务运行
 
@@ -443,51 +441,51 @@ screen -wipe #清理那些dead的会话
 
 内网穿透就是将内网的服务暴露给公网访问
 
-:::info
-
-Server 端配置
-
-下载安装包
-
-```shell title="解压"
-tar -zxvf frp_0.61.2_linux_amd64.tar.gz
-```
-
-```shell title="进入目录"
-cd frp_0.61.2_linux_amd64
-```
-
-```shell title="编辑 frps.toml"
-vim frps.toml
-```
-
-```ini
-bindPort = 7000      # 服务端与客户端通信端口
-# vhostHTTPPort = 80   # 如果客户端需要使用 http 服务，在这里配置代理端口
-
-auth.token = "token"                    # 身份验证令牌，frpc 要与 frps 一致
-
-# Server Dashboard，可以查看 frp 服务状态以及统计信息
-webServer.addr = "0.0.0.0"              # 后台管理地址
-webServer.port = 7500                   # 后台管理端口
-webServer.user = "admin"                # 后台登录用户名
-webServer.password = "admin"            # 后台登录密码
-```
-
-![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__20250318114804586.webp)
-
-访问公网 ip 的 7500 端口，可以查看 frp 服务状态以及统计信息
-
-:::tip 注意这里需要在 aliyun 控制台的安全组中添加 7000 和 7500 端口
-
-```shell title="开放服务端端口"
-sudo ufw allow 7000/tcp    # FRP 主端口
-sudo ufw allow 7500/tcp    # 仪表盘
-sudo ufw allow 40443/tcp   # HTTP 穿透
-sudo ufw allow 40800/tcp   # HTTPS 穿透
-```
-
-:::
+> [!NOTE]
+> 
+> Server 端配置
+> 
+> 下载安装包
+> 
+> ```shell title="解压"
+> tar -zxvf frp_0.61.2_linux_amd64.tar.gz
+> ```
+> 
+> ```shell title="进入目录"
+> cd frp_0.61.2_linux_amd64
+> ```
+> 
+> ```shell title="编辑 frps.toml"
+> vim frps.toml
+> ```
+> 
+> ```ini
+> bindPort = 7000      # 服务端与客户端通信端口
+> # vhostHTTPPort = 80   # 如果客户端需要使用 http 服务，在这里配置代理端口
+> 
+> auth.token = "token"                    # 身份验证令牌，frpc 要与 frps 一致
+> 
+> # Server Dashboard，可以查看 frp 服务状态以及统计信息
+> webServer.addr = "0.0.0.0"              # 后台管理地址
+> webServer.port = 7500                   # 后台管理端口
+> webServer.user = "admin"                # 后台登录用户名
+> webServer.password = "admin"            # 后台登录密码
+> ```
+> 
+> ![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__20250318114804586.webp)
+> 
+> 访问公网 ip 的 7500 端口，可以查看 frp 服务状态以及统计信息
+> 
+> [!TIP]
+> 注意这里需要在 aliyun 控制台的安全组中添加 7000 和 7500 端口
+> 
+> ```shell title="开放服务端端口"
+> sudo ufw allow 7000/tcp    # FRP 主端口
+> sudo ufw allow 7500/tcp    # 仪表盘
+> sudo ufw allow 40443/tcp   # HTTP 穿透
+> sudo ufw allow 40800/tcp   # HTTPS 穿透
+> ```
+> 
 
 ```shell title="后台运行"
 #服务器端
@@ -524,11 +522,6 @@ local_port = 22
 remote_port = 6000
 ```
 
-:::tip 特别注意，字符串要加双引号，数字和 ip 不要加双引号，尽量不要写注释
-:::
-
-:::
-
 ```shell title="启动"
 ./frpc -c frpc.ini
 ```
@@ -559,9 +552,8 @@ sudo firewall-cmd --zone=public --add-port=6000/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
-:::tip 如果报错了试着使用 su 权限运行一下，说不定可以
-
-:::
+> [!TIP]
+> 特别注意，字符串要加双引号，数字和 ip 不要加双引号，尽量不要写注释
 
 [error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type v1.ServerConfig · Issue #3657 · fatedier/frp](https://github.com/fatedier/frp/issues/3657)
 
@@ -661,10 +653,10 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 
 使用`1pcl`命令行工具进行管理，[命令行工具 - 1Panel 文档](https://1panel.cn/docs/installation/cli/)
 
-:::tip 如果使用的是云服务器，需要配置安全组规则
-:::
-
-在安全组当中，选择添加规则
+> [!TIP]
+> 如果使用的是云服务器，需要配置安全组规则
+>
+> 在安全组当中，选择添加规则
 
     - 目的：`20410/20410`
     - 源：`0.0.0.0/0`
@@ -717,11 +709,10 @@ nvidia-msi
 nvidia-smi -l
 ```
 
-:::details 各参数含义
-
-:::
-
-为什么`Volatile GPU-Util`列显示第二个卡占用为 0，明明这个卡的内存已经用了。这个深度学习调用有关，实际上这时 GPU 正在等待 CPU 的处理，而 CPU 的处理结果有时候很慢，所以 GPU 在等。可以将`num_workers=4`或 8 或 16（再多不推荐可能变慢，因为通信需要成本），分配多个子线程，且设置`pin_memory=True`，直接映射数据到 GPU 的专用内存，减少数据传输时间，提高 GPU 利用率。
+> [!NOTE]
+> 各参数含义
+>
+> 为什么`Volatile GPU-Util`列显示第二个卡占用为 0，明明这个卡的内存已经用了。这个深度学习调用有关，实际上这时 GPU 正在等待 CPU 的处理，而 CPU 的处理结果有时候很慢，所以 GPU 在等。可以将`num_workers=4`或 8 或 16（再多不推荐可能变慢，因为通信需要成本），分配多个子线程，且设置`pin_memory=True`，直接映射数据到 GPU 的专用内存，减少数据传输时间，提高 GPU 利用率。
 
 ### 查看内存
 

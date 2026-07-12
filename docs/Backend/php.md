@@ -5,15 +5,13 @@
 
 [PHP 学习路线](https://www.runoob.com/w3cnote/php-learning-recommend.html)
 
-:::tip 学习路线
-
-:::
+> [!TIP]
+> 
 
 ## 基础语法
 
-:::tip 优化之前写过的评论网页
-
-:::
+> [!TIP]
+> 
 
 - PHP 是一种开源的通用脚本语言，尤其适用于 Web 开发。
 - PHP（全称：PHP：Hypertext Preprocessor，即"PHP：超文本预处理器"）是一种通用开源脚本语言。
@@ -237,8 +235,7 @@ $conn->close();
 
 将序列化的值当作参数传入
 
-:::tip 最终的原因
-:::
+> [!TIP]
 
 PHP 是弱类型的原因，我们可以利用这样的特性去绕过一些判断
 
@@ -309,9 +306,8 @@ O:4:"Name":2:{s:14:"Nameusername";s:5:"admin";s:14:"Namepassword";i:100;}
 
 又因为私有变量需要修改，所以更改为
 
-:::tip 在反序列化时，当前属性个数大于实际属性个数时，就会跳过`__wakeup()`，去执行`__destruct`
-
-:::
+> [!TIP]
+> 
 
 又因为需要绕过`__wakeup()`函数，所以我们把属性个数改成大于实际属性的个数
 
@@ -325,8 +321,7 @@ http://02801fc4-349c-428a-bb2c-2015f2934d2b.node5.buuoj.cn:81/?select=O:4:%22Nam
 
 上课老师讲的一个例题，主要核心思想就是利用 php 这种弱类型的语言。构造的 exp 是利用引用，使得两个变量一模一样，从而达到目的。
 
-:::tip 类型
-:::
+> [!TIP]
 
 a - array
 b - boolean

@@ -1,8 +1,7 @@
 # Linux
 
-:::tip 这一篇主要记录在配置 linux 时候遇到的一些问题和解决方案
-
-:::
+> [!TIP]
+> 
 
 ## 常见操作
 
@@ -213,8 +212,7 @@ export http_proxy=http://your_proxy_server:your_proxy_port
 export https_proxy=http://your_proxy_server:your_proxy_port
 ```
 
-:::question could not connect to the clash core
-:::
+> [!IMPORTANT]
 
 检查一下网络是否能够正常连接，有可能是防火墙的规则的问题
 
@@ -253,8 +251,7 @@ sudo netplan apply
 2.改文件的编辑必须严格按照格式来，**是分层的**，用空格来退格
 
 [Netplan YAML 配置文档](https://netplan.readthedocs.io/en/latest/netplan-yaml/)
-:::tip 注意事项
-:::
+> [!TIP]
 
 出现类似错误：`line8 column 6:cloud not find expected` 提示是**冒号：后面没加空格**
 
@@ -488,13 +485,12 @@ smbclinet //ip/name -U xxx
 
 > [Linux 上挂载 Samba（Windows & macOS 共享文件夹）的正确姿势 - 知乎](https://zhuanlan.zhihu.com/p/26763026)
 
-:::tip 注意权限问题
-
-1. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
-
-不然的话，不管使用命令访问还是使用图形界面访问都是会导致**报错没有权限**的问题
-
-:::
+> [!TIP]
+> 
+> 1. 设置了匿名访问的话需要设置当前目录以及这个目录的父目录的 other 的可执行权限
+> 
+> 不然的话，不管使用命令访问还是使用图形界面访问都是会导致**报错没有权限**的问题
+> 
 
 #### linux 作客户端——挂载文件系统
 
@@ -678,60 +674,58 @@ uname -a
 vim /etc/apt/sources.list
 ```
 
-:::tip 注意换源的时候注意备份之前的
+> [!TIP]
+> 
+> ```shell
+> sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+> ```
+> 
+> 鱼香 ros
+> 
+> ```shell
+> wget http://fishros.com/install -O fishros && bash fishros
+> ```
+> 
+> 清华源
+> 
+> ```shell
+> estricted universe multiverse
+> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+> # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+> # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+> # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+> ```
+> 
+> ZJU mirror
+> 
+> ```shell
+> deb https://mirrors.zju.edu.cn/ubuntu/ focal main restricted universe multiverse
+> deb https://mirrors.zju.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+> deb https://mirrors.zju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+> deb https://mirrors.zju.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+> ```
+> 
+> Update
+> 
+> ```shell
+> sudo apt-get update
+> sudo apt-get upgrade
+> ```
+> 
 
-```shell
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
-```
-
-鱼香 ros
-
-```shell
-wget http://fishros.com/install -O fishros && bash fishros
-```
-
-清华源
-
-```shell
-estricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-```
-
-ZJU mirror
-
-```shell
-deb https://mirrors.zju.edu.cn/ubuntu/ focal main restricted universe multiverse
-deb https://mirrors.zju.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-deb https://mirrors.zju.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-deb https://mirrors.zju.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-```
-
-Update
-
-```shell
-sudo apt-get update
-sudo apt-get upgrade
-```
-
-:::
-
-:::warning 404
-[Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有 release 文件所以禁用-CSDN 博客](https://blog.csdn.net/ys743276112/article/details/127436835)
-[sudo apt-get update 命令出现没有 Release 文件问题解决\_debian apt get update 没有 release 文件-CSDN 博客](https://blog.csdn.net/A18040554844/article/details/110099737)
-
-另外的解决方法，拉取 https 问题
-
-```shell
-sudo apt install apt-transport-https
-sudo apt install ca-certificates
-```
-
-:::
+> [!WARNING]
+> [Ubuntu 换源后仍然报错：404、没有 Release 文件\_没有 release 文件所以禁用-CSDN 博客](https://blog.csdn.net/ys743276112/article/details/127436835)
+> [sudo apt-get update 命令出现没有 Release 文件问题解决\_debian apt get update 没有 release 文件-CSDN 博客](https://blog.csdn.net/A18040554844/article/details/110099737)
+> 
+> 另外的解决方法，拉取 https 问题
+> 
+> ```shell
+> sudo apt install apt-transport-https
+> sudo apt install ca-certificates
+> ```
+> 
 
 ### 中文系统
 
@@ -794,9 +788,8 @@ tar -xzvf xxxx.tar.gz
 sudo apt-get install terminator
 ```
 
-:::warning 设置为默认终端
-
-:::
+> [!WARNING]
+> 
 
 | 开启 or 关闭快捷键 | 作用                             |
 | ------------------ | -------------------------------- |
@@ -891,16 +884,15 @@ ssh-copy-id name@ip
 
 [深入理解\~/.ssh/config 和/etc/ssh/ssh_config 配置文件 - 百度开发者中心](https://developer.baidu.com/article/details/2922032)
 
-:::warning WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
-警告：远程主机标识已更改！
-
-此报错是由于远程的主机的公钥发生了变化导致的。ssh 服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh 就会核对公钥，如果和上次记录的不同，OpenSSH 会发出警告。
-
-```shell title="解决方法"
-ssh-keygen -R XX.XX.XX.XX
-```
-
-:::
+> [!WARNING]
+> 警告：远程主机标识已更改！
+> 
+> 此报错是由于远程的主机的公钥发生了变化导致的。ssh 服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~/.ssh/known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh 就会核对公钥，如果和上次记录的不同，OpenSSH 会发出警告。
+> 
+> ```shell title="解决方法"
+> ssh-keygen -R XX.XX.XX.XX
+> ```
+> 
 
 ### X11 设置 GUI
 
@@ -929,14 +921,13 @@ sudo apt install xauth
 sudo service ssh restart
 ```
 
-:::tip -X 和-Y 的区别
-if you use `ssh -X remotemachine` the remote machine is treated as an untrusted client. So your local client sends a command to the remote machine and receives the graphical output. If your command violates some security settings you'll receive an error instead.
-
-But if you use `ssh -Y remotemachine` the remote machine is treated as a trusted client. This last option can open security problems. Because other graphical (X11) clients could sniff data from the remote machine (make screenshots, do keylogging and other nasty stuff) and it is even possible to alter those data.
-
-> [xorg](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
-
-:::
+> [!TIP]
+> if you use `ssh -X remotemachine` the remote machine is treated as an untrusted client. So your local client sends a command to the remote machine and receives the graphical output. If your command violates some security settings you'll receive an error instead.
+> 
+> But if you use `ssh -Y remotemachine` the remote machine is treated as a trusted client. This last option can open security problems. Because other graphical (X11) clients could sniff data from the remote machine (make screenshots, do keylogging and other nasty stuff) and it is even possible to alter those data.
+> 
+> > [xorg](https://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-untrusted-x11-forwarding)
+> 
 
 ### conda
 
@@ -1124,8 +1115,7 @@ cd nutstore_linux_src_installer
 sudo ./update-toolchain.sh
 ```
 
-:::question 这里我报错了，少一个库
-:::
+> [!IMPORTANT]
 
 没搞明白，就全装了
 

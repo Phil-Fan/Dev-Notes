@@ -2,17 +2,16 @@
 
 ROS (Robot Operating System) 是机器人操作系统，用于编写机器人软件。
 
-:::tip 什么是 ROS？
-
-ROS 不是传统意义上的操作系统，而是一个**中间件**或**框架**，运行在 Linux (Ubuntu) 之上，提供机器人开发所需的通信、硬件抽象、设备驱动等功能。
-
-**类比理解：**
-
-- Linux 是电脑的"地基"
-- ROS 是盖房子的"脚手架"
-- 你写的代码是"房子"
-
-:::
+> [!TIP]
+> 
+> ROS 不是传统意义上的操作系统，而是一个**中间件**或**框架**，运行在 Linux (Ubuntu) 之上，提供机器人开发所需的通信、硬件抽象、设备驱动等功能。
+> 
+> **类比理解：**
+> 
+> - Linux 是电脑的"地基"
+> - ROS 是盖房子的"脚手架"
+> - 你写的代码是"房子"
+> 
 
 ---
 
@@ -20,41 +19,40 @@ ROS 不是传统意义上的操作系统，而是一个**中间件**或**框架*
 
 ### ROS 的三大核心
 
-:::info
-
-节点 (Node) 是 ROS 中的独立进程，每个节点负责一个具体任务。公司里的不同部门员工，各司其职。
-
-- 摄像头节点 - 负责采集图像
-- 激光雷达节点 - 负责采集距离数据
-- 导航节点 - 负责规划路径
-
-话题 (Topic) 是节点间传递数据的"管道"，采用**发布 - 订阅**模式。公司里的公告栏，任何人都可以发布消息，任何人都可以订阅消息。
-
-- 单向通信（发布者 → 订阅者）
-- 异步通信（非实时）
-- 一对多（一个发布者，多个订阅者）
-
-**示例：**
-
-- `/camera/image_raw` - 摄像头图像话题
-- `/cmd_vel` - 速度控制话题
-- `/scan` - 激光雷达数据话题
-
-服务 (Service) 是节点间的双向通信，采用**请求 - 响应**模式。客户请求服务，服务器处理后返回结果。
-
-**特点：**
-
-- 双向通信（请求 → 响应）
-- 同步通信（等待响应）
-- 一对一（一个客户端，一个服务端）
-
-**示例：**
-
-- `/spawn` - 生成新的海龟
-- `/clear` - 清空轨迹
-- `/kill` - 删除海龟
-
-:::
+> [!NOTE]
+> 
+> 节点 (Node) 是 ROS 中的独立进程，每个节点负责一个具体任务。公司里的不同部门员工，各司其职。
+> 
+> - 摄像头节点 - 负责采集图像
+> - 激光雷达节点 - 负责采集距离数据
+> - 导航节点 - 负责规划路径
+> 
+> 话题 (Topic) 是节点间传递数据的"管道"，采用**发布 - 订阅**模式。公司里的公告栏，任何人都可以发布消息，任何人都可以订阅消息。
+> 
+> - 单向通信（发布者 → 订阅者）
+> - 异步通信（非实时）
+> - 一对多（一个发布者，多个订阅者）
+> 
+> **示例：**
+> 
+> - `/camera/image_raw` - 摄像头图像话题
+> - `/cmd_vel` - 速度控制话题
+> - `/scan` - 激光雷达数据话题
+> 
+> 服务 (Service) 是节点间的双向通信，采用**请求 - 响应**模式。客户请求服务，服务器处理后返回结果。
+> 
+> **特点：**
+> 
+> - 双向通信（请求 → 响应）
+> - 同步通信（等待响应）
+> - 一对一（一个客户端，一个服务端）
+> 
+> **示例：**
+> 
+> - `/spawn` - 生成新的海龟
+> - `/clear` - 清空轨迹
+> - `/kill` - 删除海龟
+> 
 
 ### 其他核心概念
 
@@ -86,16 +84,15 @@ wget http://fishros.com/install -O fishros
 sudo bash fishros
 ```
 
-:::tip 注意事项
-
-- 安装 **Desktop 版本**（带可视化工具），不要选 Server 版
-- 如果遇到 "no directory" 错误，把 `.` 换成 `bash`：
-
-```bash
-bash fishros
-```
-
-:::
+> [!TIP]
+> 
+> - 安装 **Desktop 版本**（带可视化工具），不要选 Server 版
+> - 如果遇到 "no directory" 错误，把 `.` 换成 `bash`：
+> 
+> ```bash
+> bash fishros
+> ```
+> 
 
 ### 手动安装
 
@@ -161,18 +158,17 @@ rostopic hz /topic_name
 rostopic bw /topic_name
 ```
 
-:::tip 实用技巧
-
-查看海龟的位置话题：
-
-```bash
-# 新开终端
-rostopic echo /turtle1/pose
-```
-
-用键盘移动海龟时，会实时看到位置数据变化。
-
-:::
+> [!TIP]
+> 
+> 查看海龟的位置话题：
+> 
+> ```bash
+> # 新开终端
+> rostopic echo /turtle1/pose
+> ```
+> 
+> 用键盘移动海龟时，会实时看到位置数据变化。
+> 
 
 ### 服务 (Service) 命令
 
@@ -272,16 +268,15 @@ catkin_make
 source devel/setup.bash
 ```
 
-:::tip 永久设置环境变量
-
-将以下命令添加到 `~/.bashrc`：
-
-```bash
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-```
-
-:::
+> [!TIP]
+> 
+> 将以下命令添加到 `~/.bashrc`：
+> 
+> ```bash
+> echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+> source ~/.bashrc
+> ```
+> 
 
 ### 功能包结构
 
@@ -332,13 +327,12 @@ rosbag play -r 2 subset.bag
 rosbag play --pause subset.bag
 ```
 
-:::tip 应用场景
-
-- 算法调试（不用每次都运行机器人）
-- 数据采集（采集传感器数据后离线处理）
-- 演示展示（提前录制好演示视频）
-
-:::
+> [!TIP]
+> 
+> - 算法调试（不用每次都运行机器人）
+> - 数据采集（采集传感器数据后离线处理）
+> - 演示展示（提前录制好演示视频）
+> 
 
 ---
 
@@ -414,31 +408,30 @@ rosrun plotjuggler plotjuggler
 
 **Launch 文件**是 XML 格式的配置文件，用于一次性启动多个节点。
 
-:::tip 为什么需要 Launch？
-
-手动启动节点：
-
-```bash
-# 终端 1
-roscore
-
-# 终端 2
-rosrun package1 node1
-
-# 终端 3
-rosrun package2 node2
-
-# 终端 4
-rosrun package3 node3
-```
-
-使用 Launch 文件：
-
-```bash
-roslaunch my_package all_nodes.launch
-```
-
-:::
+> [!TIP]
+> 
+> 手动启动节点：
+> 
+> ```bash
+> # 终端 1
+> roscore
+> 
+> # 终端 2
+> rosrun package1 node1
+> 
+> # 终端 3
+> rosrun package2 node2
+> 
+> # 终端 4
+> rosrun package3 node3
+> ```
+> 
+> 使用 Launch 文件：
+> 
+> ```bash
+> roslaunch my_package all_nodes.launch
+> ```
+> 
 
 ### 基本 Launch 文件示例
 

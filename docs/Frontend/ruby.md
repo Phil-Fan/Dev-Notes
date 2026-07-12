@@ -31,36 +31,35 @@ graph TD
 ruby -v
 ```
 
-:::info 安装指令
-
-### linux or wsl
-
-```shell title="linux or wsl"
-sudo apt update && sudo apt upgrade -y
-sudo apt install ruby-dev ruby-bundler nodejs
-```
-
-```shell
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
-source ~/.bashrc
-
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-```
-
-### macos
-
-```shell title="macos"
-brew install rbenv ruby-build
-```
-
-```shell title="macos"
-echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-:::
+> [!NOTE]
+> 
+> ### linux or wsl
+> 
+> ```shell title="linux or wsl"
+> sudo apt update && sudo apt upgrade -y
+> sudo apt install ruby-dev ruby-bundler nodejs
+> ```
+> 
+> ```shell
+> git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+> echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+> echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
+> source ~/.bashrc
+> 
+> git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+> ```
+> 
+> ### macos
+> 
+> ```shell title="macos"
+> brew install rbenv ruby-build
+> ```
+> 
+> ```shell title="macos"
+> echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
+> source ~/.zshrc
+> ```
+> 
 
 ```shell
 rbenv install 3.2.4
@@ -127,8 +126,7 @@ gem install bundler
 
 ## 标准安装流程（Ruby ≥ 3.2）
 
-:::info 完整配置方案
-:::
+> [!NOTE]
 
 **目标：** 使用 Ruby ≥ 3.2 + 正确的 bundler + 无权限问题
 

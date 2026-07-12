@@ -77,52 +77,51 @@ Pending
 
 调度器的三步流程（非常重要）
 
-:::info
-
-① 过滤（Filtering）
-
-    排除掉不满足条件的节点，比如：
-
-    * 节点资源不足（CPU / 内存 / GPU）
-    * 有污点（taint）
-    * 不匹配 nodeSelector
-    * 不匹配 affinity
-    * 端口冲突
-    * 节点 not ready
-
-    例如 GPU Pod：
-
-    ```yaml
-    resources:
-    limits:
-        nvidia.com/gpu: 1
-    ```
-
-    → scheduler 只会考虑有 GPU 的节点。
-
-② 打分（Scoring）
-
-    在筛选后的节点上打分：
-
-    * CPU、内存利用率
-    * 负载均衡
-    * 网络拓扑
-    * anti-affinity
-    * 自定义调度插件
-
-    得分最高的节点被选中。
-
-③ 绑定（Binding）
-
-    最后 scheduler 调用：
-
-    ```shell title="POST /binding"
-    POST /binding
-    ```
-
-    把 Pod 绑定到节点。
-
-:::
+> [!NOTE]
+> 
+> ① 过滤（Filtering）
+> 
+>     排除掉不满足条件的节点，比如：
+> 
+>     * 节点资源不足（CPU / 内存 / GPU）
+>     * 有污点（taint）
+>     * 不匹配 nodeSelector
+>     * 不匹配 affinity
+>     * 端口冲突
+>     * 节点 not ready
+> 
+>     例如 GPU Pod：
+> 
+>     ```yaml
+>     resources:
+>     limits:
+>         nvidia.com/gpu: 1
+>     ```
+> 
+>     → scheduler 只会考虑有 GPU 的节点。
+> 
+> ② 打分（Scoring）
+> 
+>     在筛选后的节点上打分：
+> 
+>     * CPU、内存利用率
+>     * 负载均衡
+>     * 网络拓扑
+>     * anti-affinity
+>     * 自定义调度插件
+> 
+>     得分最高的节点被选中。
+> 
+> ③ 绑定（Binding）
+> 
+>     最后 scheduler 调用：
+> 
+>     ```shell title="POST /binding"
+>     POST /binding
+>     ```
+> 
+>     把 Pod 绑定到节点。
+> 
 
 K8s 允许你表达复杂的调度需求：
 

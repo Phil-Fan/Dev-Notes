@@ -233,7 +233,7 @@ pip install mdx_truly_sane_lists
     <div class="file-meta">xxxxKB / 2024-01-10</div>
   </div>
   <a class="down-button" target="_blank" href="xxx.xmind" markdown="1"
-    >:fontawesome-solid-download: 下载</a
+    >⬇ 下载</a
   >
 </div>
 ```

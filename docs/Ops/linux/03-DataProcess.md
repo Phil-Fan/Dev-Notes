@@ -533,7 +533,7 @@ grep "ERROR" log.txt | awk '{print $1, $2}' | sort | uniq -c
 ```
 
 > [!TIP]
-> 
+>
 > - **grep** - 搜索文本
 > - **sed** - 替换和编辑文本
 > - **awk** - 格式化和分析数据
@@ -541,4 +541,4 @@ grep "ERROR" log.txt | awk '{print $1, $2}' | sort | uniq -c
 > - **sort/uniq** - 排序和去重
 > - **cut** - 提取列
 > - **xargs** - 构建命令参数
-> 
+>

@@ -141,35 +141,35 @@ export HF_TOKEN=your_huggingface_token
 ### 模型下载
 
 > [!NOTE]
-> 
+>
 > 方法 1 huggingface-cli
-> 
+>
 > ```shell title="下载指令 cli"
 > export HF_ENDPOINT=https://hf-mirror.com
 > huggingface-cli download --resume-download <model_name> --local-dir <path>
 > ```
-> 
+>
 > 方法 2 hf download
-> 
+>
 > ```shell
 > pip install -U "huggingface_hub[cli]
 > ```
-> 
+>
 > ```shell
 > hf download <model_name>
 > ```
-> 
+>
 > 方法 3 git-lfs
-> 
+>
 > ```shell
 > apt install git-lfs -y
 > git lfs install
 > cd <folder_path>
 > git clone https://huggingface.co/<model_name>
 > ```
-> 
+>
 > 方法 4 在代码头部加入
-> 
+>
 > ```python title="在代码头部加入"
 > import subprocess
 > import os
@@ -181,7 +181,7 @@ export HF_TOKEN=your_huggingface_token
 >       var, value = line.split('=', 1)
 >       os.environ[var] = value
 > ```
-> 
+>
 
 ### 使用 modelscope 下载
 
@@ -442,23 +442,23 @@ screen -wipe #清理那些dead的会话
 内网穿透就是将内网的服务暴露给公网访问
 
 > [!NOTE]
-> 
+>
 > Server 端配置
-> 
+>
 > 下载安装包
-> 
+>
 > ```shell title="解压"
 > tar -zxvf frp_0.61.2_linux_amd64.tar.gz
 > ```
-> 
+>
 > ```shell title="进入目录"
 > cd frp_0.61.2_linux_amd64
 > ```
-> 
+>
 > ```shell title="编辑 frps.toml"
 > vim frps.toml
 > ```
-> 
+>
 > ```ini
 > bindPort = 7000      # 服务端与客户端通信端口
 > # vhostHTTPPort = 80   # 如果客户端需要使用 http 服务，在这里配置代理端口
@@ -471,21 +471,21 @@ screen -wipe #清理那些dead的会话
 > webServer.user = "admin"                # 后台登录用户名
 > webServer.password = "admin"            # 后台登录密码
 > ```
-> 
+>
 > ![image](https://img.philfan.cn/Tools__Environment__assets__settings-server.assets__20250318114804586.webp)
-> 
+>
 > 访问公网 ip 的 7500 端口，可以查看 frp 服务状态以及统计信息
-> 
+>
 > [!TIP]
 > 注意这里需要在 aliyun 控制台的安全组中添加 7000 和 7500 端口
-> 
+>
 > ```shell title="开放服务端端口"
 > sudo ufw allow 7000/tcp    # FRP 主端口
 > sudo ufw allow 7500/tcp    # 仪表盘
 > sudo ufw allow 40443/tcp   # HTTP 穿透
 > sudo ufw allow 40800/tcp   # HTTPS 穿透
 > ```
-> 
+>
 
 ```shell title="后台运行"
 #服务器端

@@ -1,12 +1,12 @@
 # Kali Linux
 
 > [!TIP]
-> 
+>
 
 ## 系统烧录
 
 > [!TIP]
-> 
+>
 
 > [Kali Linux | Penetration Testing and Ethical Hacking Linux Distribution](https://www.kali.org/)
 > [Kali 虚拟机安装，设置中文等详细教程，Linux 最新免镜像版\_kali 安装中文语言包-CSDN 博客](https://blog.csdn.net/l2872253606/article/details/123592717)
@@ -81,33 +81,33 @@ apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-pl
 ### 桌面不显示
 
 > [!WARNING]
-> 
+>
 
 > [!NOTE]
-> 
+>
 > 方法 1 在 kali 终端执行以下命令：
-> 
+>
 > ```shell
 > sudo metacity --replace      #打开窗口管理器
 > ```
-> 
+>
 > 如果没有 metacity 这个命令，就下载一下
-> 
+>
 > ```shell
 > apt-get install metacity          #下载 metacity 命令
 > ```
-> 
+>
 > 下载之后再执行一遍上面那个命令就好了
-> 
+>
 > 但有一个问题：每次打开 kali 都需要运行一遍上面第 1 条命令
-> 
+>
 > 方法 2 重装 lightdm，命令如下：
-> 
+>
 > ```shell
 > sudo apt-get remove --purge lightdm
 > sudo apt-get install lightdm
 > ```
-> 
+>
 
 ## conda 环境
 

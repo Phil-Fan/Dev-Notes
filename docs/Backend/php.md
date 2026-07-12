@@ -6,12 +6,12 @@
 [PHP 学习路线](https://www.runoob.com/w3cnote/php-learning-recommend.html)
 
 > [!TIP]
-> 
+>
 
 ## 基础语法
 
 > [!TIP]
-> 
+>
 
 - PHP 是一种开源的通用脚本语言，尤其适用于 Web 开发。
 - PHP（全称：PHP：Hypertext Preprocessor，即"PHP：超文本预处理器"）是一种通用开源脚本语言。
@@ -307,7 +307,7 @@ O:4:"Name":2:{s:14:"Nameusername";s:5:"admin";s:14:"Namepassword";i:100;}
 又因为私有变量需要修改，所以更改为
 
 > [!TIP]
-> 
+>
 
 又因为需要绕过`__wakeup()`函数，所以我们把属性个数改成大于实际属性的个数
 

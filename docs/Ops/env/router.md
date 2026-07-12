@@ -13,25 +13,25 @@
 路由器就像一个**交通枢纽**，有两个主要的进出口：
 
 > [!NOTE]
-> 
+>
 > LAN（局域网）
-> 
+>
 > 内部网络接口，连接家里的设备：
-> 
+>
 > - 多个端口（4 个 RJ45）
 > - 分配私有 IP（192.168.1.x）
 > - 内置 DHCP 服务器
 > - 网关地址：192.168.1.1
-> 
+>
 > WAN（广域网）
-> 
+>
 > 外部网络接口，连接互联网：
-> 
+>
 > - 只有一个端口
 > - 获取公网 IP
 > - 负责 NAT 转换
 > - 处理内外网数据转发
-> 
+>
 
 ### 工作流程
 
@@ -42,9 +42,9 @@
 ```
 
 > [!TIP]
-> 
+>
 > LAN 是**院子里的门**，WAN 是**通往大街的门**。路由器就是**门卫**，管理院子内外的人和物的进出。
-> 
+>
 
 ---
 
@@ -66,15 +66,15 @@
 - **防止变砖**（刷机失败也能恢复）
 
 > [!TIP]
-> 
+>
 > 路由器存储器会出现坏块，导致系统不稳定。检查方法：
-> 
+>
 > ```html
 > http://192.168.31.1/cgi-bin/luci/;stok=<你的 stok>/api/misystem/set_config_iotdev?bssid=Xiaomi&user_id=longdike&ssid=%0A%5B%20-z%20%22%24(dmesg%20%7C%20grep%20ESMT)%22%20%5D%20%26%26%20B%3D%22Toshiba%22%20%7C%7C%20B%3D%22ESMT%22%0Auci%20set%20wireless.%24(uci%20show%20wireless%20%7C%20awk%20-F%20'.'%20'%2Fwl1%2F%20%7Bprint%20%242%7D').ssid%3D%22%24B%20%24(dmesg%20%7C%20awk%20'%2FBad%2F%20%7Bprint%20%245%7D')%22%0A%2Fetc%2Finit.d%2Fnetwork%20restart%0A
 > ```
-> 
+>
 > 运行后 2.4G WiFi 名称会变成 `ESMT` 或 `Toshiba`，后面数字就是坏块数量。无数字 = 无坏块！
-> 
+>
 
 ### OpenWrt vs Padavan
 
@@ -113,13 +113,13 @@ opkg update && opkg install luci-i18n-base-zh-cn
 ### 什么是代理？
 
 > [!TIP]
-> 
+>
 > **你**想给**朋友**送礼物，但朋友家不让**陌生人**进。
-> 
+>
 > **正向代理**：你找**快递员**代送，朋友只知道快递员，不知道是你送的。
-> 
+>
 > **反向代理**：朋友家门口有个**管家**，你找管家转交，朋友以为礼物是管家送的。
-> 
+>
 
 ### 正向代理
 
@@ -150,9 +150,9 @@ opkg update && opkg install luci-i18n-base-zh-cn
 - 安全防护
 
 > [!NOTE]
-> 
+>
 > Nginx 反向代理
-> 
+>
 > ```nginx
 > server {
 >     listen 80;
@@ -163,15 +163,15 @@ opkg update && opkg install luci-i18n-base-zh-cn
 >     }
 > }
 > ```
-> 
+>
 > 用户访问 `example.com`，Nginx 转发到本地 3000 端口。
-> 
+>
 > Clash + 内网穿透
-> 
+>
 > ```text
 > 外网用户 → Nginx (反向代理) → 本地 Clash (SOCKS5) → 目标服务
 > ```
-> 
+>
 
 ### Tailscale
 
@@ -269,9 +269,9 @@ V2Ray 订阅 → Subconverter → Clash 订阅
 **取舍简述**：静态路由行为可预期、对设备开销小、排障直观；缺点是拓扑或对端地址变化时要人工维护，配置错误可能导致黑洞路由或环路。
 
 > [!TIP]
-> 
+>
 > 仅靠“一条默认路由”往往无法在多出口、VPN、校园网等环境里精细控制走向；为特定**目的网段**增加静态路由，可以把访问校内、专线或指定出口的流量显式指到正确下一跳。延伸阅读：[CC98：为什么要设置静态路由](https://www.cc98.org/topic/5650063)。
-> 
+>
 
 ## DNS 重新绑定
 
@@ -308,46 +308,46 @@ tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect
 ```
 
 > [!TIP]
-> 
+>
 > ### SS（Shadowsocks）
-> 
+>
 > - **特点**：简单高效，无混淆，易被封锁。
 > - **格式**：
-> 
+>
 > ```shell title="格式"
 > ss://加密方式:密码@服务器IP:端口#备注
 > ```
-> 
+>
 > ```shell title="示例"
 > ss://aes-256-gcm:password@1.1.1.1:443#测试节点
 > ```
-> 
+>
 > ### SSR（ShadowsocksR）
-> 
+>
 > - **特点**：支持混淆和协议插件，抗封锁更强。
 > - **格式**：
-> 
+>
 > ```shell title="格式"
 > ssr://Base64编码(IP:端口:协议:加密:混淆:密码/?参数)
 > ```
-> 
+>
 > ```shell title="示例"
 > ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9zaGExOnJjNC1tZDU6dGxzMS4yX3RpY2tldF9hdXRoOnZWMk5EVXpNdw
 > ```
-> 
+>
 > ### VMess（V2Ray 协议）
-> 
+>
 > - **特点**：动态端口，抗封锁强，配置复杂。
 > - **格式**：
-> 
+>
 > ```shell title="格式"
 > vmess://Base64编码({"add":"IP","port":"443","id":"UUID"})
 > ```
-> 
+>
 > ```shell title="示例"
 > vmess://eyJhZGQiOiIxLjEuMS4xIiwicG9ydCI6NDQzLCJpZCI6IjEyMzQ1Njc4LWFiY2QtMTIzNC1hYmNkIn0=
 > ```
-> 
+>
 
 ZJU-Connect 服务配置[zju-connect/docs/service.md at main · Mythologyli/zju-connect](https://github.com/Mythologyli/zju-connect/blob/main/docs/service.md)
 

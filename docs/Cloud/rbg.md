@@ -78,9 +78,9 @@ Pending
 调度器的三步流程（非常重要）
 
 > [!NOTE]
-> 
+>
 > ① 过滤（Filtering）
-> 
+>
 >     排除掉不满足条件的节点，比如：
 > 
 >     * 节点资源不足（CPU / 内存 / GPU）
@@ -99,9 +99,9 @@ Pending
 >     ```
 > 
 >     → scheduler 只会考虑有 GPU 的节点。
-> 
+>
 > ② 打分（Scoring）
-> 
+>
 >     在筛选后的节点上打分：
 > 
 >     * CPU、内存利用率
@@ -111,9 +111,9 @@ Pending
 >     * 自定义调度插件
 > 
 >     得分最高的节点被选中。
-> 
+>
 > ③ 绑定（Binding）
-> 
+>
 >     最后 scheduler 调用：
 > 
 >     ```shell title="POST /binding"
@@ -121,7 +121,7 @@ Pending
 >     ```
 > 
 >     把 Pod 绑定到节点。
-> 
+>
 
 K8s 允许你表达复杂的调度需求：
 

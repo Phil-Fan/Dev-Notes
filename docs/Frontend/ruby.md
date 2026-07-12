@@ -32,14 +32,14 @@ ruby -v
 ```
 
 > [!NOTE]
-> 
+>
 > ### linux or wsl
-> 
+>
 > ```shell title="linux or wsl"
 > sudo apt update && sudo apt upgrade -y
 > sudo apt install ruby-dev ruby-bundler nodejs
 > ```
-> 
+>
 > ```shell
 > git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 > echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
@@ -48,18 +48,18 @@ ruby -v
 > 
 > git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 > ```
-> 
+>
 > ### macos
-> 
+>
 > ```shell title="macos"
 > brew install rbenv ruby-build
 > ```
-> 
+>
 > ```shell title="macos"
 > echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
 > source ~/.zshrc
 > ```
-> 
+>
 
 ```shell
 rbenv install 3.2.4

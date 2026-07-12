@@ -95,10 +95,10 @@ jobs:
 发现一个 bug，请尽快修复！
 
 > [!TIP]
-> 
+>
 
 > [!TIP]
-> 
+>
 
 > [!IMPORTANT]
 
@@ -113,16 +113,16 @@ jobs:
 恭喜你，完成了一个任务！
 
 > [!TIP]
-> 
+>
 
 > [!NOTE]
-> 
+>
 
 > [!NOTE]
-> 
+>
 
 > [!NOTE]
-> 
+>
 
 ### 列表
 
@@ -176,7 +176,7 @@ jobs:
 ```
 
 > [!NOTE]
-> 
+>
 > | 参数用途 | 参数名 | 使用方法 |
 > | --- | --- | --- |
 > | 是否自动播放 (默认否) | `autoplay` | 1: 开启，0: 关闭 |
@@ -189,7 +189,7 @@ jobs:
 > | 是否开始记忆播放 (默认开启) | `fw` | 1: 开启，0: 关闭 |
 > | 默认开始时间 (默认 0) | `t` | 直接填写数值，单位秒 |
 > | 是否显示高清 (默认否) | `highQuality` | 1: 开启，0: 关闭 (貌似是无用的，各位可以试试) |
-> 
+>
 
 ### 嵌套列表
 
@@ -238,7 +238,7 @@ pip install mdx_truly_sane_lists
 - `mkdocs -h` - Print help message and exit.
 
 > [!NOTE]
-> 
+>
 
 ```Shell
    pip install mkdocs
@@ -458,7 +458,7 @@ plugins:
 ```
 
 > [!WARNING]
-> 
+>
 > ```text
 >   DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs
 >   given by the platformdirs library.  To remove this warning and
@@ -466,9 +466,9 @@ plugins:
 >   `JUPYTER_PLATFORM_DIRS=1` and then run `jupyter --paths`.
 >   The use of platformdirs will be the default in `jupyter_core` v6
 > ```
-> 
+>
 > [DeprecationWarning: Jupyter is migrating its paths to use standard platformdirs · Issue #148 · danielfrg/mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter/issues/148)
-> 
+>
 
 如果想要实现 material 中的某些功能，需要自己写 html 代码
 
@@ -670,7 +670,7 @@ changelog: True
 ### 解析 xmind
 
 > [!NOTE]
-> 
+>
 
 [OpenFiles.online](https://openfiles.online/)
 [在浏览器中解析和渲染 XMind 文件 | 文森的主站](https://liangwensen.com/blog/parse-and-render-xmind-file-in-browser)

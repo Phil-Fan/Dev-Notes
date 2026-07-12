@@ -237,7 +237,7 @@ def cancel_appointment(scheduled_id):
 ## Clash 给手机提供代理
 
 > [!TIP]
-> 
+>
 
 1. 确定电脑可以通过 clash 进行正常连接，或者能通过 SSR 连接
 

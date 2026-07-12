@@ -288,7 +288,7 @@ mtr google.com
 ```
 
 > [!TIP]
-> 
+>
 > | 权限 | 数字 | 说明 |
 > | --- | --- | --- |
 > | rwxrwxrwx | 777 | 所有人可读写执行 |
@@ -298,4 +298,4 @@ mtr google.com
 > | rwxrwxrwt | 1777 | Sticky + 777 |
 > | rwsr-xr-x | 2755 | SGID + 755 |
 > | rwsr-xr-x | 4755 | SUID + 755 |
-> 
+>

@@ -28,7 +28,7 @@ tree              # 以树形结构显示目录
 
 > [!TIP]
 > 使用 `fasd` 或 `autojump` 可以实现智能目录跳转：
-> 
+>
 > ```bash
 > # 安装 fasd
 > sudo apt install fasd  # Debian/Ubuntu
@@ -39,7 +39,7 @@ tree              # 以树形结构显示目录
 > # 快速跳转到常用目录
 > z project    # 跳转到包含 project 的最近访问目录
 > ```
-> 
+>
 
 ## 文件管理
 
@@ -63,7 +63,7 @@ rm -rf directory           # 强制递归删除（危险！）
 
 > [!WARNING]
 > `rm -rf` 命令不可恢复，使用前务必确认路径正确！建议先用 `ls` 查看目标目录内容。
-> 
+>
 
 ### 复制与移动
 
@@ -174,10 +174,10 @@ history -c                       # 清空历史
 ```
 
 > [!TIP]
-> 
+>
 > - `Ctrl + R` - 搜索历史命令（反向增量搜索）
 > - `Ctrl + A` - 移到命令开头
 > - `Ctrl + E` - 移到命令结尾
 > - `Ctrl + U` - 删除到命令开头
 > - `Ctrl + K` - 删除到命令结尾
-> 
+>

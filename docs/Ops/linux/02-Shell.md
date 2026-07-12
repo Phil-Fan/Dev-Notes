@@ -312,7 +312,7 @@ mkdir -p {src,build,test}/utils   # 创建多级目录
 ```
 
 > [!TIP]
-> 
+>
 > ```bash
 > # 备份文件
 > cp file.txt{,.bak}                # 快速备份
@@ -320,7 +320,7 @@ mkdir -p {src,build,test}/utils   # 创建多级目录
 > # 重命名
 > mv old.{txt,md}                   # old.txt -> old.md
 > ```
-> 
+>
 
 ## Stream
 

@@ -3,11 +3,11 @@
 本文档记录 Windows 常用软件安装与使用技巧，以及常见问题解决方案。
 
 > [!TIP]
-> 
+>
 > - 遇到重复问题时不再反复搜索
 > - 快速在新设备上搭建工作环境
 > - 避免因环境问题导致项目停滞
-> 
+>
 
 ---
 
@@ -38,20 +38,20 @@ clear                     # 清屏（cmd 用 cls）
 ### PowerShell 执行策略
 
 > [!NOTE]
-> 
+>
 > **问题**：无法加载文件 `WindowsPowerShell\profile.ps1`
-> 
+>
 > **解决方法**：
-> 
+>
 > 1. `Win + X` 打开 **Windows PowerShell (Admin)**
 > 2. 查看当前执行策略：
-> 
+>
 > ```powershell
 > Get-ExecutionPolicy -List
 > ```
-> 
+>
 > 1. 更改执行策略：
-> 
+>
 > ```powershell
 > # 仅对当前用户
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -59,10 +59,10 @@ clear                     # 清屏（cmd 用 cls）
 > # 对所有用户
 > Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
 > ```
-> 
+>
 > 1. 输入 `Y` 确认更改
 > 2. 重新打开终端验证
-> 
+>
 
 ### 文件信息管理
 
@@ -136,9 +136,9 @@ systeminfo
 4. CMD 中输入快捷方式名称即可启动软件
 
 > [!TIP]
-> 
+>
 > 快捷方式可以自定义名称，命令行中使用该名称即可启动软件。
-> 
+>
 
 ---
 
@@ -164,17 +164,17 @@ systeminfo
 **高级功能：**
 
 > [!NOTE]
-> 
+>
 > 自定义短语：导入行业特殊词汇右键输入法设置 → 词库和自学习 → 自定义短语 → 导入行业特殊词汇
-> 
+>
 > 专业词典：默认未完全启用，需手动开启
-> 
+>
 > V 模式：快速输入中文年月日和公式
-> 
+>
 > U 模式：输入特殊符号
-> 
+>
 > Emoji 面板：`Ctrl + Shift + B` 打开符号面板
-> 
+>
 
 ### Win11 优化
 
@@ -221,9 +221,9 @@ SRV*C:\Symbols*http://msdl.microsoft.com/download/symbols
 2. 首次打开时勾选 "Don't ask again in this WinDbg session"，点否
 
 > [!TIP]
-> 
+>
 > 使用 `Shift + F5` 清除上一个分析记录。
-> 
+>
 
 **关键信息：**
 
@@ -296,9 +296,9 @@ netsh wlan show profile name="WiFi 名称" key=clear
 | TreeSize | 分析目录占用空间 | 免费版 |
 
 > [!WARNING]
-> 
+>
 > Geek 会删除软件的所有文件夹（包括用户文件），使用前请转移重要数据！
-> 
+>
 
 ### 移动系统文件夹
 

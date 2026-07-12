@@ -7,28 +7,28 @@ WSL 让你在 Windows 上运行 Linux 环境，无需虚拟机开销。
 ### 1️⃣ 启用 WSL 功能
 
 > [!NOTE]
-> 
+>
 > PowerShell 命令
-> 
+>
 > ```powershell
 > Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 > Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 > ```
-> 
+>
 > DISM 命令
-> 
+>
 > ```shell
 > dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 > ```
-> 
+>
 > GUI 方式
-> 
+>
 > 1. Win + R 输入 `optionalfeatures`
 > 2. 勾选「适用于 Linux 的 Windows 子系统」
 > 3. 勾选「虚拟机平台」
 > 4. 点击确定，重启电脑
-> 
+>
 
 ### 2️⃣ 更新 WSL
 
@@ -72,27 +72,27 @@ sudo apt update && sudo apt upgrade -y
 默认 WSL 会继承 Windows 的 PATH，可能导致命令冲突。
 
 > [!TIP]
-> 
+>
 > 编辑 `/etc/wsl.conf`：
-> 
+>
 > ```bash
 > sudo vi /etc/wsl.conf
 > ```
-> 
+>
 > 添加以下内容：
-> 
+>
 > ```ini title="/etc/wsl.conf"
 > [interop]
 > enabled = false
 > appendWindowsPath = false
 > ```
-> 
+>
 > 重启 WSL：
-> 
+>
 > ```powershell title="PowerShell"
 > wsl --shutdown
 > ```
-> 
+>
 
 ---
 
@@ -192,11 +192,11 @@ hostAddressLoopback=true
 ```
 
 > [!TIP]
-> 
+>
 > - `networkingMode=mirrored` - WSL2 与宿主机共用 IP
 > - `hostAddressLoopback=true` - 局域网可访问 WSL2 服务
 > - `firewall=true` - 启用 Hyper-V 防火墙
-> 
+>
 
 #### 2. 重启 WSL
 
@@ -239,9 +239,9 @@ sudo service ssh restart
 #### 4. 开放防火墙
 
 > [!WARNING]
-> 
+>
 > 镜像模式下需要手动开放 Hyper-V 防火墙。
-> 
+>
 > ```powershell title="PowerShell (管理员)"
 > # 查看虚拟机 ID
 > Get-NetFirewallHyperVVMSetting
@@ -249,7 +249,7 @@ sudo service ssh restart
 > # 允许入站连接（替换为你的 VM ID）
 > Set-NetFirewallHyperVVMSetting -Name '{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}' -DefaultInboundAction Allow
 > ```
-> 
+>
 
 #### 5. 测试连接
 
@@ -354,13 +354,13 @@ nvidia-smi
 ![nvidia-smi](https://img.philfan.cn/Tools__Environment__assets__settings-wsl.assets__image-20250816210945859.webp)
 
 > [!WARNING]
-> 
+>
 > 限制
-> 
+>
 > ![Limitations](https://img.philfan.cn/Tools__Environment__assets__settings-wsl.assets__image-20250816204530654.webp)
-> 
+>
 > 不支持的功能
-> 
+>
 > ![Banned Features](https://img.philfan.cn/Tools__Environment__assets__settings-wsl.assets__image-20250816204600671.webp)
 
 ### 安装 CUDA Toolkit
@@ -404,11 +404,11 @@ nvcc --version
 ### 多版本管理
 
 > [!TIP]
-> 
+>
 > PATH 中靠前的路径优先级更高。
-> 
+>
 > 例如同时安装 CUDA 12.9 和 13.0：
-> 
+>
 > ```bash
 > # 优先使用 12.9
 > export PATH="/usr/local/cuda-12.9/bin:/usr/local/cuda-13.0/bin:$PATH"
@@ -416,7 +416,7 @@ nvcc --version
 > # 优先使用 13.0
 > export PATH="/usr/local/cuda-13.0/bin:/usr/local/cuda-12.9/bin:$PATH"
 > ```
-> 
+>
 
 ---
 
@@ -451,9 +451,9 @@ source ~/.bashrc
 ```
 
 > [!WARNING]
-> 
+>
 > 高版本 Nsight 生成的文件，低版本无法打开。团队使用时请保持版本一致。
-> 
+>
 
 ---
 

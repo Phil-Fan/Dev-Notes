@@ -45,8 +45,8 @@ uhd_find_devices
 uhd_usrp_probe
 ```
 
-::: danger RuntimeError: RuntimeError: Expected FPGA compatibility number 38, but got 39:The FPGA image on your device is not compatible with this host code build.Download the appropriate FPGA images for this version of UHD."
-:::
+> [!CAUTION]
+> RuntimeError: Expected FPGA compatibility number 38, but got 39 — The FPGA image on your device is not compatible with this host code build. Download the appropriate FPGA images for this version of UHD.
 [USRP 2954(X310) 在 ubuntu 系统下版本不兼容的问题\_expected fpga compatibility number 33, but got 39:-CSDN 博客](https://blog.csdn.net/gcc12345678/article/details/132840468)
 
 ### 方法一

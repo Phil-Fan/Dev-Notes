@@ -325,8 +325,8 @@ void loop()
 - `FALLING` for when the pin goes from high to low.
 
 ## 定时器
->
-> 参考文献：[Arduino 定时器&中断的使用和快速上手\_arduino 定时器-CSDN 博客](https://blog.csdn.net/linZinan_/article/details/127832771)
+
+参考文献：[Arduino 定时器&中断的使用和快速上手\_arduino 定时器-CSDN 博客](https://blog.csdn.net/linZinan_/article/details/127832771)
 
 > [!TIP]
 > TimerOne 不仅可以完成定时器的功能，也封装了 PWM 的功能，功能上更加丰富。不过在代码可读性上来说，MsTimer2 更具优势

@@ -99,7 +99,7 @@ pip install torchaudio-2.7.0-cp310-cp310-linux_aarch64.whl
 pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
 ```
 
-!!! question "A module that was compiled using NumPy 1.x cannot be run in NumPy 2.0.0"
+::: question A module that was compiled using NumPy 1.x cannot be run in NumPy 2.0.0
 
     i fix this problem using the experience on [here](https://stackoverflow.com/questions/78641150/a-module-that-was-compiled-using-numpy-1-x-cannot-be-run-in-numpy-2-0-0)
 
@@ -107,3 +107,5 @@ pip install torchvision-0.22.0-cp310-cp310-linux_aarch64.whl
     pip uninstall numpy
     pip install numpy==1.26.4
     ```
+
+:::

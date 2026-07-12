@@ -59,12 +59,12 @@
     brew install piclist --cask
     ```
 
-!!! note "注意 macos 没有签名时候需要手动信任"
+::: note 注意 macos 没有签名时候需要手动信任
     ```shell
     xattr -cr /Applications/zju-learning-assistant.app
     ```
 
-!!! note "资源站"
+::: note 资源站
     尽量还是支持正版
 
     1. [xclient](https://xclient.info/)

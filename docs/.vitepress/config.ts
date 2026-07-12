@@ -17,6 +17,7 @@ export default defineConfig({
 
   // Head 配置 - Microsoft Clarity
   head: [
+    ["link", { rel: "icon", href: "/icon.svg", type: "image/svg+xml" }],
     [
       "script",
       {},

@@ -162,7 +162,6 @@ export default defineConfig({
                 { text: "macOS", link: "/Ops/env/macos" },
                 { text: "路由器", link: "/Ops/env/router" },
                 { text: "服务器", link: "/Ops/env/server" },
-                { text: "软件", link: "/Ops/env/software" },
                 { text: "Windows WSL", link: "/Ops/env/windows-wsl" },
                 { text: "Windows", link: "/Ops/env/windows" },
               ],

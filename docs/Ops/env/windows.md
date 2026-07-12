@@ -433,3 +433,84 @@ vlc --rate <speed> <address>      # 倍速播放
 下载地址：[雷电模拟器官网](https://www.ldmnq.com/)
 
 应用场景：使用墨墨背单词等 App
+
+### Windows 效率工具
+
+- 图片：[bandView](https://www.bandisoft.com/bandiview/)，[honeycam(动图)](https://www.bandisoft.com/honeycam/)
+- 网络相关：[Clash for windows](https://www.clash.la/archives/748/)，[v2rayN](https://github.com/2dust/v2rayN/releases)，[下载 .NET 8.0 Desktop Runtime (v8.0.8) - Windows x64 Installer](https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/runtime-desktop-8.0.8-windows-x64-installer?cid=getdotnetcore)
+- 下载：[utorrent](https://file.cc98.org/v2-upload/il0glpvw.zip)
+- 卸载工具：[Geek Uninstaller](https://geekuninstaller.com/download)，磁盘扫描 [WizTree](https://www.diskanalyzer.com/download)
+- 使用时长统计：[ManicTime](https://www.manictime.com/download/windows)
+- 系统插件：三指拖移插件 [Three Finger Drag](https://apps.microsoft.com/detail/9msx91wqcm2v?hl=zh-CN&gl=US)
+
+---
+
+## Edge / Chrome 插件
+
+### 更好体验
+
+- global speed：最好用的倍速
+- Vimium C：使用 vim 全键盘操作浏览器；tutorial: [vimium 成神之路 - 键盘党的胜利](https://zhuanlan.zhihu.com/p/64533566)
+- ADguard：去除广告
+- Circle 阅读助手：沉浸式阅读，纯净阅读
+- 油猴/篡改猴：更多脚本/插件
+- Octotree
+
+#### 资源类
+
+- Copy as Markdown：复制成为 markdown 格式的链接
+- Simple Allow Copy：解除网站的禁用复制
+- Image Downloader：下载网站上出现过的图片
+- Zotero Connector：链接 Zotero
+- 哔哔君：b 站字幕下载
+
+#### 翻译
+
+- 沉浸式翻译：好用的网页翻译
+- Grammarly：AI writing and grammar checker
+
+#### 其他
+
+- HackBar
+- Cookie-Editor
+
+---
+
+## VS Code
+
+### 使用
+
+- F1 打开命令面板
+- `Ctrl + P` 搜索文件名打开文件
+- `Ctrl + F` 搜索内容
+- 搜索工作区内容的快捷键是 `Ctrl + Shift + F`，或者在菜单栏中选择 **查看 (View)** -> **搜索 (Search)**
+
+### 自动换行
+
+1. F1，输入 `Open User Settings`
+2. 搜索 `word wrap`
+3. 修改为 `on`
+
+![image](https://philfan-pic.oss-cn-beijing.aliyuncs.com/web_pic/Tools__Environment__assets__settings-software.assets__20241211133345.webp)
+
+### 内存占用过大问题
+
+1. 找到文件 - 首选项 - 设置：禁用自动保存
+2. 找到文件 - 首选项 - 设置，搜索 `git.enabled`，禁用 git
+3. 禁用 `search.followSymlinks`：控制是否在搜索中跟踪符号链接
+4. 按 `F1`，输入 `developer: open process explorer`，会打开一个任务管理器一样的窗口，查看里面 CPU 和内存占用最高的进程，然后一个个禁用你的扩展插件，直到 CPU 和内存占用正常，这样就可以找出耗内存的扩展然后按照你的开发需求更换或者禁用
+
+### 自动补全设置
+
+设置界面 - 文本编辑器 - 建议
+
+- 找到 `share suggest selections` 画钩
+- Editor：suggest selection 中把 `first` 改成 `recentlyUsed`
+- 打开 `settings.json` 文件，添加
+
+```json
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+     "files.associations": {
+                "*.html": "html"
+        },
+```

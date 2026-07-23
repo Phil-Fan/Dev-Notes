@@ -6,16 +6,7 @@
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re) [![GitHub Stars](https://img.shields.io/github/stars/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/network/members) [![GitHub Issues](https://img.shields.io/github/issues/Phil-Fan/Dev-Notes?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/issues) [![CC0 License](https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat-square)](https://github.com/Phil-Fan/Dev-Notes/blob/main/LICENSE)
 
-## AI 相关
-
-> [!TIP]
->
-> My Best Practices
->
-> - 能用 AI 做，不要自己做，逐渐放手。
-> - 确定好技术栈，用**脚手架和模板**框定 AI 能力边界！用**脚手架和模板**框定 AI 能力边界！
-> - 需求对话占据 80% 的时间，然后 DEBUG 和迭代占据 20% 的时间。
-> - 免费的才是最贵的。
+## AI
 
 - [Cherry Studio](https://github.com/CherryHQ/cherry-studio): All-in-one desktop LLM client.
   - 可以当做 API key 管理器
@@ -23,18 +14,9 @@
   - 知识库、agent 都可以放在一起用
 - [Token Arena](https://token.poco-ai.com/): check token usage in one place.
 
-::: note Best Practices
-
-- 调研技术栈、维护全局技术文档、每次对话即时更新技术文档
-- cc planing 模式做规划，ultrawork 模式写代码
-- cursor 进行小规模 debug 以及纠错
-- codex 大规模审核与重构、写重要的逻辑
-:::
-
 ### 配置
 
 - [AGENTS.md](https://github.com/agentsmd/agents.md)
-- [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
 
 ### CLI 工具
 
@@ -53,13 +35,11 @@
   - [superpower](https://github.com/obra/superpowers)
   - [zcf](https://github.com/UfoMiao/zcf/tree/main): Zero-Config Code Flow for Claude Code & Codex
   - [CN Documentation](https://platform.claude.com/docs/zh-CN/home)
-- [OpenCode](https://opencode.ai/)：用户体验不错。
-  - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode): OpenCode Plugin
 - [Codex](https://github.com/openai/codex): Debug 很好，能力很强
   - [oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex)
+- Grok
 - Copilot: 有[学生优惠](https://github.com/education)可以用
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli)：UI 可以
-- [ghostty-org/ghostty](https://github.com/ghostty-org/ghostty)
 
 搜索
 
@@ -105,25 +85,6 @@ Dev
 - [obsidian-skills](https://github.com/kepano/obsidian-skills): Obsidian 的 Claude Skills 集合
 - [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code): Claude Code 精选命令、文件和工作流列表
 
-### Spec Tools
-
-注：目前用的比较少了
-
-- [OpenSpec](https://github.com/Fission-AI/OpenSpec): Spec-driven development for AI coding assistants.
-- [Spec-kit](https://github.com/github/spec-kit): Toolkit to help you get started with Spec-Driven Development
-
-提问语句：
-
-```text
-read this @SPEC.md and interview me in detail
-using the AskUserQuestionTool about literally anything: 
-technical implementation, UI & UX, concerns, tradeoffs, etc. 
-but make sure the questions are not obvious
-
-be very in-depth and continue interviewing me continually 
-until it's complete, then write the spec to the file.
-```
-
 ### IDE
 
 - [Cursor](https://cursor.com/home)：Tab 神器，新上 Plan 模式和网页模式挺有意思的。
@@ -142,6 +103,7 @@ until it's complete, then write the spec to the file.
 - [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) 中转站
 - [anyrouter 公益站](https://anyrouter.top/register?aff=9Yan): 每日 25 刀 cc
 - [simonw/llm](https://github.com/simonw/llm): 命令行访问大模型
+- [chenyme/grok2api](https://github.com/chenyme/grok2api)
 
 ### 多模态
 
@@ -278,21 +240,30 @@ npx create-next-app@latest my-app
   - [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview): 数据查询库
   - [react-hook-form](https://react-hook-form.com/get-started): 表单库
 
-灵感与参考
+### 组件
+
+- [React Bits](https://www.reactbits.dev/): UI 组件库
+- [udecode/plate](https://github.com/udecode/plate): Rich-text editor with AI and shadcn/ui
+- [AI Elements](https://elements.ai-sdk.dev/): AI Chatbot 组件库
+- [React PDF Viewer](https://www.embedpdf.com/docs/react): PDF 预览
+- [liteparse](https://github.com/run-llama/liteparse): A fast, helpful, and open-source document parser
+
+### 灵感与参考
 
 - [tweakcn](https://tweakcn.com/editor/theme): 风格模版
-- [React Bits](https://www.reactbits.dev/): UI 组件库
 - [60fps](https://60fps.design/):  UI/UX animation inspiration for mobile & web apps
 - [Variant](https://variant.com/)
+- [antfu/antfu.me: My personal website](https://github.com/antfu/antfu.me)
+- [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset): 训记动图数据集
 
-TUI
+### TUI
 
 - [SBoudrias/Inquirer.js](https://github.com/SBoudrias/Inquirer.js):  common interactive command line user interfaces.
 
 ## 多平台
 
 - [Taro](https://docs.taro.zone/docs/): 使用 React/Vue 开发多平台小程序应用
-- [uni-app](https://uniapp.dcloud.net.cn/): 使用 Vue 开发多平台应用（小程序、H5、App）
+- [tauri](https://tauri.app/)
 - [electron](https://github.com/electron/electron): Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
 ## 后端
@@ -322,6 +293,8 @@ TUI
 ### 用户管理与认证
 
 - [better-auth](https://github.com/better-auth/better-auth): 现代化的用户管理与认证解决方案
+- [clerk](https://clerk.com/docs)
+- [auth0](https://auth0.com/)
 - [Casdoor](https://github.com/casdoor/casdoor)
 - [next-auth](https://next-auth.js.org)
 
@@ -341,6 +314,7 @@ TUI
 
 - [Caddy](https://github.com/caddyserver/caddy): 反向代理最佳实践
 - [Tailscale](https://tailscale.com/download/linux): 内网穿透工具
+- [mihomo](https://github.com/MetaCubeX/mihomo)
 
 ### 自动化 RPA
 
@@ -371,11 +345,6 @@ TUI
 - [Beszel](https://github.com/henrygd/beszel): 轻量级服务器资源监控平台
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)：指标与日志可视化
-
-用户侧
-
-- [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
-- [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 
 ### Testing
 
@@ -428,7 +397,7 @@ TUI
 
 ### 厂商
 
-- [Cloudflare](https://github.com/cloudflare/cloudflare-docs)：CDN，云函数
+- [Cloudflare](https://github.com/cloudflare/cloudflare-docs)：Domain, Pages, R2, D1, 云函数
 - [Aliyun](https://www.aliyun.com/)
 - [Vercel](https://vercel.com/)：前端托管与边缘函数
 
@@ -459,6 +428,12 @@ TUI
 
 - [蚁小二](https://www.yixiaoer.cn/vip): 多平台内容分发订阅服务，支持平台较全
 - [TurboPush](https://www.turbopush.top/)
+
+### 用户理解
+
+- [Microsoft Clarity](https://clarity.microsoft.com/): 免费热图与会话记录
+- [Google Analytics](https://marketingplatform.google.com/about/analytics/)
+- [PostHog](https://posthog.com/self-driving)
 
 ### 内容与文档
 
